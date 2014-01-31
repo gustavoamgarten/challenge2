@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC11C3AE18981F0600F7EC2E /* FichaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC11C3AD18981F0600F7EC2E /* FichaViewController.m */; };
+		EC322985189911DE009C34C1 /* CategoriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC322984189911DE009C34C1 /* CategoriaViewController.m */; };
+		EC32298818992690009C34C1 /* TreinoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC32298718992690009C34C1 /* TreinoViewController.m */; };
+		EC32298A18993635009C34C1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32298918993635009C34C1 /* AudioToolbox.framework */; };
+		EC32298C18993A94009C34C1 /* hehehe1.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC32298B18993A94009C34C1 /* hehehe1.wav */; };
+		EC32299018993BD2009C34C1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32298F18993BD2009C34C1 /* AVFoundation.framework */; };
+		EC32299218993BE6009C34C1 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32299118993BE6009C34C1 /* MediaPlayer.framework */; };
 		EC7D00F01897CBD900D63E28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7D00EF1897CBD900D63E28 /* Foundation.framework */; };
 		EC7D00F21897CBD900D63E28 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7D00F11897CBD900D63E28 /* CoreGraphics.framework */; };
 		EC7D00F41897CBD900D63E28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7D00F31897CBD900D63E28 /* UIKit.framework */; };
@@ -14,13 +21,21 @@
 		EC7D00FC1897CBD900D63E28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7D00FB1897CBD900D63E28 /* main.m */; };
 		EC7D01001897CBD900D63E28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7D00FF1897CBD900D63E28 /* AppDelegate.m */; };
 		EC7D01031897CBD900D63E28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC7D01011897CBD900D63E28 /* Main.storyboard */; };
-		EC7D01061897CBD900D63E28 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7D01051897CBD900D63E28 /* ViewController.m */; };
 		EC7D01081897CBD900D63E28 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC7D01071897CBD900D63E28 /* Images.xcassets */; };
 		EC7D010F1897CBD900D63E28 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7D010E1897CBD900D63E28 /* XCTest.framework */; };
 		EC7D01101897CBD900D63E28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7D00EF1897CBD900D63E28 /* Foundation.framework */; };
 		EC7D01111897CBD900D63E28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7D00F31897CBD900D63E28 /* UIKit.framework */; };
 		EC7D01191897CBD900D63E28 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC7D01171897CBD900D63E28 /* InfoPlist.strings */; };
 		EC7D011B1897CBD900D63E28 /* _Challenge_2__Ficha_Treino_2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7D011A1897CBD900D63E28 /* _Challenge_2__Ficha_Treino_2Tests.m */; };
+		EC7D36E7189AB24E008BF3D3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7D36E6189AB24E008BF3D3 /* CoreData.framework */; };
+		EC7D36F7189AC22D008BF3D3 /* DataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7D36EC189AC22D008BF3D3 /* DataStorage.m */; };
+		EC7D36F8189AC22D008BF3D3 /* DetalhesDoExercicio.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7D36EE189AC22D008BF3D3 /* DetalhesDoExercicio.m */; };
+		EC7D36F9189AC22D008BF3D3 /* FichaDeTreino.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7D36F0189AC22D008BF3D3 /* FichaDeTreino.m */; };
+		EC7D36FA189AC22D008BF3D3 /* HistoricoTreinamento.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7D36F2189AC22D008BF3D3 /* HistoricoTreinamento.m */; };
+		EC7D36FB189AC22D008BF3D3 /* Pessoa.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7D36F4189AC22D008BF3D3 /* Pessoa.m */; };
+		EC7D36FC189AC22D008BF3D3 /* Treinamentos.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7D36F6189AC22D008BF3D3 /* Treinamentos.m */; };
+		EC7D3702189AC52F008BF3D3 /* fichas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC7D3700189AC52F008BF3D3 /* fichas.xcdatamodeld */; };
+		EC7D376F189AD2D3008BF3D3 /* InitialController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7D376E189AD2D3008BF3D3 /* InitialController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +49,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC11C3AC18981F0600F7EC2E /* FichaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FichaViewController.h; sourceTree = "<group>"; };
+		EC11C3AD18981F0600F7EC2E /* FichaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FichaViewController.m; sourceTree = "<group>"; };
+		EC322983189911DE009C34C1 /* CategoriaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriaViewController.h; sourceTree = "<group>"; };
+		EC322984189911DE009C34C1 /* CategoriaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriaViewController.m; sourceTree = "<group>"; };
+		EC32298618992690009C34C1 /* TreinoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreinoViewController.h; sourceTree = "<group>"; };
+		EC32298718992690009C34C1 /* TreinoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreinoViewController.m; sourceTree = "<group>"; };
+		EC32298918993635009C34C1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		EC32298B18993A94009C34C1 /* hehehe1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hehehe1.wav; sourceTree = "<group>"; };
+		EC32298F18993BD2009C34C1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EC32299118993BE6009C34C1 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		EC7D00EC1897CBD900D63E28 /* [Challenge 2] Ficha Treino 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "[Challenge 2] Ficha Treino 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7D00EF1897CBD900D63E28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EC7D00F11897CBD900D63E28 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,14 +70,28 @@
 		EC7D00FE1897CBD900D63E28 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EC7D00FF1897CBD900D63E28 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EC7D01021897CBD900D63E28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EC7D01041897CBD900D63E28 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EC7D01051897CBD900D63E28 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EC7D01071897CBD900D63E28 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EC7D010D1897CBD900D63E28 /* [Challenge 2] Ficha Treino 2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "[Challenge 2] Ficha Treino 2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7D010E1897CBD900D63E28 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		EC7D01161897CBD900D63E28 /* [Challenge 2] Ficha Treino 2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "[Challenge 2] Ficha Treino 2Tests-Info.plist"; sourceTree = "<group>"; };
 		EC7D01181897CBD900D63E28 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EC7D011A1897CBD900D63E28 /* _Challenge_2__Ficha_Treino_2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _Challenge_2__Ficha_Treino_2Tests.m; sourceTree = "<group>"; };
+		EC7D36E6189AB24E008BF3D3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EC7D36EB189AC22D008BF3D3 /* DataStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStorage.h; sourceTree = "<group>"; };
+		EC7D36EC189AC22D008BF3D3 /* DataStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStorage.m; sourceTree = "<group>"; };
+		EC7D36ED189AC22D008BF3D3 /* DetalhesDoExercicio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalhesDoExercicio.h; sourceTree = "<group>"; };
+		EC7D36EE189AC22D008BF3D3 /* DetalhesDoExercicio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalhesDoExercicio.m; sourceTree = "<group>"; };
+		EC7D36EF189AC22D008BF3D3 /* FichaDeTreino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FichaDeTreino.h; sourceTree = "<group>"; };
+		EC7D36F0189AC22D008BF3D3 /* FichaDeTreino.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FichaDeTreino.m; sourceTree = "<group>"; };
+		EC7D36F1189AC22D008BF3D3 /* HistoricoTreinamento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoricoTreinamento.h; sourceTree = "<group>"; };
+		EC7D36F2189AC22D008BF3D3 /* HistoricoTreinamento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoricoTreinamento.m; sourceTree = "<group>"; };
+		EC7D36F3189AC22D008BF3D3 /* Pessoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pessoa.h; sourceTree = "<group>"; };
+		EC7D36F4189AC22D008BF3D3 /* Pessoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pessoa.m; sourceTree = "<group>"; };
+		EC7D36F5189AC22D008BF3D3 /* Treinamentos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Treinamentos.h; sourceTree = "<group>"; };
+		EC7D36F6189AC22D008BF3D3 /* Treinamentos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Treinamentos.m; sourceTree = "<group>"; };
+		EC7D3701189AC52F008BF3D3 /* CDtesteDBA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CDtesteDBA.xcdatamodel; sourceTree = "<group>"; };
+		EC7D376D189AD2D3008BF3D3 /* InitialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialController.h; sourceTree = "<group>"; };
+		EC7D376E189AD2D3008BF3D3 /* InitialController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +99,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7D36E7189AB24E008BF3D3 /* CoreData.framework in Frameworks */,
+				EC32299218993BE6009C34C1 /* MediaPlayer.framework in Frameworks */,
+				EC32299018993BD2009C34C1 /* AVFoundation.framework in Frameworks */,
+				EC32298A18993635009C34C1 /* AudioToolbox.framework in Frameworks */,
 				EC7D00F21897CBD900D63E28 /* CoreGraphics.framework in Frameworks */,
 				EC7D00F41897CBD900D63E28 /* UIKit.framework in Frameworks */,
 				EC7D00F01897CBD900D63E28 /* Foundation.framework in Frameworks */,
@@ -79,6 +122,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC322982189910D7009C34C1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EC32298B18993A94009C34C1 /* hehehe1.wav */,
+				EC7D376D189AD2D3008BF3D3 /* InitialController.h */,
+				EC7D376E189AD2D3008BF3D3 /* InitialController.m */,
+				EC32298618992690009C34C1 /* TreinoViewController.h */,
+				EC32298718992690009C34C1 /* TreinoViewController.m */,
+				EC322983189911DE009C34C1 /* CategoriaViewController.h */,
+				EC322984189911DE009C34C1 /* CategoriaViewController.m */,
+				EC11C3AC18981F0600F7EC2E /* FichaViewController.h */,
+				EC11C3AD18981F0600F7EC2E /* FichaViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EC32298D18993A9E009C34C1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EC32298E18993AB6009C34C1 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				EC7D3700189AC52F008BF3D3 /* fichas.xcdatamodeld */,
+				EC7D00FE1897CBD900D63E28 /* AppDelegate.h */,
+				EC7D00FF1897CBD900D63E28 /* AppDelegate.m */,
+				EC7D01011897CBD900D63E28 /* Main.storyboard */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
 		EC7D00E31897CBD900D63E28 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +178,10 @@
 		EC7D00EE1897CBD900D63E28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EC7D36E6189AB24E008BF3D3 /* CoreData.framework */,
+				EC32299118993BE6009C34C1 /* MediaPlayer.framework */,
+				EC32298F18993BD2009C34C1 /* AVFoundation.framework */,
+				EC32298918993635009C34C1 /* AudioToolbox.framework */,
 				EC7D00EF1897CBD900D63E28 /* Foundation.framework */,
 				EC7D00F11897CBD900D63E28 /* CoreGraphics.framework */,
 				EC7D00F31897CBD900D63E28 /* UIKit.framework */,
@@ -112,11 +193,10 @@
 		EC7D00F51897CBD900D63E28 /* [Challenge 2] Ficha Treino 2 */ = {
 			isa = PBXGroup;
 			children = (
-				EC7D00FE1897CBD900D63E28 /* AppDelegate.h */,
-				EC7D00FF1897CBD900D63E28 /* AppDelegate.m */,
-				EC7D01011897CBD900D63E28 /* Main.storyboard */,
-				EC7D01041897CBD900D63E28 /* ViewController.h */,
-				EC7D01051897CBD900D63E28 /* ViewController.m */,
+				EC7D36E8189AC102008BF3D3 /* Model */,
+				EC32298D18993A9E009C34C1 /* Resources */,
+				EC32298E18993AB6009C34C1 /* Other */,
+				EC322982189910D7009C34C1 /* Controller */,
 				EC7D01071897CBD900D63E28 /* Images.xcassets */,
 				EC7D00F61897CBD900D63E28 /* Supporting Files */,
 			);
@@ -150,6 +230,41 @@
 				EC7D01171897CBD900D63E28 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC7D36E8189AC102008BF3D3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC7D36EA189AC149008BF3D3 /* Singleton */,
+				EC7D36E9189AC13D008BF3D3 /* ManagedObjects */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EC7D36E9189AC13D008BF3D3 /* ManagedObjects */ = {
+			isa = PBXGroup;
+			children = (
+				EC7D36ED189AC22D008BF3D3 /* DetalhesDoExercicio.h */,
+				EC7D36EE189AC22D008BF3D3 /* DetalhesDoExercicio.m */,
+				EC7D36EF189AC22D008BF3D3 /* FichaDeTreino.h */,
+				EC7D36F0189AC22D008BF3D3 /* FichaDeTreino.m */,
+				EC7D36F1189AC22D008BF3D3 /* HistoricoTreinamento.h */,
+				EC7D36F2189AC22D008BF3D3 /* HistoricoTreinamento.m */,
+				EC7D36F3189AC22D008BF3D3 /* Pessoa.h */,
+				EC7D36F4189AC22D008BF3D3 /* Pessoa.m */,
+				EC7D36F5189AC22D008BF3D3 /* Treinamentos.h */,
+				EC7D36F6189AC22D008BF3D3 /* Treinamentos.m */,
+			);
+			name = ManagedObjects;
+			sourceTree = "<group>";
+		};
+		EC7D36EA189AC149008BF3D3 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				EC7D36EB189AC22D008BF3D3 /* DataStorage.h */,
+				EC7D36EC189AC22D008BF3D3 /* DataStorage.m */,
+			);
+			name = Singleton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +346,7 @@
 				EC7D01081897CBD900D63E28 /* Images.xcassets in Resources */,
 				EC7D00FA1897CBD900D63E28 /* InfoPlist.strings in Resources */,
 				EC7D01031897CBD900D63E28 /* Main.storyboard in Resources */,
+				EC32298C18993A94009C34C1 /* hehehe1.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +365,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC7D01061897CBD900D63E28 /* ViewController.m in Sources */,
+				EC7D36F8189AC22D008BF3D3 /* DetalhesDoExercicio.m in Sources */,
+				EC7D36FB189AC22D008BF3D3 /* Pessoa.m in Sources */,
+				EC32298818992690009C34C1 /* TreinoViewController.m in Sources */,
 				EC7D01001897CBD900D63E28 /* AppDelegate.m in Sources */,
+				EC7D36FA189AC22D008BF3D3 /* HistoricoTreinamento.m in Sources */,
+				EC11C3AE18981F0600F7EC2E /* FichaViewController.m in Sources */,
+				EC7D376F189AD2D3008BF3D3 /* InitialController.m in Sources */,
+				EC7D36F9189AC22D008BF3D3 /* FichaDeTreino.m in Sources */,
+				EC322985189911DE009C34C1 /* CategoriaViewController.m in Sources */,
 				EC7D00FC1897CBD900D63E28 /* main.m in Sources */,
+				EC7D3702189AC52F008BF3D3 /* fichas.xcdatamodeld in Sources */,
+				EC7D36FC189AC22D008BF3D3 /* Treinamentos.m in Sources */,
+				EC7D36F7189AC22D008BF3D3 /* DataStorage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +586,7 @@
 				EC7D01201897CBD900D63E28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC7D01211897CBD900D63E28 /* Build configuration list for PBXNativeTarget "[Challenge 2] Ficha Treino 2Tests" */ = {
 			isa = XCConfigurationList;
@@ -468,8 +595,22 @@
 				EC7D01231897CBD900D63E28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EC7D3700189AC52F008BF3D3 /* fichas.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EC7D3701189AC52F008BF3D3 /* CDtesteDBA.xcdatamodel */,
+			);
+			currentVersion = EC7D3701189AC52F008BF3D3 /* CDtesteDBA.xcdatamodel */;
+			path = fichas.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EC7D00E41897CBD900D63E28 /* Project object */;
 }

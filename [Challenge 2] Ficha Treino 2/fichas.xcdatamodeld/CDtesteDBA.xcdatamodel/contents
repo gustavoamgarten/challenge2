@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="13B42" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="DetalhesDoExercicio" representedClassName="DetalhesDoExercicio" syncable="YES">
+        <attribute name="nomeDoExercicio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numeroDeRepeticoes" optional="YES" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="numeroDeSeries" optional="YES" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="pesoUtilizado" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="fichasDeTreino" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FichaDeTreino" inverseName="newRelationship" inverseEntity="FichaDeTreino" syncable="YES"/>
+    </entity>
+    <entity name="FichaDeTreino" representedClassName="FichaDeTreino" syncable="YES">
+        <attribute name="dataDaCriacao" optional="YES" attributeType="Date" minDateTimeInterval="0" minValueString="0" syncable="YES"/>
+        <attribute name="frequenciaSemanal" optional="YES" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="intervaloEntreSequencias" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="nomeDoTreinamento" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="objetivoDoTreino" optional="YES" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="periodoDeUtilizacaoDaFicha" optional="YES" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="periodoEmSemanas" optional="YES" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DetalhesDoExercicio" inverseName="fichasDeTreino" inverseEntity="DetalhesDoExercicio" syncable="YES"/>
+        <relationship name="treinamentos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Treinamentos" inverseName="fichasDeTreino" inverseEntity="Treinamentos" syncable="YES"/>
+    </entity>
+    <entity name="HistoricoTreinamento" representedClassName="HistoricoTreinamento" syncable="YES">
+        <attribute name="braco" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="cintura" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="coxa" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="ombro" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="peso" optional="YES" attributeType="Transformable" minValueString="0" syncable="YES"/>
+        <relationship name="pessoa" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pessoa" inverseName="historicoTreinamento" inverseEntity="Pessoa" syncable="YES"/>
+    </entity>
+    <entity name="Pessoa" representedClassName="Pessoa" syncable="YES">
+        <attribute name="altura" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="dataDeNascimento" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="nomeCompleto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sexoMasculino" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="historicoTreinamento" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="HistoricoTreinamento" inverseName="pessoa" inverseEntity="HistoricoTreinamento" syncable="YES"/>
+        <relationship name="treinamentos" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Treinamentos" inverseName="pessoa" inverseEntity="Treinamentos" syncable="YES"/>
+    </entity>
+    <entity name="Treinamentos" representedClassName="Treinamentos" syncable="YES">
+        <relationship name="fichasDeTreino" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FichaDeTreino" inverseName="treinamentos" inverseEntity="FichaDeTreino" syncable="YES"/>
+        <relationship name="pessoa" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pessoa" inverseName="treinamentos" inverseEntity="Pessoa" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="HistoricoTreinamento" positionX="3105" positionY="-5058" width="128" height="133"/>
+        <element name="Pessoa" positionX="2925" positionY="-4993" width="146" height="133"/>
+        <element name="Treinamentos" positionX="3105" positionY="-4907" width="128" height="73"/>
+        <element name="FichaDeTreino" positionX="3267" positionY="-4915" width="128" height="178"/>
+        <element name="DetalhesDoExercicio" positionX="3429" positionY="-4912" width="128" height="118"/>
+    </elements>
+</model>
