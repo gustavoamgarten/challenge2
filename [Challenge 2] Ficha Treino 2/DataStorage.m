@@ -85,6 +85,7 @@ static NSManagedObjectContext *_managedObjectContext;
 -(void)reloadData
 {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    [fetchRequest setReturnsObjectsAsFaults:NO];
     NSEntityDescription *entity = [NSEntityDescription entityForName:tabelaPessoas
                                               inManagedObjectContext:_managedObjectContext];
     NSError *error;
@@ -224,6 +225,63 @@ comFrequenciaDeTreinosSemanais:(int) frequencia
     
     NSError *error = nil;
     if (![fichaDeExercicio.managedObjectContext save:&error])
+    {
+        return NO;
+    }
+    
+    //[self.fetchedResultsController performFetch:&error];
+    [self reloadData];
+    return YES;
+}
+
+
+-(BOOL)addHomem:(NSString*) nomeCompleto
+          comAltura:(float) altura
+comDataDeNascimento:(NSDate*) dataDeNascimento
+{
+    Pessoa *fichaPessoa = [NSEntityDescription insertNewObjectForEntityForName:tabelaPessoas
+                                                        inManagedObjectContext:_managedObjectContext];
+    
+    fichaPessoa.altura = [NSNumber numberWithFloat:altura];
+    fichaPessoa.dataDeNascimento = dataDeNascimento;
+    fichaPessoa.nomeCompleto = nomeCompleto;
+    fichaPessoa.sexoMasculino = [NSNumber numberWithBool:YES];
+    fichaPessoa.treinamentos = [NSEntityDescription insertNewObjectForEntityForName:tabelaTreinamentos
+                                                             inManagedObjectContext:_managedObjectContext];
+    
+    fichaPessoa.historicoTreinamento = [NSEntityDescription insertNewObjectForEntityForName:tabelaHistorico
+                                                                     inManagedObjectContext:_managedObjectContext];
+    
+    NSError *error = nil;
+    if (![fichaPessoa.managedObjectContext save:&error])
+    {
+        return YES;
+    }
+    
+    //[self.fetchedResultsController performFetch:&error];
+    [self reloadData];
+    return YES;
+}
+
+-(BOOL)addMulher:(NSString*) nomeCompleto
+           comAltura:(float) altura
+ comDataDeNascimento:(NSDate*) dataDeNascimento
+{
+    Pessoa *fichaPessoa = [NSEntityDescription insertNewObjectForEntityForName:tabelaPessoas
+                                                        inManagedObjectContext:_managedObjectContext];
+    
+    fichaPessoa.altura = [NSNumber numberWithFloat:altura];
+    fichaPessoa.dataDeNascimento = dataDeNascimento;
+    fichaPessoa.nomeCompleto = nomeCompleto;
+    fichaPessoa.sexoMasculino = [NSNumber numberWithBool:NO];
+    fichaPessoa.treinamentos = [NSEntityDescription insertNewObjectForEntityForName:tabelaTreinamentos
+                                                             inManagedObjectContext:_managedObjectContext];
+    
+    fichaPessoa.historicoTreinamento = [NSEntityDescription insertNewObjectForEntityForName:tabelaHistorico
+                                                                     inManagedObjectContext:_managedObjectContext];
+    
+    NSError *error = nil;
+    if (![fichaPessoa.managedObjectContext save:&error])
     {
         return NO;
     }

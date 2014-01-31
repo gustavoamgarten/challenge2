@@ -37,4 +37,12 @@ comFrequenciaDeTreinosSemanais:(int) frequencia;
 comFrequenciaDeTreinosSemanais:(int) frequencia;
 -(BOOL)addFichaDeExercicio:(NSString*) nome comPesoUtilizado:(float) peso
          comNumeroDeRepeticoes:(int) repeticoes comNumeroDeSeries:(int) series;
+
+
+-(BOOL)addHomem:(NSString*) nomeCompleto
+          comAltura:(float) altura
+comDataDeNascimento:(NSDate*) dataDeNascimento;
+-(BOOL)addMulher:(NSString*) nomeCompleto
+           comAltura:(float) altura
+ comDataDeNascimento:(NSDate*) dataDeNascimento;
 @end
