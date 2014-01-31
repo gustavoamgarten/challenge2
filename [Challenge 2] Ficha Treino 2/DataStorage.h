@@ -27,14 +27,14 @@
 -(NSArray *)getFichasDeExercicio;
 
 
--(NSError*)addFichaDeTreino:(NSString*)nome
+-(BOOL)addFichaDeTreino:(NSString*)nome
                 comObjetivo:(int) codigoDoObjetivo
             comSemanasDeUso:(int)semanas
 comIntervaloEntreSequencias:(int) intervalo
 comFrequenciaDeTreinosSemanais:(int) frequencia;
--(NSError*)addFichaDeTreino:(NSString*)nome comObjetivo:(int) codigoDoObjetivo
+-(BOOL)addFichaDeTreino:(NSString*)nome comObjetivo:(int) codigoDoObjetivo
               comMesesDeUso:(int)meses comIntervaloEntreSequencias:(int) intervalo
 comFrequenciaDeTreinosSemanais:(int) frequencia;
--(NSError*)addFichaDeExercicio:(NSString*) nome comPesoUtilizado:(float) peso
+-(BOOL)addFichaDeExercicio:(NSString*) nome comPesoUtilizado:(float) peso
          comNumeroDeRepeticoes:(int) repeticoes comNumeroDeSeries:(int) series;
 @end

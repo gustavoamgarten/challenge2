@@ -154,7 +154,7 @@ static NSManagedObjectContext *_managedObjectContext;
 
 #pragma mark - Métodos para gravar dados
 
--(NSError*)addFichaDeTreino:(NSString*)nome
+-(BOOL)addFichaDeTreino:(NSString*)nome
                 comObjetivo:(int) codigoDoObjetivo
             comSemanasDeUso:(int)semanas
 comIntervaloEntreSequencias:(int) intervalo
@@ -174,15 +174,15 @@ comFrequenciaDeTreinosSemanais:(int) frequencia
     NSError *error = nil;
     if (![fichaDeTreino.managedObjectContext save:&error])
     {
-        return error;
+        return NO;
     }
     
     //[self.fetchedResultsController performFetch:&error];
     [self reloadData];
-    return error;
+    return YES;
 }
 
--(NSError*)addFichaDeTreino:(NSString*)nome
+-(BOOL)addFichaDeTreino:(NSString*)nome
                 comObjetivo:(int) codigoDoObjetivo
               comMesesDeUso:(int)meses
 comIntervaloEntreSequencias:(int) intervalo
@@ -202,16 +202,15 @@ comFrequenciaDeTreinosSemanais:(int) frequencia
     NSError *error = nil;
     if (![fichaDeTreino.managedObjectContext save:&error])
     {
-        return error;
+        return NO;
     }
     
     //[self.fetchedResultsController performFetch:&error];
     [self reloadData];
-    NSLog(@"ficha adicionada");
-    return error;
+    return YES;
 }
 
--(NSError*)addFichaDeExercicio:(NSString*) nome
+-(BOOL)addFichaDeExercicio:(NSString*) nome
               comPesoUtilizado:(float) peso
          comNumeroDeRepeticoes:(int) repeticoes
              comNumeroDeSeries:(int) series
@@ -226,11 +225,11 @@ comFrequenciaDeTreinosSemanais:(int) frequencia
     NSError *error = nil;
     if (![fichaDeExercicio.managedObjectContext save:&error])
     {
-        return error;
+        return NO;
     }
     
     //[self.fetchedResultsController performFetch:&error];
     [self reloadData];
-    return error;
+    return YES;
 }
 @end
