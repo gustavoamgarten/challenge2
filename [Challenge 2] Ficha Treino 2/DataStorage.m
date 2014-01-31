@@ -207,6 +207,7 @@ comFrequenciaDeTreinosSemanais:(int) frequencia
     
     //[self.fetchedResultsController performFetch:&error];
     [self reloadData];
+    NSLog(@"ficha adicionada");
     return error;
 }
 
