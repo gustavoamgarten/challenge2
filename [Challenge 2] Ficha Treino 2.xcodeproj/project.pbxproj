@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EC11C3AE18981F0600F7EC2E /* FichaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC11C3AD18981F0600F7EC2E /* FichaViewController.m */; };
-		EC2CF20C189BFF940097C82A /* exercicios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC2CF20A189BFF940097C82A /* exercicios.xcdatamodeld */; };
 		EC2CF213189C025C0097C82A /* Exercicios.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2CF212189C025C0097C82A /* Exercicios.m */; };
 		EC322985189911DE009C34C1 /* CategoriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC322984189911DE009C34C1 /* CategoriaViewController.m */; };
 		EC32298818992690009C34C1 /* TreinoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC32298718992690009C34C1 /* TreinoViewController.m */; };
@@ -38,6 +37,7 @@
 		EC7D36FC189AC22D008BF3D3 /* Treinamentos.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7D36F6189AC22D008BF3D3 /* Treinamentos.m */; };
 		EC7D3702189AC52F008BF3D3 /* fichas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC7D3700189AC52F008BF3D3 /* fichas.xcdatamodeld */; };
 		EC7D376F189AD2D3008BF3D3 /* InitialController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7D376E189AD2D3008BF3D3 /* InitialController.m */; };
+		ED194E95189C076A006EE9F5 /* DadoFisico.m in Sources */ = {isa = PBXBuildFile; fileRef = ED194E94189C076A006EE9F5 /* DadoFisico.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +53,6 @@
 /* Begin PBXFileReference section */
 		EC11C3AC18981F0600F7EC2E /* FichaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FichaViewController.h; sourceTree = "<group>"; };
 		EC11C3AD18981F0600F7EC2E /* FichaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FichaViewController.m; sourceTree = "<group>"; };
-		EC2CF20B189BFF940097C82A /* exercicios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = exercicios.xcdatamodel; sourceTree = "<group>"; };
 		EC2CF211189C025C0097C82A /* Exercicios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercicios.h; sourceTree = "<group>"; };
 		EC2CF212189C025C0097C82A /* Exercicios.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercicios.m; sourceTree = "<group>"; };
 		EC322983189911DE009C34C1 /* CategoriaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriaViewController.h; sourceTree = "<group>"; };
@@ -97,6 +96,8 @@
 		EC7D3701189AC52F008BF3D3 /* CDtesteDBA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CDtesteDBA.xcdatamodel; sourceTree = "<group>"; };
 		EC7D376D189AD2D3008BF3D3 /* InitialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialController.h; sourceTree = "<group>"; };
 		EC7D376E189AD2D3008BF3D3 /* InitialController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialController.m; sourceTree = "<group>"; };
+		ED194E93189C076A006EE9F5 /* DadoFisico.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DadoFisico.h; sourceTree = "<group>"; };
+		ED194E94189C076A006EE9F5 /* DadoFisico.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DadoFisico.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				EC7D3700189AC52F008BF3D3 /* fichas.xcdatamodeld */,
-				EC2CF20A189BFF940097C82A /* exercicios.xcdatamodeld */,
 				EC7D00FE1897CBD900D63E28 /* AppDelegate.h */,
 				EC7D00FF1897CBD900D63E28 /* AppDelegate.m */,
 				EC7D01011897CBD900D63E28 /* Main.storyboard */,
@@ -253,6 +253,8 @@
 				EC2CF20D189C01940097C82A /* Exercicios */,
 				EC7D36EA189AC149008BF3D3 /* Singleton */,
 				EC7D36E9189AC13D008BF3D3 /* Fichas */,
+				ED194E93189C076A006EE9F5 /* DadoFisico.h */,
+				ED194E94189C076A006EE9F5 /* DadoFisico.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -391,8 +393,8 @@
 				EC7D376F189AD2D3008BF3D3 /* InitialController.m in Sources */,
 				EC7D36F9189AC22D008BF3D3 /* FichaDeTreino.m in Sources */,
 				EC322985189911DE009C34C1 /* CategoriaViewController.m in Sources */,
-				EC2CF20C189BFF940097C82A /* exercicios.xcdatamodeld in Sources */,
 				EC7D00FC1897CBD900D63E28 /* main.m in Sources */,
+				ED194E95189C076A006EE9F5 /* DadoFisico.m in Sources */,
 				EC7D3702189AC52F008BF3D3 /* fichas.xcdatamodeld in Sources */,
 				EC7D36FC189AC22D008BF3D3 /* Treinamentos.m in Sources */,
 				EC7D36F7189AC22D008BF3D3 /* DataStorage.m in Sources */,
@@ -618,16 +620,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		EC2CF20A189BFF940097C82A /* exercicios.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				EC2CF20B189BFF940097C82A /* exercicios.xcdatamodel */,
-			);
-			currentVersion = EC2CF20B189BFF940097C82A /* exercicios.xcdatamodel */;
-			path = exercicios.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		EC7D3700189AC52F008BF3D3 /* fichas.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
