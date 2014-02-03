@@ -97,7 +97,7 @@ static NSManagedObjectContext *_managedObjectContext;
 
 -(NSArray*)reloadPessoa
 {
-    return [self reloadEntity:tabelaFichasPessoa];
+    return [self reloadEntity:tabelaPessoas];
 }
 
 -(NSArray*)reloadFichas
@@ -138,7 +138,6 @@ static NSManagedObjectContext *_managedObjectContext;
     
     for (Pessoa *pessoa in fetchedObjects)
     {
-        
         [self.pessoas addObject:pessoa];
     }
     
