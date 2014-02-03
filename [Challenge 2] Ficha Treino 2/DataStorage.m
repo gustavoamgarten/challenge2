@@ -80,7 +80,7 @@ static NSManagedObjectContext *_managedObjectContext;
 
 #pragma mark - Recuperar dados DBA
 
-
+//recupera uma entidade com o nome especificado
 -(NSArray*)reloadEntity:(NSString*)entityName
 {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -125,6 +125,7 @@ static NSManagedObjectContext *_managedObjectContext;
     return [self reloadEntity:tabelaExerciciosPadrao];
 }
 
+//recupera os dados de todas as tabelas e atualiza os arrays com dados de pessoas e exercícios padrão
 -(void)reloadData
 {
     //Alimenta o array com os dados da pessoa;
@@ -163,11 +164,13 @@ static NSManagedObjectContext *_managedObjectContext;
 }
 
 #pragma mark - Métodos para recuperar dados
+//Retorna uma cópia do array de pessoas
 -(NSArray *)getPessoas
 {
     return [self.pessoas copy];
 }
 
+//Retorna uma cópia do array de exercicios padrão
 -(NSArray *)getFichasDeExercicioPadrao
 {
     return [self.fichasExercicioPadrao copy];
@@ -176,7 +179,7 @@ static NSManagedObjectContext *_managedObjectContext;
 #pragma mark Metodos para adicionar dados
 
 #pragma mark - Métodos para adicionar exercício Padrão
-
+//Adiciona um exercicio padrão
 -(BOOL)addExercicioPadrao:(NSString*)nome comCategoria:(int)categoria
 {
     Exerciciopadrao *exercicoPadrao = [NSEntityDescription insertNewObjectForEntityForName:tabelaExerciciosPadrao
@@ -197,6 +200,7 @@ static NSManagedObjectContext *_managedObjectContext;
 }
 
 #pragma mark - Métodos para adicionar dados de Pessoas
+//Adiciona uma ficha de Pessoa do sexo masculino
 -(BOOL)addHomem:(NSString*) nome
 comDataDeNascimento:(NSDate*) dataDeNascimento
 {
@@ -219,6 +223,7 @@ comDataDeNascimento:(NSDate*) dataDeNascimento
     return YES;
 }
 
+//Adiciona uma ficha de Pessoa do sexo feminino
 -(BOOL)addMulher:(NSString*) nome
 comDataDeNascimento:(NSDate*) dataDeNascimento
 {

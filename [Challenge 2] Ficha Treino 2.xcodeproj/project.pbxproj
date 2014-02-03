@@ -42,6 +42,8 @@
 		ED1D0FE3189FCC0500AECAC4 /* DadosFisicos.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1D0FE2189FCC0500AECAC4 /* DadosFisicos.m */; };
 		ED1D0FE6189FCC0500AECAC4 /* Exercicio.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1D0FE5189FCC0500AECAC4 /* Exercicio.m */; };
 		ED1D0FE9189FCC0600AECAC4 /* Ficha.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1D0FE8189FCC0600AECAC4 /* Ficha.m */; };
+		ED23DFA218A010360013D4B7 /* UIImage-Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = ED23DFA118A010360013D4B7 /* UIImage-Alpha.m */; };
+		ED23DFA618A010CB0013D4B7 /* IrregularShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ED23DFA518A010CB0013D4B7 /* IrregularShapedButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,10 @@
 		ED1D0FE5189FCC0500AECAC4 /* Exercicio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercicio.m; sourceTree = "<group>"; };
 		ED1D0FE7189FCC0600AECAC4 /* Ficha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ficha.h; sourceTree = "<group>"; };
 		ED1D0FE8189FCC0600AECAC4 /* Ficha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ficha.m; sourceTree = "<group>"; };
+		ED23DFA018A010360013D4B7 /* UIImage-Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage-Alpha.h"; sourceTree = "<group>"; };
+		ED23DFA118A010360013D4B7 /* UIImage-Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage-Alpha.m"; sourceTree = "<group>"; };
+		ED23DFA418A010CB0013D4B7 /* IrregularShapedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IrregularShapedButton.h; sourceTree = "<group>"; };
+		ED23DFA518A010CB0013D4B7 /* IrregularShapedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IrregularShapedButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +274,7 @@
 		EC7D36E8189AC102008BF3D3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ED23DFA318A010940013D4B7 /* BotaoIrregular */,
 				EC2CF20D189C01940097C82A /* Exercicios */,
 				EC7D36EA189AC149008BF3D3 /* Singleton */,
 				EC7D36E9189AC13D008BF3D3 /* Fichas */,
@@ -303,6 +310,17 @@
 				EC7D36EC189AC22D008BF3D3 /* DataStorage.m */,
 			);
 			name = Singleton;
+			sourceTree = "<group>";
+		};
+		ED23DFA318A010940013D4B7 /* BotaoIrregular */ = {
+			isa = PBXGroup;
+			children = (
+				ED23DFA018A010360013D4B7 /* UIImage-Alpha.h */,
+				ED23DFA118A010360013D4B7 /* UIImage-Alpha.m */,
+				ED23DFA418A010CB0013D4B7 /* IrregularShapedButton.h */,
+				ED23DFA518A010CB0013D4B7 /* IrregularShapedButton.m */,
+			);
+			name = BotaoIrregular;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,12 +433,14 @@
 				EC1693FA18A007570055311B /* AddSexViewController.m in Sources */,
 				ED1D0FE0189FCC0500AECAC4 /* Treinos.m in Sources */,
 				EC1693F1189FEB030055311B /* LoadUserViewController.m in Sources */,
+				ED23DFA618A010CB0013D4B7 /* IrregularShapedButton.m in Sources */,
 				ED1D0FE6189FCC0500AECAC4 /* Exercicio.m in Sources */,
 				ED194E95189C076A006EE9F5 /* DadoFisico.m in Sources */,
 				EC7D36F7189AC22D008BF3D3 /* DataStorage.m in Sources */,
 				ED1D0FE9189FCC0600AECAC4 /* Ficha.m in Sources */,
 				EC1693F718A006540055311B /* AddNameViewController.m in Sources */,
 				ED1D0FDD189FCC0500AECAC4 /* Pessoa.m in Sources */,
+				ED23DFA218A010360013D4B7 /* UIImage-Alpha.m in Sources */,
 				ED1D0FDA189FCC0500AECAC4 /* Exerciciopadrao.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
