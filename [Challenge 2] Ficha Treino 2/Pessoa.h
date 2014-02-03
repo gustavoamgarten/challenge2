@@ -1,23 +1,30 @@
 //
 //  Pessoa.h
-//  CDtesteDBA
+//  [Challenge 2] Ficha Treino 2
 //
-//  Created by Victor Watanabe on 29/01/14.
-//  Copyright (c) 2014 KNA. All rights reserved.
+//  Created by Victor Watanabe on 03/02/14.
+//  Copyright (c) 2014 BEPiD. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class HistoricoTreinamento, Treinamentos;
+@class DadosFisicos, Ficha;
 
 @interface Pessoa : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * altura;
 @property (nonatomic, retain) NSDate * dataDeNascimento;
-@property (nonatomic, retain) NSString * nomeCompleto;
+@property (nonatomic, retain) NSString * nome;
 @property (nonatomic, retain) NSNumber * sexoMasculino;
-@property (nonatomic, retain) HistoricoTreinamento *historicoTreinamento;
-@property (nonatomic, retain) Treinamentos *treinamentos;
+@property (nonatomic, retain) DadosFisicos *dadosFisicos;
+@property (nonatomic, retain) NSSet *fichas;
+@end
+
+@interface Pessoa (CoreDataGeneratedAccessors)
+
+- (void)addFichasObject:(Ficha *)value;
+- (void)removeFichasObject:(Ficha *)value;
+- (void)addFichas:(NSSet *)values;
+- (void)removeFichas:(NSSet *)values;
 
 @end

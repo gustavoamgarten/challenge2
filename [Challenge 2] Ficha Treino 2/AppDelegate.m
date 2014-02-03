@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 
 #import "FichaViewController.h"
-#import "FichaDeTreino.h"
 #import "DataStorage.h"
 
 @implementation AppDelegate
@@ -29,8 +28,8 @@
     
     NSManagedObjectContext *context = [self managedObjectContext];
     
-//    [DataStorage setManagedObjectContext:context];
-//    [[DataStorage sharedRepository]reloadData];
+    [DataStorage setManagedObjectContext:context];
+    [[DataStorage sharedRepository]reloadData];
     //[[DataStorage sharedRepository] addFichaDeExercicio:@"Supino" comPesoUtilizado:30.5f comNumeroDeRepeticoes:10 comNumeroDeSeries:3];
 //    [[DataStorage sharedRepository] addFichaDeTreino:@"A" comObjetivo:2 comMesesDeUso:4 comIntervaloEntreSequencias:23 comFrequenciaDeTreinosSemanais:5];
     

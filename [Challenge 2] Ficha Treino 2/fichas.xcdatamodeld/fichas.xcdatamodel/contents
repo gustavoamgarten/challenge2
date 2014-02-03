@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="13B42" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="DadosFisicos" representedClassName="HistoricoTreinamento" syncable="YES">
+    <entity name="DadosFisicos" representedClassName="DadosFisicos" syncable="YES">
         <attribute name="dadosFisicos" optional="YES" attributeType="Transformable" syncable="YES"/>
         <relationship name="pessoa" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pessoa" inverseName="dadosFisicos" inverseEntity="Pessoa" syncable="YES"/>
     </entity>
-    <entity name="Exercicio" syncable="YES">
+    <entity name="Exercicio" representedClassName="Exercicio" syncable="YES">
         <attribute name="peso" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0.0" syncable="YES"/>
         <attribute name="repeticoes" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="sequencias" optional="YES" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
         <relationship name="detalhesDoExercicio" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ExercicioPadrao" inverseName="exerciciosRelacionados" inverseEntity="ExercicioPadrao" syncable="YES"/>
         <relationship name="treinoRelacionado" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Treinos" inverseName="listaDeExercicios" inverseEntity="Treinos" syncable="YES"/>
     </entity>
-    <entity name="ExercicioPadrao" representedClassName="DetalhesDoExercicio" syncable="YES">
+    <entity name="ExercicioPadrao" representedClassName="Exerciciopadrao" syncable="YES">
         <attribute name="categoria" optional="YES" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="exerciciosRelacionados" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Exercicio" inverseName="detalhesDoExercicio" inverseEntity="Exercicio" syncable="YES"/>
     </entity>
-    <entity name="Ficha" representedClassName="Treinamentos" syncable="YES">
+    <entity name="Ficha" representedClassName="Ficha" syncable="YES">
         <attribute name="dataDaCriacao" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="frequencia" optional="YES" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="intervalo" optional="YES" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
@@ -33,17 +33,17 @@
         <relationship name="dadosFisicos" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="DadosFisicos" inverseName="pessoa" inverseEntity="DadosFisicos" syncable="YES"/>
         <relationship name="fichas" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Ficha" inverseName="pessoa" inverseEntity="Ficha" syncable="YES"/>
     </entity>
-    <entity name="Treinos" syncable="YES">
+    <entity name="Treinos" representedClassName="Treinos" syncable="YES">
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="fichaRelacionada" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Ficha" inverseName="listaDeTreinos" inverseEntity="Ficha" syncable="YES"/>
         <relationship name="listaDeExercicios" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Exercicio" inverseName="treinoRelacionado" inverseEntity="Exercicio" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ExercicioPadrao" positionX="3447" positionY="-4743" width="128" height="88"/>
         <element name="DadosFisicos" positionX="3105" positionY="-5058" width="128" height="73"/>
-        <element name="Pessoa" positionX="2925" positionY="-5004" width="146" height="118"/>
-        <element name="Ficha" positionX="3112" positionY="-4907" width="128" height="163"/>
-        <element name="Treinos" positionX="3283" positionY="-4905" width="128" height="88"/>
         <element name="Exercicio" positionX="3463" positionY="-4905" width="128" height="118"/>
+        <element name="ExercicioPadrao" positionX="3447" positionY="-4743" width="128" height="88"/>
+        <element name="Ficha" positionX="3112" positionY="-4907" width="128" height="163"/>
+        <element name="Pessoa" positionX="2925" positionY="-5004" width="146" height="118"/>
+        <element name="Treinos" positionX="3283" positionY="-4905" width="128" height="88"/>
     </elements>
 </model>

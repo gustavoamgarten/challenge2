@@ -30,14 +30,15 @@
 		EC7D011B1897CBD900D63E28 /* _Challenge_2__Ficha_Treino_2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7D011A1897CBD900D63E28 /* _Challenge_2__Ficha_Treino_2Tests.m */; };
 		EC7D36E7189AB24E008BF3D3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7D36E6189AB24E008BF3D3 /* CoreData.framework */; };
 		EC7D36F7189AC22D008BF3D3 /* DataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7D36EC189AC22D008BF3D3 /* DataStorage.m */; };
-		EC7D36F8189AC22D008BF3D3 /* DetalhesDoExercicio.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7D36EE189AC22D008BF3D3 /* DetalhesDoExercicio.m */; };
-		EC7D36F9189AC22D008BF3D3 /* FichaDeTreino.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7D36F0189AC22D008BF3D3 /* FichaDeTreino.m */; };
-		EC7D36FA189AC22D008BF3D3 /* HistoricoTreinamento.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7D36F2189AC22D008BF3D3 /* HistoricoTreinamento.m */; };
-		EC7D36FB189AC22D008BF3D3 /* Pessoa.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7D36F4189AC22D008BF3D3 /* Pessoa.m */; };
-		EC7D36FC189AC22D008BF3D3 /* Treinamentos.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7D36F6189AC22D008BF3D3 /* Treinamentos.m */; };
-		EC7D3702189AC52F008BF3D3 /* fichas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC7D3700189AC52F008BF3D3 /* fichas.xcdatamodeld */; };
 		EC7D376F189AD2D3008BF3D3 /* InitialController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7D376E189AD2D3008BF3D3 /* InitialController.m */; };
 		ED194E95189C076A006EE9F5 /* DadoFisico.m in Sources */ = {isa = PBXBuildFile; fileRef = ED194E94189C076A006EE9F5 /* DadoFisico.m */; };
+		ED1D0FD7189FCBD300AECAC4 /* fichas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED1D0FD5189FCBD300AECAC4 /* fichas.xcdatamodeld */; };
+		ED1D0FDA189FCC0500AECAC4 /* Exerciciopadrao.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1D0FD9189FCC0500AECAC4 /* Exerciciopadrao.m */; };
+		ED1D0FDD189FCC0500AECAC4 /* Pessoa.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1D0FDC189FCC0500AECAC4 /* Pessoa.m */; };
+		ED1D0FE0189FCC0500AECAC4 /* Treinos.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1D0FDF189FCC0500AECAC4 /* Treinos.m */; };
+		ED1D0FE3189FCC0500AECAC4 /* DadosFisicos.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1D0FE2189FCC0500AECAC4 /* DadosFisicos.m */; };
+		ED1D0FE6189FCC0500AECAC4 /* Exercicio.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1D0FE5189FCC0500AECAC4 /* Exercicio.m */; };
+		ED1D0FE9189FCC0600AECAC4 /* Ficha.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1D0FE8189FCC0600AECAC4 /* Ficha.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,21 +84,23 @@
 		EC7D36E6189AB24E008BF3D3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EC7D36EB189AC22D008BF3D3 /* DataStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStorage.h; sourceTree = "<group>"; };
 		EC7D36EC189AC22D008BF3D3 /* DataStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStorage.m; sourceTree = "<group>"; };
-		EC7D36ED189AC22D008BF3D3 /* DetalhesDoExercicio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalhesDoExercicio.h; sourceTree = "<group>"; };
-		EC7D36EE189AC22D008BF3D3 /* DetalhesDoExercicio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalhesDoExercicio.m; sourceTree = "<group>"; };
-		EC7D36EF189AC22D008BF3D3 /* FichaDeTreino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FichaDeTreino.h; sourceTree = "<group>"; };
-		EC7D36F0189AC22D008BF3D3 /* FichaDeTreino.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FichaDeTreino.m; sourceTree = "<group>"; };
-		EC7D36F1189AC22D008BF3D3 /* HistoricoTreinamento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoricoTreinamento.h; sourceTree = "<group>"; };
-		EC7D36F2189AC22D008BF3D3 /* HistoricoTreinamento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoricoTreinamento.m; sourceTree = "<group>"; };
-		EC7D36F3189AC22D008BF3D3 /* Pessoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pessoa.h; sourceTree = "<group>"; };
-		EC7D36F4189AC22D008BF3D3 /* Pessoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pessoa.m; sourceTree = "<group>"; };
-		EC7D36F5189AC22D008BF3D3 /* Treinamentos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Treinamentos.h; sourceTree = "<group>"; };
-		EC7D36F6189AC22D008BF3D3 /* Treinamentos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Treinamentos.m; sourceTree = "<group>"; };
-		EC7D3701189AC52F008BF3D3 /* CDtesteDBA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CDtesteDBA.xcdatamodel; sourceTree = "<group>"; };
 		EC7D376D189AD2D3008BF3D3 /* InitialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialController.h; sourceTree = "<group>"; };
 		EC7D376E189AD2D3008BF3D3 /* InitialController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialController.m; sourceTree = "<group>"; };
 		ED194E93189C076A006EE9F5 /* DadoFisico.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DadoFisico.h; sourceTree = "<group>"; };
 		ED194E94189C076A006EE9F5 /* DadoFisico.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DadoFisico.m; sourceTree = "<group>"; };
+		ED1D0FD6189FCBD300AECAC4 /* fichas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fichas.xcdatamodel; sourceTree = "<group>"; };
+		ED1D0FD8189FCC0500AECAC4 /* Exerciciopadrao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exerciciopadrao.h; sourceTree = "<group>"; };
+		ED1D0FD9189FCC0500AECAC4 /* Exerciciopadrao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exerciciopadrao.m; sourceTree = "<group>"; };
+		ED1D0FDB189FCC0500AECAC4 /* Pessoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pessoa.h; sourceTree = "<group>"; };
+		ED1D0FDC189FCC0500AECAC4 /* Pessoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pessoa.m; sourceTree = "<group>"; };
+		ED1D0FDE189FCC0500AECAC4 /* Treinos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Treinos.h; sourceTree = "<group>"; };
+		ED1D0FDF189FCC0500AECAC4 /* Treinos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Treinos.m; sourceTree = "<group>"; };
+		ED1D0FE1189FCC0500AECAC4 /* DadosFisicos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DadosFisicos.h; sourceTree = "<group>"; };
+		ED1D0FE2189FCC0500AECAC4 /* DadosFisicos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DadosFisicos.m; sourceTree = "<group>"; };
+		ED1D0FE4189FCC0500AECAC4 /* Exercicio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercicio.h; sourceTree = "<group>"; };
+		ED1D0FE5189FCC0500AECAC4 /* Exercicio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercicio.m; sourceTree = "<group>"; };
+		ED1D0FE7189FCC0600AECAC4 /* Ficha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ficha.h; sourceTree = "<group>"; };
+		ED1D0FE8189FCC0600AECAC4 /* Ficha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ficha.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +166,7 @@
 		EC32298E18993AB6009C34C1 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				EC7D3700189AC52F008BF3D3 /* fichas.xcdatamodeld */,
+				ED1D0FD5189FCBD300AECAC4 /* fichas.xcdatamodeld */,
 				EC7D00FE1897CBD900D63E28 /* AppDelegate.h */,
 				EC7D00FF1897CBD900D63E28 /* AppDelegate.m */,
 				EC7D01011897CBD900D63E28 /* Main.storyboard */,
@@ -262,16 +265,18 @@
 		EC7D36E9189AC13D008BF3D3 /* Fichas */ = {
 			isa = PBXGroup;
 			children = (
-				EC7D36ED189AC22D008BF3D3 /* DetalhesDoExercicio.h */,
-				EC7D36EE189AC22D008BF3D3 /* DetalhesDoExercicio.m */,
-				EC7D36EF189AC22D008BF3D3 /* FichaDeTreino.h */,
-				EC7D36F0189AC22D008BF3D3 /* FichaDeTreino.m */,
-				EC7D36F1189AC22D008BF3D3 /* HistoricoTreinamento.h */,
-				EC7D36F2189AC22D008BF3D3 /* HistoricoTreinamento.m */,
-				EC7D36F3189AC22D008BF3D3 /* Pessoa.h */,
-				EC7D36F4189AC22D008BF3D3 /* Pessoa.m */,
-				EC7D36F5189AC22D008BF3D3 /* Treinamentos.h */,
-				EC7D36F6189AC22D008BF3D3 /* Treinamentos.m */,
+				ED1D0FDB189FCC0500AECAC4 /* Pessoa.h */,
+				ED1D0FDC189FCC0500AECAC4 /* Pessoa.m */,
+				ED1D0FE1189FCC0500AECAC4 /* DadosFisicos.h */,
+				ED1D0FE2189FCC0500AECAC4 /* DadosFisicos.m */,
+				ED1D0FE7189FCC0600AECAC4 /* Ficha.h */,
+				ED1D0FE8189FCC0600AECAC4 /* Ficha.m */,
+				ED1D0FE4189FCC0500AECAC4 /* Exercicio.h */,
+				ED1D0FE5189FCC0500AECAC4 /* Exercicio.m */,
+				ED1D0FDE189FCC0500AECAC4 /* Treinos.h */,
+				ED1D0FDF189FCC0500AECAC4 /* Treinos.m */,
+				ED1D0FD8189FCC0500AECAC4 /* Exerciciopadrao.h */,
+				ED1D0FD9189FCC0500AECAC4 /* Exerciciopadrao.m */,
 			);
 			name = Fichas;
 			sourceTree = "<group>";
@@ -383,21 +388,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC7D36F8189AC22D008BF3D3 /* DetalhesDoExercicio.m in Sources */,
 				EC2CF213189C025C0097C82A /* Exercicios.m in Sources */,
-				EC7D36FB189AC22D008BF3D3 /* Pessoa.m in Sources */,
 				EC32298818992690009C34C1 /* TreinoViewController.m in Sources */,
 				EC7D01001897CBD900D63E28 /* AppDelegate.m in Sources */,
-				EC7D36FA189AC22D008BF3D3 /* HistoricoTreinamento.m in Sources */,
+				ED1D0FD7189FCBD300AECAC4 /* fichas.xcdatamodeld in Sources */,
 				EC11C3AE18981F0600F7EC2E /* FichaViewController.m in Sources */,
 				EC7D376F189AD2D3008BF3D3 /* InitialController.m in Sources */,
-				EC7D36F9189AC22D008BF3D3 /* FichaDeTreino.m in Sources */,
+				ED1D0FE3189FCC0500AECAC4 /* DadosFisicos.m in Sources */,
 				EC322985189911DE009C34C1 /* CategoriaViewController.m in Sources */,
 				EC7D00FC1897CBD900D63E28 /* main.m in Sources */,
+				ED1D0FE0189FCC0500AECAC4 /* Treinos.m in Sources */,
+				ED1D0FE6189FCC0500AECAC4 /* Exercicio.m in Sources */,
 				ED194E95189C076A006EE9F5 /* DadoFisico.m in Sources */,
-				EC7D3702189AC52F008BF3D3 /* fichas.xcdatamodeld in Sources */,
-				EC7D36FC189AC22D008BF3D3 /* Treinamentos.m in Sources */,
 				EC7D36F7189AC22D008BF3D3 /* DataStorage.m in Sources */,
+				ED1D0FE9189FCC0600AECAC4 /* Ficha.m in Sources */,
+				ED1D0FDD189FCC0500AECAC4 /* Pessoa.m in Sources */,
+				ED1D0FDA189FCC0500AECAC4 /* Exerciciopadrao.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,12 +626,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		EC7D3700189AC52F008BF3D3 /* fichas.xcdatamodeld */ = {
+		ED1D0FD5189FCBD300AECAC4 /* fichas.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				EC7D3701189AC52F008BF3D3 /* CDtesteDBA.xcdatamodel */,
+				ED1D0FD6189FCBD300AECAC4 /* fichas.xcdatamodel */,
 			);
-			currentVersion = EC7D3701189AC52F008BF3D3 /* CDtesteDBA.xcdatamodel */;
+			currentVersion = ED1D0FD6189FCBD300AECAC4 /* fichas.xcdatamodel */;
 			path = fichas.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
