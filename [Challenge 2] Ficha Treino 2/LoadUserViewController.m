@@ -52,5 +52,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)iniciarCadastro:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"iniciarCadastro" sender:self];
+}
 
 @end

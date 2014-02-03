@@ -31,15 +31,15 @@
     [DataStorage setManagedObjectContext:context];
     [[DataStorage sharedRepository]reloadData];
     
-//    NSArray* pessoa = [[DataStorage sharedRepository] getPessoas];
-//    NSArray* treino = [[DataStorage sharedRepository]getFichasDeTreino];
-//    NSArray* exercicio = [[DataStorage sharedRepository]getFichasDeExercicio];
+//    NSDate *data = [NSDate date];
+//    
+//    [[DataStorage sharedRepository] addHomem:@"Nome" comDataDeNascimento:data];
+//    
+//    NSArray *pessoas
     
-    [[DataStorage sharedRepository]addExercicioPadrao:@"Supino Reto" comCategoria:1];
-    
-    NSLog(@"\r\n%@",[[DataStorage sharedRepository]getPessoas]);
-    
-    NSLog(@"\r\n%@",[[DataStorage sharedRepository]getFichasDeExercicioPadrao]);
+//    NSLog(@"\r\n%@",[[DataStorage sharedRepository]getPessoas]);
+//    
+//    NSLog(@"\r\n%@",[[DataStorage sharedRepository]getFichasDeExercicioPadrao]);
     
     //NSLog(@"\r\n%@",exercicio);
     return YES;
