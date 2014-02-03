@@ -1,19 +1,18 @@
 //
-//  AddNameViewController.m
+//  AddSexViewController.m
 //  [Challenge 2] Ficha Treino 2
 //
 //  Created by Gustavo Amgarten de Lêdo on 2/3/14.
 //  Copyright (c) 2014 BEPiD. All rights reserved.
 //
 
-#import "AddNameViewController.h"
 #import "AddSexViewController.h"
 
-@interface AddNameViewController ()
+@interface AddSexViewController ()
 
 @end
 
-@implementation AddNameViewController
+@implementation AddSexViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,22 +33,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Actions
-- (IBAction)addName:(UITextField *)sender {
-    self.nome = sender.text;
-    NSLog(@"Nome: %@", self.nome);
-    //[self performSegueWithIdentifier:@"addSex" sender:self];
-}
-- (IBAction)goToAddSex:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"addSex" sender:self];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    AddSexViewController *destController = segue.destinationViewController;
-    
-    destController.nome = self.nome;
 }
 
 @end

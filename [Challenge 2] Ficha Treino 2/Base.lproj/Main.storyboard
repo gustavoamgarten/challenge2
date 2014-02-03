@@ -68,7 +68,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="Pqe-0T-c81" kind="modal" id="Zlc-w6-4rM"/>
+                        <segue destination="Pqe-0T-c81" kind="push" id="Zlc-w6-4rM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="83q-dh-Tro" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -84,7 +84,7 @@
                         <viewControllerLayoutGuide type="bottom" id="bJU-0j-ZaG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="g3D-My-mWE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
