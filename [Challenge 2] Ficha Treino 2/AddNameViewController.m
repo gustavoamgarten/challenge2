@@ -40,7 +40,6 @@
 - (IBAction)addName:(UITextField *)sender {
     self.nome = sender.text;
     NSLog(@"Nome: %@", self.nome);
-    //[self performSegueWithIdentifier:@"addSex" sender:self];
 }
 - (IBAction)goToAddSex:(UIButton *)sender {
     [self performSegueWithIdentifier:@"addSex" sender:self];

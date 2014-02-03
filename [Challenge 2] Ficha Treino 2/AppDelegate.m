@@ -39,17 +39,32 @@
     //setar qual o contexto para gerenciar os dados do banco local
     [DataStorage setManagedObjectContext:context];
     //recupera os dados do banco de dados local
-    [[DataStorage sharedRepository]reloadData];
+    //[[DataStorage sharedRepository]reloadData];
     
-//    NSDate *data = [NSDate date];
-//    
-//    [[DataStorage sharedRepository] addHomem:@"Nome" comDataDeNascimento:data];
-//    
-//    NSArray *pessoas
+    //recupera os arrais de pessoa e exercicio padrao
+    //NSArray* pessoas = [[DataStorage sharedRepository]getPessoas];
+    //NSArray* exercicoPadrao =[[DataStorage sharedRepository]getFichasDeExercicioPadrao];
     
-//    NSLog(@"\r\n%@",[[DataStorage sharedRepository]getPessoas]);
-//    
-//    NSLog(@"\r\n%@",[[DataStorage sharedRepository]getFichasDeExercicioPadrao]);
+    //Pessoa* pessoaInfo = pessoas[0];
+    //NSLog(@"\r\nPESSOAS CADASTRADAS [%d]: \r\n%@\r\nEND",[pessoas count],pessoas);
+    
+    //[pessoaInfo removeFichasObject:[pessoaInfo getFichas][([[pessoaInfo getFichas] count]-1)]] ;
+    
+    //apaga a ultima pessoa
+    //[[DataStorage sharedRepository]deletePessoa:pessoas[[pessoas count ]-1]];
+    
+    
+    
+    //recupera os arrais de pessoa e exercicio padrao (eles não são atualizados porque o array passado é uma cópia)
+    //pessoas = [[DataStorage sharedRepository]getPessoas];
+    //exercicoPadrao =[[DataStorage sharedRepository]getFichasDeExercicioPadrao];
+    
+
+    //NSLog(@"\r\nPESSOAS CADASTRADAS [%d]: \r\n%@\r\nEND",[pessoas count],pessoas);
+    
+    //NSLog(@"\r\nEXERCICOS CADASTRADOS [%d]: \r\n%@\r\nEND",[exercicoPadrao count],exercicoPadrao);
+    
+    
     
     return YES;
 }

@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
-        <!--Add Name View Controller-->
+        <!--Add Name View Controller - Nome-->
         <scene sceneID="qxn-97-R0e">
             <objects>
                 <viewController id="DzE-77-kxa" customClass="AddNameViewController" sceneMemberID="viewController">
@@ -45,7 +45,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="FdB-Dc-Jm5"/>
+                    <navigationItem key="navigationItem" title="Nome" id="FdB-Dc-Jm5"/>
                     <connections>
                         <segue destination="76X-eF-4Sh" kind="push" identifier="addSex" id="Wic-30-MpJ"/>
                     </connections>
@@ -54,19 +54,20 @@
             </objects>
             <point key="canvasLocation" x="816" y="-553"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Sex View Controller - Sexo-->
         <scene sceneID="4lT-tb-bOF">
             <objects>
-                <viewController id="76X-eF-4Sh" sceneMemberID="viewController">
+                <viewController id="76X-eF-4Sh" customClass="AddSexViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UbF-iO-R2T"/>
-                        <viewControllerLayoutGuide type="bottom" id="KUo-E3-2Im"/>
+                        <viewControllerLayoutGuide type="top" id="Wrh-SD-rRZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zc0-wP-HDj"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="l7q-bx-v1q">
+                    <view key="view" contentMode="scaleToFill" id="JP4-lv-74s">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Sexo" id="G6W-IQ-iIS"/>
                     <connections>
                         <segue destination="Pqe-0T-c81" kind="push" id="Zlc-w6-4rM"/>
                     </connections>
@@ -695,13 +696,18 @@
     <resources>
         <image name="calendar" width="16" height="16"/>
         <image name="edit" width="48" height="48"/>
+        <image name="edit" width="48" height="48"/>
         <image name="frequency" width="16" height="16"/>
         <image name="goal" width="128" height="128"/>
+        <image name="loop" width="32" height="32"/>
         <image name="loop" width="32" height="32"/>
         <image name="next" width="72" height="72"/>
         <image name="note" width="32" height="32"/>
         <image name="sequence" width="16" height="16"/>
+        <image name="sequence" width="16" height="16"/>
         <image name="time" width="32" height="32"/>
+        <image name="weight" width="30" height="30"/>
+        <image name="weight" width="30" height="30"/>
         <image name="weight" width="30" height="30"/>
         <image name="youtube" width="64" height="64"/>
     </resources>
