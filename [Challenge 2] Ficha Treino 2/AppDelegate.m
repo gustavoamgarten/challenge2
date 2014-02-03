@@ -10,8 +10,6 @@
 
 #import "FichaViewController.h"
 #import "DataStorage.h"
-#import "Pessoa.h"
-
 
 @implementation AppDelegate
 
@@ -33,35 +31,17 @@
     [DataStorage setManagedObjectContext:context];
     [[DataStorage sharedRepository]reloadData];
     
+//    NSArray* pessoa = [[DataStorage sharedRepository] getPessoas];
+//    NSArray* treino = [[DataStorage sharedRepository]getFichasDeTreino];
+//    NSArray* exercicio = [[DataStorage sharedRepository]getFichasDeExercicio];
     
-    NSDateComponents *comps  = [[NSDateComponents alloc]init];
-    [comps setYear:1982];
-    [comps setWeekOfMonth:3];
-    [comps setDay:11];
+    [[DataStorage sharedRepository]addExercicioPadrao:@"Supino Reto" comCategoria:1];
     
-    //NSDate *data = [[NSCalendar currentCalendar]dateFromComponents:comps];
-    //[[DataStorage sharedRepository]addMulher:@"Paula Pereira"  comDataDeNascimento:data];
+    NSLog(@"\r\n%@",[[DataStorage sharedRepository]getPessoas]);
     
-      NSArray* pessoa = [[DataStorage sharedRepository] getPessoas];
+    NSLog(@"\r\n%@",[[DataStorage sharedRepository]getFichasDeExercicioPadrao]);
     
-      NSArray* exercicio = [[DataStorage sharedRepository]getFichasDeExercicioPadrao];
-    
-    Pessoa *pessoaInfo;
-    if([pessoa count]> 1)
-    {
-        pessoaInfo = pessoa[1];
-        //[pessoaInfo addFichaDeTreino:1 comFrequencia:13 comPeriodoQuantidade:6 comPeriodoTipo:88];
-    }
-    
-    //pessoa = [[DataStorage sharedRepository] getPessoas];
-    
-    NSArray* arrayDeTreinos = [pessoaInfo.fichas allObjects];
-    
-      //NSLog(@"\r\n%@",pessoa);
-    
-    NSLog(@"\r\n%@",pessoaInfo.fichas);
-    
-      NSLog(@"\r\n%@",exercicio);
+    //NSLog(@"\r\n%@",exercicio);
     return YES;
 }
 

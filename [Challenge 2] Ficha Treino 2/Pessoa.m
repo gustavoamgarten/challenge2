@@ -19,9 +19,7 @@
 @dynamic dadosFisicos;
 @dynamic fichas;
 
-
-
--(BOOL) addFichaDeTreinoComObjetivo:(int)objetivo comFrequencia:(int)frequencia comPeriodoQuantidade:(int)periodoQuantidade
+-(BOOL) addFichaComObjetivo:(int)objetivo comFrequencia:(int)frequencia comPeriodoQuantidade:(int)periodoQuantidade
                      comPeriodoTipo:(int)periodoTipo comIntervalo:(int)intervalo
 {
     Ficha *fichaDeTreinos = [NSEntityDescription insertNewObjectForEntityForName:tabelaFichasPessoa
@@ -38,6 +36,25 @@
     
     NSError *error = nil;
     if (![fichaDeTreinos.managedObjectContext save:&error])
+    {
+        return NO;
+    }
+    
+    [[DataStorage sharedRepository]reloadData];
+    return YES;
+}
+
+
+-(BOOL)addDadosFisicos:(DadoFisico*)dados
+{
+    DadosFisicos *dadosFisicos = self.dadosFisicos;
+    NSMutableArray *arrayDeDados = [[NSMutableArray alloc]initWithArray:dadosFisicos.dadosFisicos];
+    [arrayDeDados addObject:dados];
+    
+    dadosFisicos.dadosFisicos = arrayDeDados;
+    
+    NSError *error = nil;
+    if (![dadosFisicos.managedObjectContext save:&error])
     {
         return NO;
     }
