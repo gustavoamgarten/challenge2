@@ -36,7 +36,7 @@
     <entity name="Treinos" representedClassName="Treinos" syncable="YES">
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="fichaRelacionada" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Ficha" inverseName="listaDeTreinos" inverseEntity="Ficha" syncable="YES"/>
-        <relationship name="listaDeExercicios" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Exercicio" inverseName="treinoRelacionado" inverseEntity="Exercicio" syncable="YES"/>
+        <relationship name="listaDeExercicios" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Exercicio" inverseName="treinoRelacionado" inverseEntity="Exercicio" syncable="YES"/>
     </entity>
     <elements>
         <element name="DadosFisicos" positionX="3105" positionY="-5058" width="128" height="73"/>

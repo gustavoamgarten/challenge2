@@ -23,26 +23,25 @@
 -(void)reloadData;
 
 -(NSArray *)getPessoas;
--(NSArray *)getFichasDeTreino;
--(NSArray *)getFichasDeExercicio;
+-(NSArray *)getFichasDeExercicioPadrao;
 
 
 -(BOOL)addFichaDeTreino:(NSString*)nome
-                comObjetivo:(int) codigoDoObjetivo
-            comSemanasDeUso:(int)semanas
+            comObjetivo:(int) codigoDoObjetivo
+        comSemanasDeUso:(int)semanas
 comIntervaloEntreSequencias:(int) intervalo
 comFrequenciaDeTreinosSemanais:(int) frequencia;
 -(BOOL)addFichaDeTreino:(NSString*)nome comObjetivo:(int) codigoDoObjetivo
-              comMesesDeUso:(int)meses comIntervaloEntreSequencias:(int) intervalo
+          comMesesDeUso:(int)meses comIntervaloEntreSequencias:(int) intervalo
 comFrequenciaDeTreinosSemanais:(int) frequencia;
 -(BOOL)addFichaDeExercicio:(NSString*) nome comPesoUtilizado:(float) peso
-         comNumeroDeRepeticoes:(int) repeticoes comNumeroDeSeries:(int) series;
+     comNumeroDeRepeticoes:(int) repeticoes comNumeroDeSeries:(int) series;
 
 
--(BOOL)addHomem:(NSString*) nomeCompleto
-          comAltura:(float) altura
+-(BOOL)addHomem:(NSString*) nome
+      comAltura:(float) altura
 comDataDeNascimento:(NSDate*) dataDeNascimento;
--(BOOL)addMulher:(NSString*) nomeCompleto
-           comAltura:(float) altura
- comDataDeNascimento:(NSDate*) dataDeNascimento;
+-(BOOL)addMulher:(NSString*) nome
+       comAltura:(float) altura
+comDataDeNascimento:(NSDate*) dataDeNascimento;
 @end
