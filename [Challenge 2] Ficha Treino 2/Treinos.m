@@ -9,6 +9,7 @@
 #import "Treinos.h"
 #import "Exercicio.h"
 #import "Ficha.h"
+#import "DataStorage.h"
 
 
 @implementation Treinos
@@ -16,5 +17,28 @@
 @dynamic nome;
 @dynamic fichaRelacionada;
 @dynamic listaDeExercicios;
+
+
+-(BOOL)addExercicio:(Exerciciopadrao*)exercicioPadrao comPeso:(int)peso comRepeticoes:(int)repeticoes comSequencias:(int)sequencias;
+{
+    
+    Exercicio *fichaDeExercicio = [NSEntityDescription insertNewObjectForEntityForName:tabelaFichasExercicios
+                                                          inManagedObjectContext:self.managedObjectContext];
+
+    fichaDeExercicio.peso = [NSNumber numberWithInt:peso];
+    fichaDeExercicio.repeticoes = [NSNumber numberWithInt:repeticoes];
+    fichaDeExercicio.sequencias = [NSNumber numberWithInt:sequencias];
+    fichaDeExercicio.detalhesDoExercicio = exercicioPadrao;
+    fichaDeExercicio.treinoRelacionado = self;
+    
+    NSError *error = nil;
+    if (![fichaDeExercicio.managedObjectContext save:&error])
+    {
+        return NO;
+    }
+    
+    [[DataStorage sharedRepository]reloadData];
+    return YES;
+}
 
 @end

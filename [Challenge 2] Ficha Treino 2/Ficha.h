@@ -21,6 +21,9 @@
 @property (nonatomic, retain) NSNumber * periodoTipo;
 @property (nonatomic, retain) NSSet *listaDeTreinos;
 @property (nonatomic, retain) Pessoa *pessoa;
+
+-(BOOL)addTreino:(NSString*)nome;
+
 @end
 
 @interface Ficha (CoreDataGeneratedAccessors)

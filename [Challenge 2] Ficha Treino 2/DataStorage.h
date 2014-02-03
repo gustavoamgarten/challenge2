@@ -8,8 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+#define tabelaPessoas @"Pessoa"
+#define tabelaDadosFisicos @"DadosFisicos"
+#define tabelaFichasPessoa @"Ficha"
+#define tabelaFichasTreinos @"Treinos"
+#define tabelaFichasExercicios @"Exercicio"
+#define tabelaExerciciosPadrao @"ExercicioPadrao"
+
 @class FichaDeTreino;
 @class DetalhesDoExercicio;
+
 
 @interface DataStorage : NSObject
 
@@ -25,23 +33,23 @@
 -(NSArray *)getPessoas;
 -(NSArray *)getFichasDeExercicioPadrao;
 
+//
+//-(BOOL)addFichaDeTreino:(NSString*)nome
+//            comObjetivo:(int) codigoDoObjetivo
+//        comSemanasDeUso:(int)semanas
+//comIntervaloEntreSequencias:(int) intervalo
+//comFrequenciaDeTreinosSemanais:(int) frequencia;
+//
+//-(BOOL)addFichaDeTreino:(NSString*)nome comObjetivo:(int) codigoDoObjetivo
+//          comMesesDeUso:(int)meses comIntervaloEntreSequencias:(int) intervalo
+//comFrequenciaDeTreinosSemanais:(int) frequencia;
+//
+//-(BOOL)addFichaDeExercicio:(NSString*) nome comPesoUtilizado:(float) peso
+//     comNumeroDeRepeticoes:(int) repeticoes comNumeroDeSeries:(int) series;
+//
 
--(BOOL)addFichaDeTreino:(NSString*)nome
-            comObjetivo:(int) codigoDoObjetivo
-        comSemanasDeUso:(int)semanas
-comIntervaloEntreSequencias:(int) intervalo
-comFrequenciaDeTreinosSemanais:(int) frequencia;
--(BOOL)addFichaDeTreino:(NSString*)nome comObjetivo:(int) codigoDoObjetivo
-          comMesesDeUso:(int)meses comIntervaloEntreSequencias:(int) intervalo
-comFrequenciaDeTreinosSemanais:(int) frequencia;
--(BOOL)addFichaDeExercicio:(NSString*) nome comPesoUtilizado:(float) peso
-     comNumeroDeRepeticoes:(int) repeticoes comNumeroDeSeries:(int) series;
+-(BOOL)addExercicioPadrao:(NSString*)nome comCategoria:(int)categoria;
 
-
--(BOOL)addHomem:(NSString*) nome
-      comAltura:(float) altura
-comDataDeNascimento:(NSDate*) dataDeNascimento;
--(BOOL)addMulher:(NSString*) nome
-       comAltura:(float) altura
-comDataDeNascimento:(NSDate*) dataDeNascimento;
+-(BOOL)addHomem:(NSString*) nome comDataDeNascimento:(NSDate*) dataDeNascimento;
+-(BOOL)addMulher:(NSString*) nome comDataDeNascimento:(NSDate*) dataDeNascimento;
 @end

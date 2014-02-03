@@ -9,7 +9,7 @@
 #import "Ficha.h"
 #import "Pessoa.h"
 #import "Treinos.h"
-
+#import "DataStorage.h"
 
 @implementation Ficha
 
@@ -21,5 +21,25 @@
 @dynamic periodoTipo;
 @dynamic listaDeTreinos;
 @dynamic pessoa;
+
+
+-(BOOL)addTreino:(NSString*)nome
+{
+    
+    Treinos *fichaDeTreino = [NSEntityDescription insertNewObjectForEntityForName:tabelaFichasTreinos
+                                                                inManagedObjectContext:self.managedObjectContext];
+    
+    fichaDeTreino.nome = nome;
+    fichaDeTreino.fichaRelacionada = self;
+    
+    NSError *error = nil;
+    if (![fichaDeTreino.managedObjectContext save:&error])
+    {
+        return NO;
+    }
+    
+    [[DataStorage sharedRepository]reloadData];
+    return YES;
+}
 
 @end

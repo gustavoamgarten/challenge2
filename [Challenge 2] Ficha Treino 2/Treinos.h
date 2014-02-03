@@ -9,13 +9,16 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Exercicio, Ficha;
+@class Exercicio, Ficha, Exerciciopadrao;
 
 @interface Treinos : NSManagedObject
 
 @property (nonatomic, retain) NSString * nome;
 @property (nonatomic, retain) Ficha *fichaRelacionada;
 @property (nonatomic, retain) NSSet *listaDeExercicios;
+
+-(BOOL)addExercicio:(Exerciciopadrao*)exercicioPadrao comPeso:(int)peso comRepeticoes:(int)repeticoes comSequencias:(int)sequencias;
+
 @end
 
 @interface Treinos (CoreDataGeneratedAccessors)

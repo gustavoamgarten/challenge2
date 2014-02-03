@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class DadosFisicos, Ficha;
+@class DadosFisicos, Ficha, DadoFisico;
 
 @interface Pessoa : NSManagedObject
 
@@ -18,6 +18,12 @@
 @property (nonatomic, retain) NSNumber * sexoMasculino;
 @property (nonatomic, retain) DadosFisicos *dadosFisicos;
 @property (nonatomic, retain) NSSet *fichas;
+
+-(BOOL) addFichaComObjetivo:(int)objetivo comFrequencia:(int)frequencia comPeriodoQuantidade:(int)periodoQuantidade
+                     comPeriodoTipo:(int)periodoTipo comIntervalo:(int)intervalo;
+
+-(BOOL)addDadosFisicos:(DadoFisico*)dados;
+
 @end
 
 @interface Pessoa (CoreDataGeneratedAccessors)
