@@ -8,7 +8,7 @@
 
 #import "FichaViewController.h"
 
-@interface FichaViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIPickerViewDataSource>
+@interface FichaViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -63,14 +63,14 @@
     return CGSizeMake(70, 70); //Return the size of the cell.
 }
 
-#pragma mark - UIPickerViewDataSource
-
-- (NSInteger) pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return 3;
-}
-
-- (NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return 1;
-}
+//#pragma mark - UIPickerViewDataSource
+//
+//- (NSInteger) pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+//    return 3;
+//}
+//
+//- (NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+//    return 1;
+//}
 
 @end
