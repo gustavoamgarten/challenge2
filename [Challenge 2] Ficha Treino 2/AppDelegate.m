@@ -29,20 +29,20 @@
     
     NSManagedObjectContext *context = [self managedObjectContext];
     
-    [DataStorage setManagedObjectContext:context];
-    [[DataStorage sharedRepository]reloadData];
+//    [DataStorage setManagedObjectContext:context];
+//    [[DataStorage sharedRepository]reloadData];
     //[[DataStorage sharedRepository] addFichaDeExercicio:@"Supino" comPesoUtilizado:30.5f comNumeroDeRepeticoes:10 comNumeroDeSeries:3];
-    [[DataStorage sharedRepository] addFichaDeTreino:@"A" comObjetivo:2 comMesesDeUso:4 comIntervaloEntreSequencias:23 comFrequenciaDeTreinosSemanais:5];
+//    [[DataStorage sharedRepository] addFichaDeTreino:@"A" comObjetivo:2 comMesesDeUso:4 comIntervaloEntreSequencias:23 comFrequenciaDeTreinosSemanais:5];
     
-    NSArray* pessoa = [[DataStorage sharedRepository] getPessoas];
-    NSArray* treino = [[DataStorage sharedRepository]getFichasDeTreino];
-    NSArray* exercicio = [[DataStorage sharedRepository]getFichasDeExercicio];
-    
-    NSLog(@"\r\n%@",pessoa);
-    
-    NSLog(@"\r\n%@",treino);
-    
-    NSLog(@"\r\n%@",exercicio);
+//    NSArray* pessoa = [[DataStorage sharedRepository] getPessoas];
+//    NSArray* treino = [[DataStorage sharedRepository]getFichasDeTreino];
+//    NSArray* exercicio = [[DataStorage sharedRepository]getFichasDeExercicio];
+//    
+//    NSLog(@"\r\n%@",pessoa);
+//    
+//    NSLog(@"\r\n%@",treino);
+//    
+//    NSLog(@"\r\n%@",exercicio);
     return YES;
 }
 
