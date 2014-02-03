@@ -19,6 +19,13 @@
 @dynamic dadosFisicos;
 @dynamic fichas;
 
+
+-(NSArray*)getFichas
+{
+    return [self.fichas allObjects];
+}
+
+#pragma mark - métodos para adição de dados
 -(BOOL) addFichaComObjetivo:(int)objetivo comFrequencia:(int)frequencia comPeriodoQuantidade:(int)periodoQuantidade
                      comPeriodoTipo:(int)periodoTipo comIntervalo:(int)intervalo
 {

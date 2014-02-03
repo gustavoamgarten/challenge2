@@ -11,6 +11,14 @@
 #import "FichaViewController.h"
 #import "DataStorage.h"
 
+#import "Pessoa.h"
+#import "DadoFisico.h"
+#import "Ficha.h"
+#import "Exerciciopadrao.h"
+#import "Treinos.h"
+#import "Exercicio.h"
+
+
 @implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -26,9 +34,11 @@
     //controller.managedObjectContext = self.managedObjectContext;
     
     
+    //recupera qual o contexto
     NSManagedObjectContext *context = [self managedObjectContext];
-    
+    //setar qual o contexto para gerenciar os dados do banco local
     [DataStorage setManagedObjectContext:context];
+    //recupera os dados do banco de dados local
     [[DataStorage sharedRepository]reloadData];
     
 //    NSDate *data = [NSDate date];
@@ -41,7 +51,6 @@
 //    
 //    NSLog(@"\r\n%@",[[DataStorage sharedRepository]getFichasDeExercicioPadrao]);
     
-    //NSLog(@"\r\n%@",exercicio);
     return YES;
 }
 

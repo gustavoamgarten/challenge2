@@ -17,8 +17,12 @@
 @property (nonatomic, retain) Ficha *fichaRelacionada;
 @property (nonatomic, retain) NSSet *listaDeExercicios;
 
+//adicionar novo exercício na ficha de treino
 -(BOOL)addExercicio:(Exerciciopadrao*)exercicioPadrao comPeso:(int)peso comRepeticoes:(int)repeticoes comSequencias:(int)sequencias;
 
+
+//método para pegar o array de fichas de exercícios contidos no treino
+-(NSArray*)getListaExercicios;
 @end
 
 @interface Treinos (CoreDataGeneratedAccessors)

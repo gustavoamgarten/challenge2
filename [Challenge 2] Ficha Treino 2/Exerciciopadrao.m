@@ -16,4 +16,9 @@
 @dynamic nome;
 @dynamic exerciciosRelacionados;
 
+
+-(NSArray*)getListaExerciciosRelacionados
+{
+    return [self.exerciciosRelacionados allObjects];
+}
 @end

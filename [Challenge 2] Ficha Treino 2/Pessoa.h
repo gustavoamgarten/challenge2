@@ -19,11 +19,15 @@
 @property (nonatomic, retain) DadosFisicos *dadosFisicos;
 @property (nonatomic, retain) NSSet *fichas;
 
+//método para adicionar nova ficha de treino da pessoa
 -(BOOL) addFichaComObjetivo:(int)objetivo comFrequencia:(int)frequencia comPeriodoQuantidade:(int)periodoQuantidade
                      comPeriodoTipo:(int)periodoTipo comIntervalo:(int)intervalo;
 
+//método para inserir medidas da pessoa
 -(BOOL)addDadosFisicos:(DadoFisico*)dados;
 
+//método para pegar o array de fichas de treino da pessoa
+-(NSArray*)getFichas;
 @end
 
 @interface Pessoa (CoreDataGeneratedAccessors)

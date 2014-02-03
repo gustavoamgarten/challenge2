@@ -16,6 +16,9 @@
 @property (nonatomic, retain) NSNumber * categoria;
 @property (nonatomic, retain) NSString * nome;
 @property (nonatomic, retain) NSSet *exerciciosRelacionados;
+
+//método para pegar o array de exercicios ao qual este exercicio padrao está relacionado
+-(NSArray*)getListaExerciciosRelacionados;
 @end
 
 @interface Exerciciopadrao (CoreDataGeneratedAccessors)
