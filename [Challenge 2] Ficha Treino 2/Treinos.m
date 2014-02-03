@@ -18,6 +18,10 @@
 @dynamic fichaRelacionada;
 @dynamic listaDeExercicios;
 
+-(NSArray *)getListaExercicios
+{
+    return [self.listaDeExercicios allObjects];
+}
 
 -(BOOL)addExercicio:(Exerciciopadrao*)exercicioPadrao comPeso:(int)peso comRepeticoes:(int)repeticoes comSequencias:(int)sequencias;
 {

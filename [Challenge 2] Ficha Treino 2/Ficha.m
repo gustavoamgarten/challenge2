@@ -22,6 +22,10 @@
 @dynamic listaDeTreinos;
 @dynamic pessoa;
 
+-(NSArray*)getListaTreinos
+{
+    return [self.listaDeTreinos allObjects];
+}
 
 -(BOOL)addTreino:(NSString*)nome
 {

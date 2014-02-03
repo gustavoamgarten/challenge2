@@ -24,13 +24,6 @@
 
 @implementation DataStorage
 
-//NSString* const tabelaPessoas = @"Pessoa";
-//NSString* const tabelaDadosFisicos = @"DadosFisicos";
-//NSString* const tabelaFichasPessoa = @"Ficha";
-//NSString* const tabelaFichasTreinos = @"Treinos";
-//NSString* const tabelaFichasExercicios = @"Exercicio";
-//NSString* const tabelaExerciciosPadrao = @"ExercicioPadrao";
-
 static DataStorage *_dataStorageRepository = nil;
 static NSManagedObjectContext *_managedObjectContext;
 
@@ -180,6 +173,8 @@ static NSManagedObjectContext *_managedObjectContext;
     return [self.fichasExercicioPadrao copy];
 }
 
+#pragma mark Metodos para adicionar dados
+
 #pragma mark - Métodos para adicionar exercício Padrão
 
 -(BOOL)addExercicioPadrao:(NSString*)nome comCategoria:(int)categoria
@@ -247,4 +242,37 @@ comDataDeNascimento:(NSDate*) dataDeNascimento
     return YES;
 }
 
+#pragma mark - Métodos para apagar dados
+
+#pragma mark - Método para apagar pessoa
+
+-(BOOL)deletePessoa:(Pessoa*)pessoa
+{
+    [_managedObjectContext deleteObject:pessoa];
+    
+    NSError *error = nil;
+    if (![_managedObjectContext save:&error])
+    {
+        return NO;
+    }
+    
+    [self reloadData];
+    return YES;
+}
+
+#pragma mark - Método para apagar exercicio padrão
+
+-(BOOL)deleteExercicioPadrao:(Exerciciopadrao*)exercicioPadrao
+{
+    [_managedObjectContext deleteObject:exercicioPadrao];
+    
+    NSError *error = nil;
+    if (![_managedObjectContext save:&error])
+    {
+        return NO;
+    }
+    
+    [self reloadData];
+    return YES;
+}
 @end

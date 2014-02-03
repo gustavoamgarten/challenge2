@@ -11,6 +11,14 @@
 #import "FichaViewController.h"
 #import "DataStorage.h"
 
+#import "Pessoa.h"
+#import "DadoFisico.h"
+#import "Ficha.h"
+#import "Exerciciopadrao.h"
+#import "Treinos.h"
+#import "Exercicio.h"
+
+
 @implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -26,22 +34,38 @@
     //controller.managedObjectContext = self.managedObjectContext;
     
     
+    //recupera qual o contexto
     NSManagedObjectContext *context = [self managedObjectContext];
-    
+    //setar qual o contexto para gerenciar os dados do banco local
     [DataStorage setManagedObjectContext:context];
+    //recupera os dados do banco de dados local
     [[DataStorage sharedRepository]reloadData];
     
-//    NSArray* pessoa = [[DataStorage sharedRepository] getPessoas];
-//    NSArray* treino = [[DataStorage sharedRepository]getFichasDeTreino];
-//    NSArray* exercicio = [[DataStorage sharedRepository]getFichasDeExercicio];
+    //recupera os arrais de pessoa e exercicio padrao
+    NSArray* pessoas = [[DataStorage sharedRepository]getPessoas];
+    NSArray* exercicoPadrao =[[DataStorage sharedRepository]getFichasDeExercicioPadrao];
     
-    [[DataStorage sharedRepository]addExercicioPadrao:@"Supino Reto" comCategoria:1];
+    Pessoa* pessoaInfo = pessoas[0];
+    NSLog(@"\r\nPESSOAS CADASTRADAS [%d]: \r\n%@\r\nEND",[pessoas count],pessoas);
     
-    NSLog(@"\r\n%@",[[DataStorage sharedRepository]getPessoas]);
+    //[pessoaInfo removeFichasObject:[pessoaInfo getFichas][([[pessoaInfo getFichas] count]-1)]] ;
     
-    NSLog(@"\r\n%@",[[DataStorage sharedRepository]getFichasDeExercicioPadrao]);
+    //apaga a ultima pessoa
+    [[DataStorage sharedRepository]deletePessoa:pessoas[[pessoas count ]-1]];
     
-    //NSLog(@"\r\n%@",exercicio);
+    
+    
+    //recupera os arrais de pessoa e exercicio padrao (eles não são atualizados porque o array passado é uma cópia)
+    pessoas = [[DataStorage sharedRepository]getPessoas];
+    exercicoPadrao =[[DataStorage sharedRepository]getFichasDeExercicioPadrao];
+    
+
+    NSLog(@"\r\nPESSOAS CADASTRADAS [%d]: \r\n%@\r\nEND",[pessoas count],pessoas);
+    
+    NSLog(@"\r\nEXERCICOS CADASTRADOS [%d]: \r\n%@\r\nEND",[exercicoPadrao count],exercicoPadrao);
+    
+    
+    
     return YES;
 }
 

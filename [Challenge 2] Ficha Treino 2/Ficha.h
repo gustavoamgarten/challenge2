@@ -22,8 +22,12 @@
 @property (nonatomic, retain) NSSet *listaDeTreinos;
 @property (nonatomic, retain) Pessoa *pessoa;
 
+//Adicionar nova rotina de treino na ficha de treinamentos
 -(BOOL)addTreino:(NSString*)nome;
 
+
+//método para pegar o array de fichas de treinos contidos na ficha
+-(NSArray*)getListaTreinos;
 @end
 
 @interface Ficha (CoreDataGeneratedAccessors)
