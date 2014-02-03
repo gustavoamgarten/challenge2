@@ -7,8 +7,10 @@
 //
 
 #import "LoadUserViewController.h"
+#import "DataStorage.h"
 
 @interface LoadUserViewController ()
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 
 @end
 
@@ -28,7 +30,21 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    DataStorage *repository = [DataStorage sharedRepository];
+    [repository reloadData];
     
+    NSArray *pessoas = [repository getPessoas];
+    
+//    NSLog(@"pessoas: %d", [pessoas count]);
+    
+    if ([pessoas count] > 0) {
+        [self performSegueWithIdentifier:@"comFicha" sender:self];
+    }
+    
+    NSDate *currentDate = [NSDate date];
+    [self.datePicker setMaximumDate:currentDate];
+    CGAffineTransform s0 = CGAffineTransformMakeScale(0.5, 0.5);
+    self.datePicker.transform = s0;
 }
 
 - (void)didReceiveMemoryWarning
