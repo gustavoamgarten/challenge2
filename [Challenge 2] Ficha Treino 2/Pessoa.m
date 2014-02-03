@@ -9,7 +9,7 @@
 #import "Pessoa.h"
 #import "DadosFisicos.h"
 #import "Ficha.h"
-
+#import "DataStorage.h"
 
 @implementation Pessoa
 
@@ -18,5 +18,32 @@
 @dynamic sexoMasculino;
 @dynamic dadosFisicos;
 @dynamic fichas;
+
+
+
+-(BOOL) addFichaDeTreinoComObjetivo:(int)objetivo comFrequencia:(int)frequencia comPeriodoQuantidade:(int)periodoQuantidade
+                     comPeriodoTipo:(int)periodoTipo comIntervalo:(int)intervalo
+{
+    Ficha *fichaDeTreinos = [NSEntityDescription insertNewObjectForEntityForName:tabelaFichasPessoa
+                                                        inManagedObjectContext:self.managedObjectContext];
+    
+    fichaDeTreinos.dataDaCriacao = [NSDate date];
+    fichaDeTreinos.objetivo = [NSNumber numberWithInt:objetivo];
+    fichaDeTreinos.frequencia = [NSNumber numberWithInt:frequencia];
+    fichaDeTreinos.periodoQuantidade = [NSNumber numberWithInt:periodoQuantidade];
+    fichaDeTreinos.periodoTipo = [NSNumber numberWithInt:periodoTipo];
+    fichaDeTreinos.intervalo = [NSNumber numberWithInt:intervalo];
+    
+    fichaDeTreinos.pessoa = self;
+    
+    NSError *error = nil;
+    if (![fichaDeTreinos.managedObjectContext save:&error])
+    {
+        return NO;
+    }
+    
+    [[DataStorage sharedRepository]reloadData];
+    return YES;
+}
 
 @end

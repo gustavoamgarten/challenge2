@@ -18,6 +18,10 @@
 @property (nonatomic, retain) NSNumber * sexoMasculino;
 @property (nonatomic, retain) DadosFisicos *dadosFisicos;
 @property (nonatomic, retain) NSSet *fichas;
+
+-(BOOL) addFichaDeTreinoComObjetivo:(int)objetivo comFrequencia:(int)frequencia comPeriodoQuantidade:(int)periodoQuantidade
+                     comPeriodoTipo:(int)periodoTipo comIntervalo:(int)intervalo;
+
 @end
 
 @interface Pessoa (CoreDataGeneratedAccessors)

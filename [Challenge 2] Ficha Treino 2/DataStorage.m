@@ -21,14 +21,15 @@
 @end
 
 
+
 @implementation DataStorage
 
-NSString* const tabelaPessoas = @"Pessoa";
-NSString* const tabelaDadosFisicos = @"DadosFisicos";
-NSString* const tabelaFichasPessoa = @"Ficha";
-NSString* const tabelaFichasTreinos = @"Treinos";
-NSString* const tabelaFichasExercicios = @"Exercicio";
-NSString* const tabelaExerciciosPadrao = @"ExercicioPadrao";
+//NSString* const tabelaPessoas = @"Pessoa";
+//NSString* const tabelaDadosFisicos = @"DadosFisicos";
+//NSString* const tabelaFichasPessoa = @"Ficha";
+//NSString* const tabelaFichasTreinos = @"Treinos";
+//NSString* const tabelaFichasExercicios = @"Exercicio";
+//NSString* const tabelaExerciciosPadrao = @"ExercicioPadrao";
 
 static DataStorage *_dataStorageRepository = nil;
 static NSManagedObjectContext *_managedObjectContext;
@@ -86,17 +87,55 @@ static NSManagedObjectContext *_managedObjectContext;
 
 #pragma mark - Recuperar dados DBA
 
--(void)reloadData
+
+-(NSArray*)reloadEntity:(NSString*)entityName
 {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     [fetchRequest setReturnsObjectsAsFaults:NO];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:tabelaPessoas
+    NSEntityDescription *entity = [NSEntityDescription entityForName:entityName
                                               inManagedObjectContext:_managedObjectContext];
     NSError *error;
     
     
     [fetchRequest setEntity:entity];
-    NSArray *fetchedObjects = [_managedObjectContext executeFetchRequest:fetchRequest error:&error];
+     return [_managedObjectContext executeFetchRequest:fetchRequest error:&error];
+}
+
+
+-(NSArray*)reloadPessoa
+{
+    return [self reloadEntity:tabelaFichasPessoa];
+}
+
+-(NSArray*)reloadFichas
+{
+    return [self reloadEntity:tabelaFichasPessoa];
+}
+
+-(NSArray*)reloadDadosFisicos
+{
+    return [self reloadEntity:tabelaDadosFisicos];
+}
+
+-(NSArray*)reloadExercicios
+{
+    return [self reloadEntity:tabelaFichasExercicios];
+}
+
+-(NSArray*)reloadTreinos
+{
+    return [self reloadEntity:tabelaFichasTreinos];
+}
+
+-(NSArray*)reloadExerciciosPadrao
+{
+    return [self reloadEntity:tabelaExerciciosPadrao];
+}
+
+-(void)reloadData
+{
+    //Alimenta o array com os dados da pessoa;
+    NSArray *fetchedObjects = [self reloadPessoa];
     
     if(fetchedObjects != nil)
     {
@@ -105,13 +144,13 @@ static NSManagedObjectContext *_managedObjectContext;
     
     for (Pessoa *pessoa in fetchedObjects)
     {
+        
         [self.pessoas addObject:pessoa];
     }
     
-    entity = [NSEntityDescription entityForName:tabelaExerciciosPadrao
-                         inManagedObjectContext:_managedObjectContext];
-    [fetchRequest setEntity:entity];
-    fetchedObjects = [_managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    //Alimenta o Array com os exercíios padrao
+    fetchedObjects = [self reloadExerciciosPadrao];
     
     if(fetchedObjects != nil)
     {
@@ -122,6 +161,12 @@ static NSManagedObjectContext *_managedObjectContext;
     {
         [self.fichasExercicioPadrao addObject:exercicio];
     }
+    
+    //recarrega todas as tabelas restantes
+    [self reloadFichas];
+    [self reloadDadosFisicos];
+    [self reloadTreinos];
+    [self reloadExercicios];
 }
 
 #pragma mark - Métodos para recuperar dados
@@ -135,91 +180,29 @@ static NSManagedObjectContext *_managedObjectContext;
     return [self.fichasExercicioPadrao copy];
 }
 
+#pragma mark - Métodos para adicionar exercício Padrão
 
-#pragma mark - Métodos para gravar dados
-
--(BOOL)addFichaDeTreino:(NSString*)nome
-            comObjetivo:(int) codigoDoObjetivo
-        comSemanasDeUso:(int)semanas
-comIntervaloEntreSequencias:(int) intervalo
-comFrequenciaDeTreinosSemanais:(int) frequencia
+-(BOOL)addExercicioPadrao:(NSString*)nome comCategoria:(int)categoria
 {
-    //    FichaDeTreino *fichaDeTreino = [NSEntityDescription insertNewObjectForEntityForName:tabelaFichasTreinos
-    //                                                                 inManagedObjectContext:_managedObjectContext];
-    //
-    //    fichaDeTreino.nomeDoTreinamento = nome;
-    //    fichaDeTreino.dataDaCriacao = [NSDate date];
-    //    fichaDeTreino.intervaloEntreSequencias = [NSNumber numberWithInt:intervalo];
-    //    fichaDeTreino.frequenciaSemanal = [NSNumber numberWithInt:frequencia];
-    //    fichaDeTreino.periodoDeUtilizacaoDaFicha = [NSNumber numberWithInt:semanas];
-    //    fichaDeTreino.periodoEmSemanas = [NSNumber numberWithBool:YES];
-    //    fichaDeTreino.objetivoDoTreino = [NSNumber numberWithInt:codigoDoObjetivo];
-    //
-    //    NSError *error = nil;
-    //    if (![fichaDeTreino.managedObjectContext save:&error])
-    //    {
-    //        return NO;
-    //    }
-    //
-    //    //[self.fetchedResultsController performFetch:&error];
-    //    [self reloadData];
+    Exerciciopadrao *exercicoPadrao = [NSEntityDescription insertNewObjectForEntityForName:tabelaExerciciosPadrao
+                                                        inManagedObjectContext:_managedObjectContext];
+    
+    exercicoPadrao.nome = nome;
+    exercicoPadrao.categoria = [NSNumber numberWithInt:categoria];
+    
+    
+    NSError *error = nil;
+    if (![exercicoPadrao.managedObjectContext save:&error])
+    {
+        return NO;
+    }
+    
+    [self reloadData];
     return YES;
 }
 
--(BOOL)addFichaDeTreino:(NSString*)nome
-            comObjetivo:(int) codigoDoObjetivo
-          comMesesDeUso:(int)meses
-comIntervaloEntreSequencias:(int) intervalo
-comFrequenciaDeTreinosSemanais:(int) frequencia
-{
-    //    FichaDeTreino *fichaDeTreino = [NSEntityDescription insertNewObjectForEntityForName:tabelaFichasTreinos
-    //                                                                 inManagedObjectContext:_managedObjectContext];
-    //
-    //    fichaDeTreino.nomeDoTreinamento = nome;
-    //    fichaDeTreino.dataDaCriacao = [NSDate date];
-    //    fichaDeTreino.intervaloEntreSequencias = [NSNumber numberWithInt:intervalo];
-    //    fichaDeTreino.frequenciaSemanal = [NSNumber numberWithInt:frequencia];
-    //    fichaDeTreino.periodoDeUtilizacaoDaFicha = [NSNumber numberWithInt:meses];
-    //    fichaDeTreino.periodoEmSemanas = [NSNumber numberWithBool:NO];
-    //    fichaDeTreino.objetivoDoTreino = [NSNumber numberWithInt:codigoDoObjetivo];
-    //
-    //    NSError *error = nil;
-    //    if (![fichaDeTreino.managedObjectContext save:&error])
-    //    {
-    //        return NO;
-    //    }
-    //
-    //    //[self.fetchedResultsController performFetch:&error];
-    //    [self reloadData];
-    return YES;
-}
-
--(BOOL)addFichaDeExercicio:(NSString*) nome
-          comPesoUtilizado:(float) peso
-     comNumeroDeRepeticoes:(int) repeticoes
-         comNumeroDeSeries:(int) series
-{
-    //    DetalhesDoExercicio *fichaDeExercicio = [NSEntityDescription insertNewObjectForEntityForName:tabelaFichasExercicios
-    //                                                                          inManagedObjectContext:_managedObjectContext];
-    //    fichaDeExercicio.nomeDoExercicio = nome;
-    //    fichaDeExercicio.pesoUtilizado = [NSNumber numberWithFloat:peso];
-    //    fichaDeExercicio.numeroDeRepeticoes = [NSNumber numberWithInt:repeticoes];
-    //    fichaDeExercicio.numeroDeSeries = [NSNumber numberWithInt:series];
-    //
-    //    NSError *error = nil;
-    //    if (![fichaDeExercicio.managedObjectContext save:&error])
-    //    {
-    //        return NO;
-    //    }
-    //
-    //    //[self.fetchedResultsController performFetch:&error];
-    //    [self reloadData];
-    return YES;
-}
-
-
+#pragma mark - Métodos para adicionar dados de Pessoas
 -(BOOL)addHomem:(NSString*) nome
-      comAltura:(float) altura
 comDataDeNascimento:(NSDate*) dataDeNascimento
 {
     Pessoa *fichaPessoa = [NSEntityDescription insertNewObjectForEntityForName:tabelaPessoas
@@ -231,45 +214,36 @@ comDataDeNascimento:(NSDate*) dataDeNascimento
     fichaPessoa.dadosFisicos = [NSEntityDescription insertNewObjectForEntityForName:tabelaDadosFisicos
                                                              inManagedObjectContext:_managedObjectContext];
     
-    //fichaPessoa.historicoTreinamento = [NSEntityDescription insertNewObjectForEntityForName:tabelaHistorico
-    //                                                                 inManagedObjectContext:_managedObjectContext];
-    
     NSError *error = nil;
     if (![fichaPessoa.managedObjectContext save:&error])
     {
-        return YES;
+        return NO;
     }
     
-    //[self.fetchedResultsController performFetch:&error];
     [self reloadData];
     return YES;
 }
 
 -(BOOL)addMulher:(NSString*) nome
-       comAltura:(float) altura
 comDataDeNascimento:(NSDate*) dataDeNascimento
 {
-    //    Pessoa *fichaPessoa = [NSEntityDescription insertNewObjectForEntityForName:tabelaPessoas
-    //                                                        inManagedObjectContext:_managedObjectContext];
-    //
-    //    fichaPessoa.altura = [NSNumber numberWithFloat:altura];
-    //    fichaPessoa.dataDeNascimento = dataDeNascimento;
-    //    fichaPessoa.nomeCompleto = nomeCompleto;
-    //    fichaPessoa.sexoMasculino = [NSNumber numberWithBool:NO];
-    //    fichaPessoa.treinamentos = [NSEntityDescription insertNewObjectForEntityForName:tabelaTreinamentos
-    //                                                             inManagedObjectContext:_managedObjectContext];
-    //
-    //    fichaPessoa.historicoTreinamento = [NSEntityDescription insertNewObjectForEntityForName:tabelaHistorico
-    //                                                                     inManagedObjectContext:_managedObjectContext];
-    //
-    //    NSError *error = nil;
-    //    if (![fichaPessoa.managedObjectContext save:&error])
-    //    {
-    //        return NO;
-    //    }
-    //    
-    //    //[self.fetchedResultsController performFetch:&error];
-    //    [self reloadData];
+    Pessoa *fichaPessoa = [NSEntityDescription insertNewObjectForEntityForName:tabelaPessoas
+                                                        inManagedObjectContext:_managedObjectContext];
+    
+    fichaPessoa.nome = nome;
+    fichaPessoa.dataDeNascimento = dataDeNascimento;
+    fichaPessoa.sexoMasculino = [NSNumber numberWithBool:NO];
+    fichaPessoa.dadosFisicos = [NSEntityDescription insertNewObjectForEntityForName:tabelaDadosFisicos
+                                                             inManagedObjectContext:_managedObjectContext];
+    
+    
+    NSError *error = nil;
+    if (![fichaPessoa.managedObjectContext save:&error])
+    {
+        return NO;
+    }
+    
+    [self reloadData];
     return YES;
 }
 
