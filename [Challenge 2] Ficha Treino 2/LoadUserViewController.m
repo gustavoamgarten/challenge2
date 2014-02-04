@@ -30,6 +30,18 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    //    NSDate *currentDate = [NSDate date];
+    //    [self.datePicker setMaximumDate:currentDate];
+    //    CGAffineTransform s0 = CGAffineTransformMakeScale(0.5, 0.5);
+    //    self.datePicker.transform = s0;
+    
+    self.view.hidden = YES;
+
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
     DataStorage *repository = [DataStorage sharedRepository];
     [repository reloadData];
     
@@ -38,13 +50,11 @@
     NSLog(@"pessoas: %d", [pessoas count]);
     
     if ([pessoas count] > 0) {
+        NSLog(@"Aqui");
         [self performSegueWithIdentifier:@"comFicha" sender:self];
+    } else {
+        [self performSegueWithIdentifier:@"iniciarCadastro" sender:self];
     }
-    
-    NSDate *currentDate = [NSDate date];
-    [self.datePicker setMaximumDate:currentDate];
-    CGAffineTransform s0 = CGAffineTransformMakeScale(0.5, 0.5);
-    self.datePicker.transform = s0;
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,7 +63,6 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)iniciarCadastro:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"iniciarCadastro" sender:self];
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "AddBirthdayViewController.h"
+#import "DataStorage.h"
 
 @interface AddBirthdayViewController ()
 
@@ -40,6 +41,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)doCadastro:(UIButton *)sender {
+    self.sexo = self.sexo + 1;
     NSLog(@"Nome: %@", self.nome);
     NSLog(@"Sexo: %d", self.sexo);
     
@@ -48,6 +50,15 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"dd/MM/yyyy"];
     NSLog(@"Nascimento: %@", [formatter stringFromDate:self.dataDeNascimento]);
+    
+    if (self.sexo == 1) {
+        [[DataStorage sharedRepository] addHomem:self.nome comDataDeNascimento:self.dataDeNascimento];
+    } else {
+        [[DataStorage sharedRepository] addMulher:self.nome comDataDeNascimento:self.dataDeNascimento];
+    }
+    
+    [self performSegueWithIdentifier:@"criouPessoa" sender:self];
+    
 }
 
 @end
