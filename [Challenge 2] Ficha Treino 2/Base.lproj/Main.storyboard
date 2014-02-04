@@ -402,7 +402,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="103"/>
+            <point key="canvasLocation" x="1360" y="103"/>
         </scene>
         <!--Categoria View Controller-->
         <scene sceneID="0fn-Wz-guB">
@@ -465,7 +465,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXu-VQ-aBQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1257" y="103"/>
+            <point key="canvasLocation" x="1792" y="103"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="yP6-WY-lC7">
@@ -568,14 +568,15 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3c1-xj-nTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1696" y="103"/>
+            <point key="canvasLocation" x="2231" y="103"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Ficha-->
         <scene sceneID="cDx-d9-Gdp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gna-EC-IIo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="uQI-eE-mVS"/>
+                    <tabBarItem key="tabBarItem" title="Ficha" id="uQI-eE-mVS"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="98z-GB-a31"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="4Ih-w2-GK8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -590,7 +591,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZTb-ab-l2y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="290" y="103"/>
+            <point key="canvasLocation" x="825" y="103"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Wky-HH-WhA">
@@ -605,33 +606,75 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <color key="barTintColor" red="0.93333333330000001" green="0.60784313729999995" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="3Ug-H8-g4I" kind="relationship" relationship="viewControllers" id="htJ-oX-uf9"/>
-                        <segue destination="1XN-nF-vtO" kind="relationship" relationship="viewControllers" id="pQY-OD-hgl"/>
-                        <segue destination="gna-EC-IIo" kind="relationship" relationship="viewControllers" id="ctx-k1-3w2"/>
+                        <segue destination="uNn-Cc-kgn" kind="relationship" relationship="viewControllers" id="AmI-Xp-hpG"/>
+                        <segue destination="wai-Zs-F4u" kind="relationship" relationship="viewControllers" id="w3N-gv-IQu"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FaI-41-MRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-295" y="773"/>
         </scene>
-        <!--View Controller - Evolução-->
-        <scene sceneID="St9-S9-bCW">
+        <!--Load Iniciar Treino View Controller - Ficha-->
+        <scene sceneID="cfO-81-Ycf">
             <objects>
-                <viewController id="3Ug-H8-g4I" sceneMemberID="viewController">
+                <viewController id="uNn-Cc-kgn" customClass="LoadIniciarTreinoViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4jH-Ob-96f"/>
-                        <viewControllerLayoutGuide type="bottom" id="oQd-hZ-Gji"/>
+                        <viewControllerLayoutGuide type="top" id="e3S-Br-S7X"/>
+                        <viewControllerLayoutGuide type="bottom" id="qfH-bn-N3R"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Zpi-ox-F5M">
+                    <view key="view" contentMode="scaleToFill" id="nup-64-NEJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Não há ficha ativa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eY-Jl-4dz">
+                                <rect key="frame" x="91" y="205" width="138" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Evolução" id="Oz5-lf-LXF"/>
+                    <tabBarItem key="tabBarItem" title="Ficha" id="Xqf-5y-GwJ"/>
+                    <connections>
+                        <segue destination="gna-EC-IIo" kind="push" identifier="fichaAtiva" id="y8h-7k-z4M"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HK0-YC-jVk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="juf-BX-gvV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="290" y="773"/>
+            <point key="canvasLocation" x="290" y="103"/>
+        </scene>
+        <!--Load Iniciar Treino View Controller - Treinar-->
+        <scene sceneID="VQK-dR-lSi">
+            <objects>
+                <viewController id="wai-Zs-F4u" customClass="LoadIniciarTreinoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gT2-d9-lFw"/>
+                        <viewControllerLayoutGuide type="bottom" id="U6j-eL-lvM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="74C-gv-sGH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Não há ficha ativa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAF-B8-VO0">
+                                <rect key="frame" x="91" y="205" width="138" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Treinar" id="WTp-uH-bVX"/>
+                    <connections>
+                        <segue destination="1XN-nF-vtO" kind="push" identifier="fichaAtiva" id="16B-RB-BXg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zYa-k3-VgS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="290" y="1429"/>
         </scene>
         <!--Treino View Controller - Treinar-->
         <scene sceneID="eh8-9f-D9q">
@@ -737,6 +780,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Treinar" id="2DH-Sr-fXI"/>
+                    <navigationItem key="navigationItem" id="WTn-58-gLS"/>
                     <connections>
                         <outlet property="clockLabel" destination="rrV-7A-ak7" id="6wh-IS-Gs1"/>
                         <outlet property="finishButton" destination="tjh-ZK-jif" id="Isq-a0-JG9"/>
@@ -744,7 +788,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1QP-am-TpU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="290" y="1507"/>
+            <point key="canvasLocation" x="825" y="1429"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="x8g-mE-47L">
@@ -774,13 +818,18 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     <resources>
         <image name="calendar" width="16" height="16"/>
         <image name="edit" width="48" height="48"/>
+        <image name="edit" width="48" height="48"/>
         <image name="frequency" width="16" height="16"/>
         <image name="goal" width="128" height="128"/>
+        <image name="loop" width="32" height="32"/>
         <image name="loop" width="32" height="32"/>
         <image name="next" width="72" height="72"/>
         <image name="note" width="32" height="32"/>
         <image name="sequence" width="16" height="16"/>
+        <image name="sequence" width="16" height="16"/>
         <image name="time" width="32" height="32"/>
+        <image name="weight" width="30" height="30"/>
+        <image name="weight" width="30" height="30"/>
         <image name="weight" width="30" height="30"/>
         <image name="youtube" width="64" height="64"/>
     </resources>

@@ -19,6 +19,7 @@
 		EC32298C18993A94009C34C1 /* hehehe1.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC32298B18993A94009C34C1 /* hehehe1.wav */; };
 		EC32299018993BD2009C34C1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32298F18993BD2009C34C1 /* AVFoundation.framework */; };
 		EC32299218993BE6009C34C1 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32299118993BE6009C34C1 /* MediaPlayer.framework */; };
+		EC4A58B218A1650B00C1FE01 /* LoadIniciarTreinoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4A58B118A1650B00C1FE01 /* LoadIniciarTreinoViewController.m */; };
 		EC7D00F01897CBD900D63E28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7D00EF1897CBD900D63E28 /* Foundation.framework */; };
 		EC7D00F21897CBD900D63E28 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7D00F11897CBD900D63E28 /* CoreGraphics.framework */; };
 		EC7D00F41897CBD900D63E28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7D00F31897CBD900D63E28 /* UIKit.framework */; };
@@ -78,6 +79,8 @@
 		EC32298B18993A94009C34C1 /* hehehe1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hehehe1.wav; sourceTree = "<group>"; };
 		EC32298F18993BD2009C34C1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		EC32299118993BE6009C34C1 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		EC4A58B018A1650B00C1FE01 /* LoadIniciarTreinoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadIniciarTreinoViewController.h; sourceTree = "<group>"; };
+		EC4A58B118A1650B00C1FE01 /* LoadIniciarTreinoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadIniciarTreinoViewController.m; sourceTree = "<group>"; };
 		EC7D00EC1897CBD900D63E28 /* [Challenge 2] Ficha Treino 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "[Challenge 2] Ficha Treino 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7D00EF1897CBD900D63E28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EC7D00F11897CBD900D63E28 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -177,10 +180,9 @@
 				EC1693FE18A017EC0055311B /* Cadastro */,
 				EC1693EF189FEB030055311B /* LoadUserViewController.h */,
 				EC1693F0189FEB030055311B /* LoadUserViewController.m */,
+				EC4A58B318A1657300C1FE01 /* IniciarTreino */,
 				EC7D376D189AD2D3008BF3D3 /* InitialController.h */,
 				EC7D376E189AD2D3008BF3D3 /* InitialController.m */,
-				EC32298618992690009C34C1 /* TreinoViewController.h */,
-				EC32298718992690009C34C1 /* TreinoViewController.m */,
 				EC322983189911DE009C34C1 /* CategoriaViewController.h */,
 				EC322984189911DE009C34C1 /* CategoriaViewController.m */,
 				EC11C3AC18981F0600F7EC2E /* FichaViewController.h */,
@@ -206,6 +208,17 @@
 				EC7D01011897CBD900D63E28 /* Main.storyboard */,
 			);
 			name = Other;
+			sourceTree = "<group>";
+		};
+		EC4A58B318A1657300C1FE01 /* IniciarTreino */ = {
+			isa = PBXGroup;
+			children = (
+				EC4A58B018A1650B00C1FE01 /* LoadIniciarTreinoViewController.h */,
+				EC4A58B118A1650B00C1FE01 /* LoadIniciarTreinoViewController.m */,
+				EC32298618992690009C34C1 /* TreinoViewController.h */,
+				EC32298718992690009C34C1 /* TreinoViewController.m */,
+			);
+			name = IniciarTreino;
 			sourceTree = "<group>";
 		};
 		EC7D00E31897CBD900D63E28 = {
@@ -442,6 +455,7 @@
 				EC7D376F189AD2D3008BF3D3 /* InitialController.m in Sources */,
 				ED1D0FE3189FCC0500AECAC4 /* DadosFisicos.m in Sources */,
 				EC322985189911DE009C34C1 /* CategoriaViewController.m in Sources */,
+				EC4A58B218A1650B00C1FE01 /* LoadIniciarTreinoViewController.m in Sources */,
 				EC7D00FC1897CBD900D63E28 /* main.m in Sources */,
 				EC1693FA18A007570055311B /* AddSexViewController.m in Sources */,
 				ED1D0FE0189FCC0500AECAC4 /* Treinos.m in Sources */,
