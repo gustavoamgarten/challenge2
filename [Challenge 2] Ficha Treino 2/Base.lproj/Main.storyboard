@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q91-YG-RHp">
-                                <rect key="frame" x="20" y="49" width="280" height="30"/>
+                                <rect key="frame" x="20" y="20" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -25,19 +25,10 @@
                                     <action selector="addName:" destination="DzE-77-kxa" eventType="editingChanged" id="Iak-0f-yCd"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhW-WA-C1T">
-                                <rect key="frame" x="20" y="20" width="46" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ght-hW-WYE">
-                                <rect key="frame" x="20" y="87" width="57" height="30"/>
+                                <rect key="frame" x="20" y="58" width="67" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Próximo">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <state key="normal" title="Próximo"/>
                                 <connections>
                                     <action selector="goToAddSex:" destination="DzE-77-kxa" eventType="touchUpInside" id="oBm-0Y-VeO"/>
                                 </connections>
@@ -65,21 +56,49 @@
                     <view key="view" contentMode="scaleToFill" id="JP4-lv-74s">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Iy-K0-67i">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.60784313729999995" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="76X-eF-4Sh" id="sio-w5-NVj"/>
+                                    <outlet property="delegate" destination="76X-eF-4Sh" id="5Qn-vQ-Wyb"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWY-5v-aoq">
+                                <rect key="frame" x="20" y="170" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Próximo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQQ-pH-YTO">
+                                <rect key="frame" x="20" y="170" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Próximo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToAddBirthday:" destination="76X-eF-4Sh" eventType="touchUpInside" id="7Kz-DU-x3W"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sexo" id="G6W-IQ-iIS"/>
                     <connections>
-                        <segue destination="Pqe-0T-c81" kind="push" id="Zlc-w6-4rM"/>
+                        <segue destination="Pqe-0T-c81" kind="push" identifier="addBirthday" id="Zlc-w6-4rM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="83q-dh-Tro" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1257" y="-553"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Birthday View Controller - Data de Nascimento-->
         <scene sceneID="013-Hi-7lp">
             <objects>
-                <viewController id="Pqe-0T-c81" sceneMemberID="viewController">
+                <viewController id="Pqe-0T-c81" customClass="AddBirthdayViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="H0e-jQ-PE8"/>
                         <viewControllerLayoutGuide type="bottom" id="bJU-0j-ZaG"/>
@@ -87,8 +106,55 @@
                     <view key="view" contentMode="scaleToFill" id="g3D-My-mWE">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dXf-gD-pIM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.60784313729999995" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.1137254902" green="0.39607843139999999" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <date key="date" timeIntervalSinceReferenceDate="413145550.20534497">
+                                    <!--2014-02-03 18:39:10 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="pt_BR"/>
+                                <timeZone key="timeZone" name="America/Los_Angeles">
+                                    <mutableData key="data">
+VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
+y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
+5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
+8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
+AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
+DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
+HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
+KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
+OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
+Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
+VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
+Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
+cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
+f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
+</mutableData>
+                                </timeZone>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUk-GL-DrJ">
+                                <rect key="frame" x="20" y="170" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Finalizar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doCadastro:" destination="Pqe-0T-c81" eventType="touchUpInside" id="44w-V5-KQK"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Data de Nascimento" id="qd8-ID-lyl"/>
+                    <connections>
+                        <outlet property="datePicker" destination="dXf-gD-pIM" id="5LI-1a-0Gy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M3h-dc-h5H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -682,6 +748,9 @@
                         <color key="backgroundColor" red="0.1137254902" green="0.39607843139999999" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.93333333330000001" green="0.60784313729999995" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.1137254902" green="0.39607843139999999" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.93333333330000001" green="0.60784313729999995" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -696,18 +765,13 @@
     <resources>
         <image name="calendar" width="16" height="16"/>
         <image name="edit" width="48" height="48"/>
-        <image name="edit" width="48" height="48"/>
         <image name="frequency" width="16" height="16"/>
         <image name="goal" width="128" height="128"/>
-        <image name="loop" width="32" height="32"/>
         <image name="loop" width="32" height="32"/>
         <image name="next" width="72" height="72"/>
         <image name="note" width="32" height="32"/>
         <image name="sequence" width="16" height="16"/>
-        <image name="sequence" width="16" height="16"/>
         <image name="time" width="32" height="32"/>
-        <image name="weight" width="30" height="30"/>
-        <image name="weight" width="30" height="30"/>
         <image name="weight" width="30" height="30"/>
         <image name="youtube" width="64" height="64"/>
     </resources>

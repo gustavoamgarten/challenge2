@@ -11,6 +11,7 @@
 		EC1693F1189FEB030055311B /* LoadUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1693F0189FEB030055311B /* LoadUserViewController.m */; };
 		EC1693F718A006540055311B /* AddNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1693F618A006540055311B /* AddNameViewController.m */; };
 		EC1693FA18A007570055311B /* AddSexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1693F918A007570055311B /* AddSexViewController.m */; };
+		EC1693FD18A017D90055311B /* AddBirthdayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1693FC18A017D90055311B /* AddBirthdayViewController.m */; };
 		EC2CF213189C025C0097C82A /* Exercicios.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2CF212189C025C0097C82A /* Exercicios.m */; };
 		EC322985189911DE009C34C1 /* CategoriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC322984189911DE009C34C1 /* CategoriaViewController.m */; };
 		EC32298818992690009C34C1 /* TreinoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC32298718992690009C34C1 /* TreinoViewController.m */; };
@@ -63,6 +64,8 @@
 		EC1693F618A006540055311B /* AddNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNameViewController.m; sourceTree = "<group>"; };
 		EC1693F818A007570055311B /* AddSexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSexViewController.h; sourceTree = "<group>"; };
 		EC1693F918A007570055311B /* AddSexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSexViewController.m; sourceTree = "<group>"; };
+		EC1693FB18A017D90055311B /* AddBirthdayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBirthdayViewController.h; sourceTree = "<group>"; };
+		EC1693FC18A017D90055311B /* AddBirthdayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBirthdayViewController.m; sourceTree = "<group>"; };
 		EC2CF211189C025C0097C82A /* Exercicios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercicios.h; sourceTree = "<group>"; };
 		EC2CF212189C025C0097C82A /* Exercicios.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercicios.m; sourceTree = "<group>"; };
 		EC322983189911DE009C34C1 /* CategoriaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriaViewController.h; sourceTree = "<group>"; };
@@ -140,6 +143,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC1693FE18A017EC0055311B /* Cadastro */ = {
+			isa = PBXGroup;
+			children = (
+				EC1693FB18A017D90055311B /* AddBirthdayViewController.h */,
+				EC1693FC18A017D90055311B /* AddBirthdayViewController.m */,
+				EC1693F818A007570055311B /* AddSexViewController.h */,
+				EC1693F918A007570055311B /* AddSexViewController.m */,
+				EC1693F518A006540055311B /* AddNameViewController.h */,
+				EC1693F618A006540055311B /* AddNameViewController.m */,
+			);
+			name = Cadastro;
+			sourceTree = "<group>";
+		};
 		EC2CF20D189C01940097C82A /* Exercicios */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,10 +168,7 @@
 		EC322982189910D7009C34C1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EC1693F818A007570055311B /* AddSexViewController.h */,
-				EC1693F918A007570055311B /* AddSexViewController.m */,
-				EC1693F518A006540055311B /* AddNameViewController.h */,
-				EC1693F618A006540055311B /* AddNameViewController.m */,
+				EC1693FE18A017EC0055311B /* Cadastro */,
 				EC1693EF189FEB030055311B /* LoadUserViewController.h */,
 				EC1693F0189FEB030055311B /* LoadUserViewController.m */,
 				EC7D376D189AD2D3008BF3D3 /* InitialController.h */,
@@ -416,6 +429,7 @@
 				ED1D0FE0189FCC0500AECAC4 /* Treinos.m in Sources */,
 				EC1693F1189FEB030055311B /* LoadUserViewController.m in Sources */,
 				ED1D0FE6189FCC0500AECAC4 /* Exercicio.m in Sources */,
+				EC1693FD18A017D90055311B /* AddBirthdayViewController.m in Sources */,
 				ED194E95189C076A006EE9F5 /* DadoFisico.m in Sources */,
 				EC7D36F7189AC22D008BF3D3 /* DataStorage.m in Sources */,
 				ED1D0FE9189FCC0600AECAC4 /* Ficha.m in Sources */,
