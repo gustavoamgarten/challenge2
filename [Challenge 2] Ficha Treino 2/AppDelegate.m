@@ -27,9 +27,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    //Override point for customization after application launch.
     //UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-//    FichaViewController *controller = (FichaViewController *)navigationController.topViewController;
+    //FichaViewController *controller = (FichaViewController *)navigationController.topViewController;
     //FichaViewController *controller = [[FichaViewController alloc] init];
     //controller.managedObjectContext = self.managedObjectContext;
     
@@ -39,11 +39,16 @@
     //setar qual o contexto para gerenciar os dados do banco local
     [DataStorage setManagedObjectContext:context];
     //recupera os dados do banco de dados local
-    //[[DataStorage sharedRepository]reloadData];
+    [[DataStorage sharedRepository]reloadData];
+    
+    
+    
+    
     
     //recupera os arrais de pessoa e exercicio padrao
-    //NSArray* pessoas = [[DataStorage sharedRepository]getPessoas];
-    //NSArray* exercicoPadrao =[[DataStorage sharedRepository]getFichasDeExercicioPadrao];
+    NSArray* pessoas = [[DataStorage sharedRepository]getPessoas];
+    NSArray* exercicoPadrao =[[DataStorage sharedRepository]getFichasDeExercicioPadrao];
+    
     
     //Pessoa* pessoaInfo = pessoas[0];
     //NSLog(@"\r\nPESSOAS CADASTRADAS [%d]: \r\n%@\r\nEND",[pessoas count],pessoas);
@@ -53,18 +58,57 @@
     //apaga a ultima pessoa
     //[[DataStorage sharedRepository]deletePessoa:pessoas[[pessoas count ]-1]];
     
+    [[DataStorage sharedRepository]addExercicioPadrao:@"Supino" comCategoria:1];
+    //[[DataStorage sharedRepository]addExercicioPadrao:@"Rosca" comCategoria:1];
+    exercicoPadrao =[[DataStorage sharedRepository]getFichasDeExercicioPadrao];
+    
+    NSDateComponents *componentes = [[NSDateComponents alloc]init];
+    [componentes setYear:1980];
+    [componentes setMonth:8];
+    [componentes setDay:19];
+    
+    [[DataStorage sharedRepository]addHomem:@"Joao Mariano" comDataDeNascimento:[[NSCalendar currentCalendar] dateFromComponents:componentes]];
     
     
     //recupera os arrais de pessoa e exercicio padrao (eles não são atualizados porque o array passado é uma cópia)
-    //pessoas = [[DataStorage sharedRepository]getPessoas];
-    //exercicoPadrao =[[DataStorage sharedRepository]getFichasDeExercicioPadrao];
+    pessoas = [[DataStorage sharedRepository]getPessoas];
+    Pessoa *pessoaInfo =  (Pessoa*)pessoas[0];
+    DadoFisico *dadoFisico = [[DadoFisico alloc]init];
+    dadoFisico.braco = arc4random()%30;
+    dadoFisico.cintura = arc4random()%30;
+    dadoFisico.coxa = arc4random()%30;
+    dadoFisico.ombro = arc4random()%30;
+    dadoFisico.panturrilha = arc4random()%30;
+    dadoFisico.antebraco = arc4random()%30;
+    dadoFisico.quadris = arc4random()%115;
+    dadoFisico.porcentagemDeGordura = arc4random()%80;
+    dadoFisico.altura = 1.75f;
+    
+    //[pessoaInfo addDadosFisicos:dadoFisico];
+    [pessoaInfo addFichaComObjetivo:1 comFrequencia:3 comPeriodoQuantidade:2 comPeriodoTipo:1 comIntervalo:3];
+    Ficha *fichaPessoa = [pessoaInfo getFichas][0];
+    [fichaPessoa addTreino:@"Treino A"];
+    Treinos *fichaTreinamento = [fichaPessoa getListaTreinos][0];
+    [fichaTreinamento addExercicio:exercicoPadrao[0]  comPeso:10 comRepeticoes:12 comSequencias:3];
+    
+    
+    exercicoPadrao =[[DataStorage sharedRepository]getFichasDeExercicioPadrao];
     
 
-    //NSLog(@"\r\nPESSOAS CADASTRADAS [%d]: \r\n%@\r\nEND",[pessoas count],pessoas);
+    NSLog(@"\r\nPESSOAS CADASTRADAS [%d]: \r\n%@\r\nEND",[pessoas count],pessoas);
     
-    //NSLog(@"\r\nEXERCICOS CADASTRADOS [%d]: \r\n%@\r\nEND",[exercicoPadrao count],exercicoPadrao);
+    NSLog(@"\r\nEXERCICOS CADASTRADOS [%d]: \r\n%@\r\nEND",[exercicoPadrao count],exercicoPadrao);
     
     
+    [[DataStorage sharedRepository]deleteExercicioPadrao:exercicoPadrao[0]];
+    
+    pessoas = [[DataStorage sharedRepository]getPessoas];
+    exercicoPadrao =[[DataStorage sharedRepository]getFichasDeExercicioPadrao];
+    
+    
+    NSLog(@"\r\nPESSOAS CADASTRADAS [%d]: \r\n%@\r\nEND",[pessoas count],pessoas);
+    
+    NSLog(@"\r\nEXERCICOS CADASTRADOS [%d]: \r\n%@\r\nEND",[exercicoPadrao count],exercicoPadrao);
     
     return YES;
 }
