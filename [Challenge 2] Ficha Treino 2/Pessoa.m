@@ -38,6 +38,9 @@
     fichaDeTreinos.periodoQuantidade = [NSNumber numberWithInt:periodoQuantidade];
     fichaDeTreinos.periodoTipo = [NSNumber numberWithInt:periodoTipo];
     fichaDeTreinos.intervalo = [NSNumber numberWithInt:intervalo];
+    
+    [fichaDeTreinos.managedObjectContext save:nil];
+    
     fichaDeTreinos.pessoa = self;
     
     NSError *error = nil;

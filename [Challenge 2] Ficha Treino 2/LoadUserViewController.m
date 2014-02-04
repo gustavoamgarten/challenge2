@@ -35,7 +35,7 @@
     
     NSArray *pessoas = [repository getPessoas];
     
-//    NSLog(@"pessoas: %d", [pessoas count]);
+    NSLog(@"pessoas: %d", [pessoas count]);
     
     if ([pessoas count] > 0) {
         [self performSegueWithIdentifier:@"comFicha" sender:self];
