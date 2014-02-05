@@ -11,6 +11,7 @@
 #import "DataStorage.h"
 #import "Ficha.h"
 #import "Treinos.h"
+#import "GerenciarTreinoViewController.h"
 
 @interface FichaViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
@@ -21,6 +22,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *periodoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *periodoTipo;
 @property (weak, nonatomic) IBOutlet UILabel *objetivoLabel;
+
+@property (strong, nonatomic) Ficha *ficha;
 
 @end
 
@@ -49,6 +52,7 @@
     
     NSArray* fichas = [usuario getFichas];
     Ficha *ficha = fichas[0];
+    self.ficha = ficha;
     
     //Data
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -123,12 +127,27 @@
     return CGSizeMake(70, 70); //Return the size of the cell.
 }
 
+#pragma mark - Buttons
+
 - (IBAction)editButton:(UIButton *)sender {
     NSLog(@"Cliquei no botao de Editar");
 }
 
 - (IBAction)novoTreinoButton:(UIButton *)sender {
-    NSLog(@"Cliquei no botao de Novo Treino");
+    [self performSegueWithIdentifier:@"goGerenciarTreino" sender:self];
+}
+
+#pragma mark - Outros métodos
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [super prepareForSegue:segue sender:sender];
+    
+    if ([segue.identifier isEqualToString:@"goGerenciarTreino"]) {
+        GerenciarTreinoViewController *destController = segue.destinationViewController;
+        NSLog(@"Ficha: %@", self.ficha);
+        
+        destController.ficha = self.ficha;
+    }
 }
 
 @end
