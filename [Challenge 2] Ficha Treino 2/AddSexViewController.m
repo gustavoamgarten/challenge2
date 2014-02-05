@@ -9,7 +9,9 @@
 #import "AddSexViewController.h"
 #import "AddBirthdayViewController.h"
 
-@interface AddSexViewController () <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface AddSexViewController ()
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *sexoSegmentedControl;
 
 @end
 
@@ -38,34 +40,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - UIPickerViewDataSource
-
-- (NSInteger) pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return 2;
-}
-
-- (NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return 1;
-}
-
-#pragma mark - UIPickerViewDelegate
-- (NSString *) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    NSString *title = [[NSString alloc] init];
-    
-    if (row == 0) {
-        title = [NSString stringWithFormat:@"Masculino"];
-    } else if (row == 1) {
-        title = [NSString stringWithFormat:@"Feminino"];
-    }
-    
-    return title;
-}
-
-- (void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    self.sexo = row;
-    NSLog(@"Sexo: %d", self.sexo);
-}
 - (IBAction)goToAddBirthday:(UIButton *)sender {
+    self.sexo = self.sexoSegmentedControl.selectedSegmentIndex;
     [self performSegueWithIdentifier:@"addBirthday" sender:self];
 }
 
