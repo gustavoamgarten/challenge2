@@ -83,8 +83,8 @@
 		EC32299118993BE6009C34C1 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		EC4A58B018A1650B00C1FE01 /* LoadIniciarTreinoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadIniciarTreinoViewController.h; sourceTree = "<group>"; };
 		EC4A58B118A1650B00C1FE01 /* LoadIniciarTreinoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadIniciarTreinoViewController.m; sourceTree = "<group>"; };
-		EC4B9AEE18A256FF002ADB4C /* fichas 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fichas 2.xcdatamodel"; sourceTree = "<group>"; };
-		EC4B9AF018A25A05002ADB4C /* fichas 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fichas 3.xcdatamodel"; sourceTree = "<group>"; };
+		EC4B9AEE18A256FF002ADB4C /* fichas 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "fichas 2.xcdatamodel"; sourceTree = "<group>"; };
+		EC4B9AF018A25A05002ADB4C /* fichas 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "fichas 3.xcdatamodel"; sourceTree = "<group>"; };
 		EC4B9AF118A260EA002ADB4C /* LoadFichaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadFichaViewController.h; sourceTree = "<group>"; };
 		EC4B9AF218A260EA002ADB4C /* LoadFichaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadFichaViewController.m; sourceTree = "<group>"; };
 		EC4B9AF518A26655002ADB4C /* CriarFichaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CriarFichaViewController.h; sourceTree = "<group>"; };
@@ -185,9 +185,9 @@
 		EC322982189910D7009C34C1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EC1693FE18A017EC0055311B /* Cadastro */,
 				EC1693EF189FEB030055311B /* LoadUserViewController.h */,
 				EC1693F0189FEB030055311B /* LoadUserViewController.m */,
+				EC1693FE18A017EC0055311B /* Cadastro */,
 				EC4A58B318A1657300C1FE01 /* IniciarTreino */,
 				EC7D376D189AD2D3008BF3D3 /* InitialController.h */,
 				EC7D376E189AD2D3008BF3D3 /* InitialController.m */,
