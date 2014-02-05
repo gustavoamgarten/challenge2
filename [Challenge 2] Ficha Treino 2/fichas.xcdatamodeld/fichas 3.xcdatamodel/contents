@@ -23,7 +23,7 @@
         <attribute name="objetivo" optional="YES" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="periodoQuantidade" optional="YES" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="periodoTipo" optional="YES" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
-        <relationship name="listaDeTreinos" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Treinos" inverseName="fichaRelacionada" inverseEntity="Treinos" syncable="YES"/>
+        <relationship name="listaDeTreinos" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Treinos" inverseName="fichaRelacionada" inverseEntity="Treinos" syncable="YES"/>
         <relationship name="pessoa" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pessoa" inverseName="fichas" inverseEntity="Pessoa" syncable="YES"/>
     </entity>
     <entity name="Pessoa" representedClassName="Pessoa" syncable="YES">
@@ -37,7 +37,7 @@
     <entity name="Treinos" representedClassName="Treinos" syncable="YES">
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="fichaRelacionada" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Ficha" inverseName="listaDeTreinos" inverseEntity="Ficha" syncable="YES"/>
-        <relationship name="listaDeExercicios" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Exercicio" inverseName="treinoRelacionado" inverseEntity="Exercicio" syncable="YES"/>
+        <relationship name="listaDeExercicios" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Exercicio" inverseName="treinoRelacionado" inverseEntity="Exercicio" syncable="YES"/>
     </entity>
     <elements>
         <element name="DadosFisicos" positionX="0" positionY="0" width="0" height="0"/>

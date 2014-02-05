@@ -12,6 +12,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *ordemTreinoLabel;
 @property (nonatomic, strong) Treinos *treino;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSArray *exercicios;
 
 @end
 
@@ -46,6 +48,14 @@
     self.treino = [[self.ficha getListaTreinos] objectAtIndex:(ordemTreino - 1)];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    
+    [self.tableView reloadData];
+    self.exercicios = [self.treino getListaExercicios];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -55,13 +65,19 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return [[self.treino getListaExercicios] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"gerenciarTreinoCell"];
     
+    cell.textLabel.text = [self.exercicios objectAtIndex:indexPath.row];
+    
     return cell;
+}
+
+- (IBAction)goAdicionarExercicioButton:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"goAdicionarExercicio" sender:self];
 }
 
 @end
