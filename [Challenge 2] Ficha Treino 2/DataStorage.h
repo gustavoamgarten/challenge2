@@ -32,6 +32,7 @@
 //Métodos para pegar dados de tabelas raiz
 -(NSArray *)getPessoas;
 -(NSArray *)getFichasDeExercicioPadrao;
+-(NSArray *)getFichas;
 
 //Métodos para inserir dados em tabelas raiz
 -(BOOL)addExercicioPadrao:(NSString*)nome comCategoria:(int)categoria;

@@ -28,6 +28,7 @@
     </entity>
     <entity name="Pessoa" representedClassName="Pessoa" syncable="YES">
         <attribute name="dataDeNascimento" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="fichaAtiva" optional="YES" attributeType="Integer 32" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sexoMasculino" optional="YES" attributeType="Boolean" syncable="YES"/>
         <relationship name="dadosFisicos" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="DadosFisicos" inverseName="pessoa" inverseEntity="DadosFisicos" syncable="YES"/>
@@ -39,11 +40,11 @@
         <relationship name="listaDeExercicios" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Exercicio" inverseName="treinoRelacionado" inverseEntity="Exercicio" syncable="YES"/>
     </entity>
     <elements>
-        <element name="DadosFisicos" positionX="162" positionY="-297" width="128" height="75"/>
-        <element name="Exercicio" positionX="97" positionY="132" width="128" height="120"/>
-        <element name="ExercicioPadrao" positionX="-117" positionY="234" width="128" height="90"/>
-        <element name="Ficha" positionX="340" positionY="-108" width="128" height="165"/>
-        <element name="Pessoa" positionX="-45" positionY="-144" width="128" height="118"/>
-        <element name="Treinos" positionX="322" positionY="144" width="128" height="90"/>
+        <element name="DadosFisicos" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Exercicio" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ExercicioPadrao" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Ficha" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Pessoa" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Treinos" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

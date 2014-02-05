@@ -14,6 +14,7 @@
 @implementation Pessoa
 
 @dynamic dataDeNascimento;
+@dynamic fichaAtiva;
 @dynamic nome;
 @dynamic sexoMasculino;
 @dynamic dadosFisicos;

@@ -162,7 +162,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <navigationItem key="navigationItem" title="Data de Nascimento" id="qd8-ID-lyl"/>
                     <connections>
                         <outlet property="datePicker" destination="dXf-gD-pIM" id="5LI-1a-0Gy"/>
-                        <segue destination="3AP-zW-wTZ" kind="modal" identifier="criouPessoa" id="tZE-nl-rh7"/>
+                        <segue destination="uNn-Cc-kgn" kind="modal" identifier="criouPessoa" id="wHr-7e-bNv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M3h-dc-h5H" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -206,7 +206,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <navigationItem key="navigationItem" id="ITT-Uz-Bws"/>
                     <connections>
                         <segue destination="KBd-8L-I1z" kind="modal" identifier="iniciarCadastro" id="Hw8-qG-3tt"/>
-                        <segue destination="3AP-zW-wTZ" kind="modal" identifier="comFicha" id="uSX-9F-gao"/>
+                        <segue destination="uNn-Cc-kgn" kind="modal" identifier="comFicha" id="Cm5-3x-Sn7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bkS-yr-15u" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -397,7 +397,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1360" y="103"/>
+            <point key="canvasLocation" x="1688" y="195"/>
         </scene>
         <!--Categoria View Controller-->
         <scene sceneID="0fn-Wz-guB">
@@ -460,7 +460,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXu-VQ-aBQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1792" y="103"/>
+            <point key="canvasLocation" x="2120" y="195"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="yP6-WY-lC7">
@@ -563,7 +563,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3c1-xj-nTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2231" y="103"/>
+            <point key="canvasLocation" x="2559" y="195"/>
         </scene>
         <!--Navigation Controller - Ficha-->
         <scene sceneID="cDx-d9-Gdp">
@@ -586,7 +586,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZTb-ab-l2y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="103"/>
+            <point key="canvasLocation" x="1153" y="195"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Wky-HH-WhA">
@@ -601,24 +601,142 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <color key="barTintColor" red="0.93333333330000001" green="0.60784313729999995" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="uNn-Cc-kgn" kind="relationship" relationship="viewControllers" id="AmI-Xp-hpG"/>
-                        <segue destination="wai-Zs-F4u" kind="relationship" relationship="viewControllers" id="w3N-gv-IQu"/>
+                        <segue destination="gna-EC-IIo" kind="relationship" relationship="viewControllers" id="bUV-FF-AEa"/>
+                        <segue destination="1XN-nF-vtO" kind="relationship" relationship="viewControllers" id="IPq-ut-F2I"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FaI-41-MRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-295" y="773"/>
+            <point key="canvasLocation" x="465" y="743"/>
         </scene>
-        <!--Load Iniciar Treino View Controller - Ficha-->
+        <!--Criar Ficha View Controller-->
+        <scene sceneID="nvD-kx-6hy">
+            <objects>
+                <viewController id="mmf-Ix-dLS" customClass="CriarFichaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ROp-3O-m8c"/>
+                        <viewControllerLayoutGuide type="bottom" id="WRt-e0-8oN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bx7-HW-Whn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pPh-B9-1CR">
+                                <rect key="frame" x="20" y="88" width="86" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oz0-GJ-iKE">
+                                <rect key="frame" x="234" y="88" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tBT-RJ-W6d">
+                                <rect key="frame" x="20" y="221" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Frequência" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJm-NN-KEJ">
+                                <rect key="frame" x="20" y="43" width="86" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.1137254902" green="0.39607843139999999" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Intervalo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUq-7h-eZg">
+                                <rect key="frame" x="234" y="43" width="66" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.1137254902" green="0.39607843139999999" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Objetivo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dk-1o-acz">
+                                <rect key="frame" x="20" y="126" width="64" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.1137254902" green="0.39607843139999999" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Período" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1Z-bc-Lrq">
+                                <rect key="frame" x="20" y="191" width="60" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.1137254902" green="0.39607843139999999" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="W7V-GM-TIm">
+                                <rect key="frame" x="20" y="155" width="280" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.39607843139999999" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <segments>
+                                    <segment title="Adaptação"/>
+                                    <segment title="Hipertrofia"/>
+                                    <segment title="Força"/>
+                                    <segment title="Definição"/>
+                                </segments>
+                                <color key="tintColor" red="0.93333333330000001" green="0.60784313729999995" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="25m-YL-AFH">
+                                <rect key="frame" x="94" y="221" width="206" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.39607843139999999" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <segments>
+                                    <segment title="Semanas"/>
+                                    <segment title="Meses"/>
+                                </segments>
+                                <color key="tintColor" red="0.93333333330000001" green="0.60784313729999995" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T69-6z-y7T">
+                                <rect key="frame" x="20" y="258" width="33" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Criar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="criarFicha:" destination="mmf-Ix-dLS" eventType="touchUpInside" id="4H2-IB-Jde"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="vezes por semana" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGO-fF-rlU">
+                                <rect key="frame" x="20" y="59" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="segundos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pP4-Dh-i6L">
+                                <rect key="frame" x="242" y="59" width="51" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="frequenciaTextField" destination="pPh-B9-1CR" id="Btb-1l-5iK"/>
+                        <outlet property="intervaloTextField" destination="oz0-GJ-iKE" id="Rzh-hK-KpN"/>
+                        <outlet property="objetivoSegmentedControl" destination="W7V-GM-TIm" id="Jt8-ZO-KoQ"/>
+                        <outlet property="periodoTextField" destination="tBT-RJ-W6d" id="Luh-qH-xFy"/>
+                        <outlet property="periodoTipoSegmentedControl" destination="25m-YL-AFH" id="0Sj-Sg-Dd9"/>
+                        <segue destination="uNn-Cc-kgn" kind="modal" identifier="fichaCriada" id="kaZ-jt-RFq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jDN-sR-TP0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-334" y="1656"/>
+        </scene>
+        <!--Load Ficha View Controller - Ficha-->
         <scene sceneID="cfO-81-Ycf">
             <objects>
-                <viewController id="uNn-Cc-kgn" customClass="LoadIniciarTreinoViewController" sceneMemberID="viewController">
+                <viewController id="uNn-Cc-kgn" customClass="LoadFichaViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e3S-Br-S7X"/>
                         <viewControllerLayoutGuide type="bottom" id="qfH-bn-N3R"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nup-64-NEJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Não há ficha ativa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eY-Jl-4dz">
@@ -628,48 +746,28 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHi-w5-D7s">
+                                <rect key="frame" x="123" y="234" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Criar Ficha">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goCriarFicha:" destination="uNn-Cc-kgn" eventType="touchUpInside" id="979-Ux-Dbk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ficha" id="Xqf-5y-GwJ"/>
                     <connections>
-                        <segue destination="gna-EC-IIo" kind="push" identifier="fichaAtiva" id="y8h-7k-z4M"/>
+                        <segue destination="mmf-Ix-dLS" kind="modal" identifier="criarFicha" id="PLB-RZ-Yfy"/>
+                        <segue destination="3AP-zW-wTZ" kind="modal" identifier="fichaAtiva" id="AZz-Qa-mBP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="juf-BX-gvV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="290" y="103"/>
-        </scene>
-        <!--Load Iniciar Treino View Controller - Treinar-->
-        <scene sceneID="VQK-dR-lSi">
-            <objects>
-                <viewController id="wai-Zs-F4u" customClass="LoadIniciarTreinoViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gT2-d9-lFw"/>
-                        <viewControllerLayoutGuide type="bottom" id="U6j-eL-lvM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="74C-gv-sGH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Não há ficha ativa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAF-B8-VO0">
-                                <rect key="frame" x="91" y="205" width="138" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Treinar" id="WTp-uH-bVX"/>
-                    <connections>
-                        <segue destination="1XN-nF-vtO" kind="push" identifier="fichaAtiva" id="16B-RB-BXg"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zYa-k3-VgS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="290" y="1429"/>
+            <point key="canvasLocation" x="-334" y="743"/>
         </scene>
         <!--Treino View Controller - Treinar-->
         <scene sceneID="eh8-9f-D9q">
@@ -680,7 +778,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <viewControllerLayoutGuide type="bottom" id="npo-kL-o2c"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RQU-M6-ZEL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjh-ZK-jif">
@@ -783,7 +881,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1QP-am-TpU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="1429"/>
+            <point key="canvasLocation" x="1153" y="1321"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="x8g-mE-47L">
@@ -813,13 +911,18 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     <resources>
         <image name="calendar" width="16" height="16"/>
         <image name="edit" width="48" height="48"/>
+        <image name="edit" width="48" height="48"/>
         <image name="frequency" width="16" height="16"/>
         <image name="goal" width="128" height="128"/>
+        <image name="loop" width="32" height="32"/>
         <image name="loop" width="32" height="32"/>
         <image name="next" width="72" height="72"/>
         <image name="note" width="32" height="32"/>
         <image name="sequence" width="16" height="16"/>
+        <image name="sequence" width="16" height="16"/>
         <image name="time" width="32" height="32"/>
+        <image name="weight" width="30" height="30"/>
+        <image name="weight" width="30" height="30"/>
         <image name="weight" width="30" height="30"/>
         <image name="youtube" width="64" height="64"/>
     </resources>
@@ -829,6 +932,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="tZE-nl-rh7"/>
+        <segue reference="kaZ-jt-RFq"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -18,6 +18,7 @@
 @interface DataStorage()
 @property NSMutableArray *pessoas;
 @property NSMutableArray *fichasExercicioPadrao;
+@property NSMutableArray *fichas;
 @end
 
 
@@ -155,8 +156,20 @@ static NSManagedObjectContext *_managedObjectContext;
         [self.fichasExercicioPadrao addObject:exercicio];
     }
     
+    //Alimenta o Array com as fichas
+    fetchedObjects = [self reloadFichas];
+    
+    if(fetchedObjects != nil)
+    {
+        self.fichasExercicioPadrao = [[NSMutableArray alloc]init];
+    }
+    
+    for (Ficha *ficha in fetchedObjects)
+    {
+        [self.fichas addObject:ficha];
+    }
+    
     //recarrega todas as tabelas restantes
-    [self reloadFichas];
     [self reloadDadosFisicos];
     [self reloadTreinos];
     [self reloadExercicios];
@@ -173,6 +186,12 @@ static NSManagedObjectContext *_managedObjectContext;
 -(NSArray *)getFichasDeExercicioPadrao
 {
     return [self.fichasExercicioPadrao copy];
+}
+
+//Retorna uma cópia do array de exercicios padrão
+-(NSArray *)getFichas
+{
+    return [self.fichas copy];
 }
 
 #pragma mark Metodos para adicionar dados
@@ -279,4 +298,36 @@ comDataDeNascimento:(NSDate*) dataDeNascimento
     [self reloadData];
     return YES;
 }
+
+//@property (nonatomic, retain) NSDate * dataDaCriacao;
+//@property (nonatomic, retain) NSNumber * frequencia;
+//@property (nonatomic, retain) NSNumber * intervalo;
+//@property (nonatomic, retain) NSNumber * objetivo;
+//@property (nonatomic, retain) NSNumber * periodoQuantidade;
+//@property (nonatomic, retain) NSNumber * periodoTipo;
+//@property (nonatomic, retain) NSSet *listaDeTreinos;
+//@property (nonatomic, retain) Pessoa *pessoa;
+//
+//#pragma mark - Métodos para adicionar dados de Pessoas
+////Adiciona uma ficha de Pessoa do sexo masculino
+//-(BOOL)addFicha
+//{
+//    Pessoa *fichaPessoa = [NSEntityDescription insertNewObjectForEntityForName:tabelaPessoas
+//                                                        inManagedObjectContext:_managedObjectContext];
+//    
+//    fichaPessoa.nome = nome;
+//    fichaPessoa.dataDeNascimento = dataDeNascimento;
+//    fichaPessoa.sexoMasculino = [NSNumber numberWithBool:YES];
+//    fichaPessoa.dadosFisicos = [NSEntityDescription insertNewObjectForEntityForName:tabelaDadosFisicos
+//                                                             inManagedObjectContext:_managedObjectContext];
+//    
+//    NSError *error = nil;
+//    if (![fichaPessoa.managedObjectContext save:&error])
+//    {
+//        return NO;
+//    }
+//    
+//    [self reloadData];
+//    return YES;
+//}
 @end

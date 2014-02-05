@@ -14,6 +14,7 @@
 @interface Pessoa : NSManagedObject
 
 @property (nonatomic, retain) NSDate * dataDeNascimento;
+@property (nonatomic, retain) NSNumber * fichaAtiva;
 @property (nonatomic, retain) NSString * nome;
 @property (nonatomic, retain) NSNumber * sexoMasculino;
 @property (nonatomic, retain) DadosFisicos *dadosFisicos;

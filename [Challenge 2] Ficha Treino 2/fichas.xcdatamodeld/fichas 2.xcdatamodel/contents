@@ -29,7 +29,7 @@
     <entity name="Pessoa" representedClassName="Pessoa" syncable="YES">
         <attribute name="dataDeNascimento" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="sexoMasculino" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="sexo" optional="YES" attributeType="Integer 16" minValueString="0" syncable="YES"/>
         <relationship name="dadosFisicos" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="DadosFisicos" inverseName="pessoa" inverseEntity="DadosFisicos" syncable="YES"/>
         <relationship name="fichas" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Ficha" inverseName="pessoa" inverseEntity="Ficha" syncable="YES"/>
     </entity>
@@ -39,11 +39,11 @@
         <relationship name="listaDeExercicios" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Exercicio" inverseName="treinoRelacionado" inverseEntity="Exercicio" syncable="YES"/>
     </entity>
     <elements>
-        <element name="DadosFisicos" positionX="162" positionY="-297" width="128" height="75"/>
-        <element name="Exercicio" positionX="97" positionY="132" width="128" height="120"/>
-        <element name="ExercicioPadrao" positionX="-117" positionY="234" width="128" height="90"/>
-        <element name="Ficha" positionX="340" positionY="-108" width="128" height="165"/>
-        <element name="Pessoa" positionX="-45" positionY="-144" width="128" height="118"/>
-        <element name="Treinos" positionX="322" positionY="144" width="128" height="90"/>
+        <element name="DadosFisicos" positionX="-360" positionY="-72" width="128" height="75"/>
+        <element name="Exercicio" positionX="-18" positionY="195" width="128" height="120"/>
+        <element name="ExercicioPadrao" positionX="-171" positionY="315" width="128" height="90"/>
+        <element name="Ficha" positionX="7" positionY="-225" width="128" height="165"/>
+        <element name="Pessoa" positionX="-162" positionY="-189" width="128" height="118"/>
+        <element name="Treinos" positionX="268" positionY="-90" width="128" height="90"/>
     </elements>
 </model>
