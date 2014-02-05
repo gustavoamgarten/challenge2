@@ -11,6 +11,7 @@
 @interface GerenciarTreinoViewController () <UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UILabel *ordemTreinoLabel;
+@property (nonatomic, strong) Treinos *treino;
 
 @end
 
@@ -38,10 +39,11 @@
     NSInteger ordemTreino = [[self.ficha getListaTreinos] count];
     ordemTreino = ordemTreino + 1;
     [self.ficha addTreino:[NSString stringWithFormat:@"%d", ordemTreino]];
+    NSLog(@"Criou Treino");
     
     self.ordemTreinoLabel.text = [NSString stringWithFormat:@"%d", ordemTreino];
     
-    Treinos *treino = [[self.ficha getListaTreinos] objectAtIndex:ordemTreino];
+    self.treino = [[self.ficha getListaTreinos] objectAtIndex:(ordemTreino - 1)];
 }
 
 - (void)didReceiveMemoryWarning

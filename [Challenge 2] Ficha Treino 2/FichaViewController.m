@@ -12,6 +12,7 @@
 #import "Ficha.h"
 #import "Treinos.h"
 #import "GerenciarTreinoViewController.h"
+#import "TreinoCell.h"
 
 @interface FichaViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
@@ -106,11 +107,15 @@
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 3;
+    return [[self.ficha getListaTreinos] count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"fichaCell" forIndexPath:indexPath];
+    TreinoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"fichaCell" forIndexPath:indexPath];
+    
+    Treinos *treino = [[self.ficha getListaTreinos] objectAtIndex:indexPath.row];
+    
+    cell.nomeTreinoLabel.text = treino.nome;
     
     return cell;
 }

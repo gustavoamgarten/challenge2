@@ -19,6 +19,7 @@
 		EC32299018993BD2009C34C1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32298F18993BD2009C34C1 /* AVFoundation.framework */; };
 		EC32299218993BE6009C34C1 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32299118993BE6009C34C1 /* MediaPlayer.framework */; };
 		EC348CDF18A2A4E100CD79D0 /* GerenciarTreinoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC348CDE18A2A4E100CD79D0 /* GerenciarTreinoViewController.m */; };
+		EC348CE218A2B36900CD79D0 /* TreinoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC348CE118A2B36900CD79D0 /* TreinoCell.m */; };
 		EC4A58B218A1650B00C1FE01 /* LoadIniciarTreinoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4A58B118A1650B00C1FE01 /* LoadIniciarTreinoViewController.m */; };
 		EC4B9AF318A260EA002ADB4C /* LoadFichaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4B9AF218A260EA002ADB4C /* LoadFichaViewController.m */; };
 		EC4B9AF718A26655002ADB4C /* CriarFichaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4B9AF618A26655002ADB4C /* CriarFichaViewController.m */; };
@@ -80,6 +81,8 @@
 		EC32299118993BE6009C34C1 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		EC348CDD18A2A4E100CD79D0 /* GerenciarTreinoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GerenciarTreinoViewController.h; sourceTree = "<group>"; };
 		EC348CDE18A2A4E100CD79D0 /* GerenciarTreinoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GerenciarTreinoViewController.m; sourceTree = "<group>"; };
+		EC348CE018A2B36900CD79D0 /* TreinoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreinoCell.h; sourceTree = "<group>"; };
+		EC348CE118A2B36900CD79D0 /* TreinoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreinoCell.m; sourceTree = "<group>"; };
 		EC4A58B018A1650B00C1FE01 /* LoadIniciarTreinoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadIniciarTreinoViewController.h; sourceTree = "<group>"; };
 		EC4A58B118A1650B00C1FE01 /* LoadIniciarTreinoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadIniciarTreinoViewController.m; sourceTree = "<group>"; };
 		EC4B9AEE18A256FF002ADB4C /* fichas 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "fichas 2.xcdatamodel"; sourceTree = "<group>"; };
@@ -218,6 +221,8 @@
 				EC4B9AF418A2662E002ADB4C /* Cadastro Ficha */,
 				EC348CDD18A2A4E100CD79D0 /* GerenciarTreinoViewController.h */,
 				EC348CDE18A2A4E100CD79D0 /* GerenciarTreinoViewController.m */,
+				EC348CE018A2B36900CD79D0 /* TreinoCell.h */,
+				EC348CE118A2B36900CD79D0 /* TreinoCell.m */,
 				EC322983189911DE009C34C1 /* CategoriaViewController.h */,
 				EC322984189911DE009C34C1 /* CategoriaViewController.m */,
 				EC11C3AC18981F0600F7EC2E /* FichaViewController.h */,
@@ -466,6 +471,7 @@
 				EC7D01001897CBD900D63E28 /* AppDelegate.m in Sources */,
 				ED1D0FD7189FCBD300AECAC4 /* fichas.xcdatamodeld in Sources */,
 				EC11C3AE18981F0600F7EC2E /* FichaViewController.m in Sources */,
+				EC348CE218A2B36900CD79D0 /* TreinoCell.m in Sources */,
 				ED1D0FE3189FCC0500AECAC4 /* DadosFisicos.m in Sources */,
 				EC322985189911DE009C34C1 /* CategoriaViewController.m in Sources */,
 				EC4A58B218A1650B00C1FE01 /* LoadIniciarTreinoViewController.m in Sources */,
