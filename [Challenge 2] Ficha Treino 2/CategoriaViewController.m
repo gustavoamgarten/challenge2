@@ -7,8 +7,12 @@
 //
 
 #import "CategoriaViewController.h"
+#import "ExibeExercicioViewController.h"
 
 @interface CategoriaViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) NSArray *exercicios;
+@property (nonatomic) NSInteger exercicioSelecionado;
 
 @end
 
@@ -27,6 +31,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self.exercicios = [self.treino getListaExercicios];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,7 +43,7 @@
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return [[self.treino getListaExercicios] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -45,8 +51,55 @@
     
     //TODO
     //Populate cell
+    Exercicio *exercicio = [self.exercicios objectAtIndex:indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%d. %@", (indexPath.row + 1), exercicio.detalhesDoExercicio.nome];
+    
+    
+    NSInteger cat = [exercicio.detalhesDoExercicio.categoria integerValue];
+    
+    switch (cat) {
+        case 1:
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"Abdominal"];
+            break;
+        case 2:
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"Biceps"];
+            break;
+        case 3:
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"Costas"];
+            break;
+        case 4:
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"Peito"];
+            break;
+        case 5:
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"Perna"];
+            break;
+        case 6:
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"Triceps"];
+            break;
+        case 7:
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"Ombro"];
+            break;
+        default:
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"Outro"];
+            break;
+    }
     
     return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.exercicioSelecionado = indexPath.row;
+    
+    [self performSegueWithIdentifier:@"exibeDetalhesExercicio" sender:self];
+}
+
+#pragma mark - Outros
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    ExibeExercicioViewController *destController = segue.destinationViewController;
+    destController.exercicio = [self.exercicios objectAtIndex:self.exercicioSelecionado];
 }
 
 @end

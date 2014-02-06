@@ -13,6 +13,7 @@
 #import "Treinos.h"
 #import "GerenciarTreinoViewController.h"
 #import "TreinoCell.h"
+#import "CategoriaViewController.h"
 
 @interface FichaViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
@@ -25,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *objetivoLabel;
 
 @property (strong, nonatomic) Ficha *ficha;
+@property (nonatomic) NSInteger treinoSelecionado;
 
 @end
 
@@ -126,6 +128,13 @@
     return cell;
 }
 
+#pragma mark - UICollectionViewDelegate
+- (void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    self.treinoSelecionado = indexPath.row;
+    
+    [self performSegueWithIdentifier:@"visualizarTreino" sender:self];
+}
+
 #pragma mark - UICollectionViewDelegateFlowLayout
 
 - (UIEdgeInsets) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
@@ -158,6 +167,11 @@
         NSLog(@"Ficha: %@", self.ficha);
         
         destController.ficha = self.ficha;
+    } else if ([segue.identifier isEqualToString:@"visualizarTreino"]) {
+        Treinos *treino = [[self.ficha getListaTreinos] objectAtIndex:self.treinoSelecionado];
+        
+        CategoriaViewController *destController = segue.destinationViewController;
+        destController.treino = treino;
     }
 }
 

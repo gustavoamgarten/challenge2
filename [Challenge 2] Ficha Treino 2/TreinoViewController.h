@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BegymModel.h"
 
 @interface TreinoViewController : UIViewController
+
+@property (nonatomic, strong) Ficha *ficha;
+@property (nonatomic, strong) Treinos *treino;
 
 @end

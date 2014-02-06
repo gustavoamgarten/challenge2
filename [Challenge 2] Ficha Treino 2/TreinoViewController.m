@@ -18,6 +18,19 @@
 @property (weak, nonatomic) IBOutlet UILabel *clockLabel;
 @property (weak, nonatomic) IBOutlet UIButton *finishButton;
 
+@property (weak, nonatomic) IBOutlet UILabel *pesoLabel;
+@property (weak, nonatomic) IBOutlet UILabel *repeticoesLabel;
+@property (weak, nonatomic) IBOutlet UILabel *sequenciasLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nomeLabel;
+
+@property (nonatomic) NSInteger exercicioAtual;
+
+@property (nonatomic, strong) NSArray *exercicios;
+
+@property (nonatomic) NSInteger pesoAtual;
+@property (nonatomic) NSInteger repeticoesAtual;
+@property (nonatomic) NSInteger sequenciasAtual;
+
 @property (strong,nonatomic) AVAudioPlayer *messageSound;
 
 @end
@@ -38,7 +51,30 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    self.clockLabel.text = [NSString stringWithFormat:@"00:03"];
+    //self.seconds = [self.ficha.intervalo integerValue];
+    self.seconds = 3;
+    NSDate *intervalo = [NSDate dateWithTimeIntervalSinceReferenceDate:self.seconds];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"mm:ss";
+    self.clockLabel.text = [dateFormatter stringFromDate:intervalo];
+    
+    self.exercicios = [self.treino getListaExercicios];
+    self.exercicioAtual = 0;
+    
+    NSString *soundPath = [[NSBundle mainBundle]pathForResource:@"hehehe1" ofType:@"wav"];
+    NSURL *soundURL = [[NSURL alloc]initFileURLWithPath:soundPath];
+    NSError *error;
+    self.messageSound = [[AVAudioPlayer alloc]initWithContentsOfURL:soundURL error:&error];
+    
+    Exercicio *exercicio = [self.exercicios objectAtIndex:self.exercicioAtual];
+    self.pesoLabel.text = [NSString stringWithFormat:@"%@", exercicio.peso];
+    self.repeticoesLabel.text = [NSString stringWithFormat:@"%@", exercicio.repeticoes];
+    self.sequenciasLabel.text = [NSString stringWithFormat:@"%@", exercicio.sequencias];
+    self.nomeLabel.text = exercicio.detalhesDoExercicio.nome;
+    
+    self.pesoAtual = [exercicio.peso integerValue];
+    self.repeticoesAtual = [exercicio.repeticoes integerValue];
+    self.sequenciasAtual = [exercicio.sequencias integerValue];
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,6 +86,7 @@
 - (IBAction)finishExercise:(id)sender {
     if (![self.timer isValid]) {
         //Initialize the exercise interval.
+        //self.seconds = [self.ficha.intervalo integerValue];
         self.seconds = 3;
         
         //Specify time interval in seconds.
@@ -68,6 +105,23 @@
         [self.finishButton setAlpha:0.5];
         //self.finishButton.titleLabel.text = [NSString stringWithFormat:@"Aguarde o intervalo"];
         [self.finishButton setTitle:@"Aguarde o intervalo" forState:UIControlStateDisabled];
+        
+        self.sequenciasAtual--;
+        self.sequenciasLabel.text = [NSString stringWithFormat:@"%d", self.sequenciasAtual];
+        if (self.sequenciasAtual == 0) {
+            
+            self.exercicioAtual++;
+            
+            Exercicio *exercicio = [self.exercicios objectAtIndex:self.exercicioAtual];
+            self.pesoLabel.text = [NSString stringWithFormat:@"%@", exercicio.peso];
+            self.repeticoesLabel.text = [NSString stringWithFormat:@"%@", exercicio.repeticoes];
+            self.sequenciasLabel.text = [NSString stringWithFormat:@"%@", exercicio.sequencias];
+            self.nomeLabel.text = exercicio.detalhesDoExercicio.nome;
+            
+            self.pesoAtual = [exercicio.peso integerValue];
+            self.repeticoesAtual = [exercicio.repeticoes integerValue];
+            self.sequenciasAtual = [exercicio.sequencias integerValue];
+        }
     }
 }
 
@@ -97,10 +151,7 @@
         
         //Problema resolvido: A instância estava sendo criada nesse método. Como estava rodando de forma assíncrona, o método terminava antes do som ser enviado, o que fazia o mesmo perder a referência e não ser tocado.
         //Solução: Criar uma propriedade do view controller para armazenar o som, assim, a referência não é perdida com o fim do método.
-        NSString *soundPath = [[NSBundle mainBundle]pathForResource:@"hehehe1" ofType:@"wav"];
-        NSURL *soundURL = [[NSURL alloc]initFileURLWithPath:soundPath];
-        NSError *error;
-        self.messageSound = [[AVAudioPlayer alloc]initWithContentsOfURL:soundURL error:&error];
+
         [self.messageSound play];
         
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);

@@ -13,6 +13,8 @@
 		EC1693FA18A007570055311B /* AddSexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1693F918A007570055311B /* AddSexViewController.m */; };
 		EC1693FD18A017D90055311B /* AddBirthdayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1693FC18A017D90055311B /* AddBirthdayViewController.m */; };
 		EC2BC9E518A3E94400ECD6A9 /* ExerciciosTemporarios.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2BC9E418A3E94400ECD6A9 /* ExerciciosTemporarios.m */; };
+		EC2BC9E818A3F31C00ECD6A9 /* ExibeExercicioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2BC9E718A3F31C00ECD6A9 /* ExibeExercicioViewController.m */; };
+		EC2BC9EE18A3FEEA00ECD6A9 /* IniciarTreinoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2BC9ED18A3FEEA00ECD6A9 /* IniciarTreinoCell.m */; };
 		EC322985189911DE009C34C1 /* CategoriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC322984189911DE009C34C1 /* CategoriaViewController.m */; };
 		EC32298818992690009C34C1 /* TreinoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC32298718992690009C34C1 /* TreinoViewController.m */; };
 		EC32298A18993635009C34C1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32298918993635009C34C1 /* AudioToolbox.framework */; };
@@ -77,6 +79,10 @@
 		EC1693FC18A017D90055311B /* AddBirthdayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBirthdayViewController.m; sourceTree = "<group>"; };
 		EC2BC9E318A3E94400ECD6A9 /* ExerciciosTemporarios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciciosTemporarios.h; sourceTree = "<group>"; };
 		EC2BC9E418A3E94400ECD6A9 /* ExerciciosTemporarios.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciciosTemporarios.m; sourceTree = "<group>"; };
+		EC2BC9E618A3F31C00ECD6A9 /* ExibeExercicioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExibeExercicioViewController.h; sourceTree = "<group>"; };
+		EC2BC9E718A3F31C00ECD6A9 /* ExibeExercicioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExibeExercicioViewController.m; sourceTree = "<group>"; };
+		EC2BC9EC18A3FEEA00ECD6A9 /* IniciarTreinoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IniciarTreinoCell.h; sourceTree = "<group>"; };
+		EC2BC9ED18A3FEEA00ECD6A9 /* IniciarTreinoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IniciarTreinoCell.m; sourceTree = "<group>"; };
 		EC322983189911DE009C34C1 /* CategoriaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriaViewController.h; sourceTree = "<group>"; };
 		EC322984189911DE009C34C1 /* CategoriaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriaViewController.m; sourceTree = "<group>"; };
 		EC32298618992690009C34C1 /* TreinoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreinoViewController.h; sourceTree = "<group>"; };
@@ -232,10 +238,12 @@
 		EC4A58B318A1657300C1FE01 /* IniciarTreino */ = {
 			isa = PBXGroup;
 			children = (
-				EC4A58B018A1650B00C1FE01 /* LoadIniciarTreinoViewController.h */,
-				EC4A58B118A1650B00C1FE01 /* LoadIniciarTreinoViewController.m */,
 				EC32298618992690009C34C1 /* TreinoViewController.h */,
 				EC32298718992690009C34C1 /* TreinoViewController.m */,
+				EC4A58B018A1650B00C1FE01 /* LoadIniciarTreinoViewController.h */,
+				EC4A58B118A1650B00C1FE01 /* LoadIniciarTreinoViewController.m */,
+				EC2BC9EC18A3FEEA00ECD6A9 /* IniciarTreinoCell.h */,
+				EC2BC9ED18A3FEEA00ECD6A9 /* IniciarTreinoCell.m */,
 			);
 			name = IniciarTreino;
 			sourceTree = "<group>";
@@ -247,6 +255,8 @@
 				EC348CE418A2BC9F00CD79D0 /* Cadastro Treino */,
 				EC348CE018A2B36900CD79D0 /* TreinoCell.h */,
 				EC348CE118A2B36900CD79D0 /* TreinoCell.m */,
+				EC2BC9E618A3F31C00ECD6A9 /* ExibeExercicioViewController.h */,
+				EC2BC9E718A3F31C00ECD6A9 /* ExibeExercicioViewController.m */,
 				EC322983189911DE009C34C1 /* CategoriaViewController.h */,
 				EC322984189911DE009C34C1 /* CategoriaViewController.m */,
 				EC11C3AC18981F0600F7EC2E /* FichaViewController.h */,
@@ -500,7 +510,9 @@
 				ED1D0FD7189FCBD300AECAC4 /* fichas.xcdatamodeld in Sources */,
 				EC11C3AE18981F0600F7EC2E /* FichaViewController.m in Sources */,
 				EC348CE718A2BCF300CD79D0 /* AddExercicioViewController.m in Sources */,
+				EC2BC9EE18A3FEEA00ECD6A9 /* IniciarTreinoCell.m in Sources */,
 				EC2BC9E518A3E94400ECD6A9 /* ExerciciosTemporarios.m in Sources */,
+				EC2BC9E818A3F31C00ECD6A9 /* ExibeExercicioViewController.m in Sources */,
 				EC348CE218A2B36900CD79D0 /* TreinoCell.m in Sources */,
 				ED1D0FE3189FCC0500AECAC4 /* DadosFisicos.m in Sources */,
 				EC61FDDB18A3B2CA009527DE /* FinishAddExercicioViewController.m in Sources */,

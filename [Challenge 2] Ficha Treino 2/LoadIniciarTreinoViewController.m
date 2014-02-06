@@ -9,8 +9,14 @@
 #import "LoadIniciarTreinoViewController.h"
 #import "DataStorage.h"
 #import "Pessoa.h"
+#import "BegymModel.h"
+#import "IniciarTreinoCell.h"
+#import "TreinoViewController.h"
 
-@interface LoadIniciarTreinoViewController ()
+@interface LoadIniciarTreinoViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+
+@property (nonatomic, strong) Ficha *ficha;
+@property (nonatomic) NSInteger treinoSelecionado;
 
 @end
 
@@ -36,16 +42,62 @@
     NSArray *pessoas = [repository getPessoas];
     Pessoa *user = pessoas[0];
     
-    if ([user.fichas count] != 0) {
-        self.view.hidden = YES;
-        [self performSegueWithIdentifier:@"fichaAtiva" sender:self];
-    }
+    NSArray* fichas = [user getFichas];
+    Ficha *ficha = fichas[0];
+    self.ficha = ficha;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UICollectionViewDataSource
+
+- (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return [[self.ficha getListaTreinos] count];
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    IniciarTreinoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"treinoCell" forIndexPath:indexPath];
+    
+    Treinos *treino = [[self.ficha getListaTreinos] objectAtIndex:indexPath.row];
+    
+    cell.nomeTreinoLabel.text = treino.nome;
+    
+    return cell;
+}
+
+#pragma mark - UICollectionViewDelegate
+- (void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    self.treinoSelecionado = indexPath.row;
+    
+    [self performSegueWithIdentifier:@"iniciarTreino" sender:self];
+}
+
+#pragma mark - UICollectionViewDelegateFlowLayout
+
+- (UIEdgeInsets) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    UIEdgeInsets inset = UIEdgeInsetsMake(0, 20, 20, 20); //Return the margin of the Collection View.
+    
+    return inset;
+}
+
+- (CGSize) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(70, 70); //Return the size of the cell.
+}
+
+#pragma mark - Outros métodos
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [super prepareForSegue:segue sender:sender];
+    
+    if ([segue.identifier isEqualToString:@"iniciarTreino"]) {
+        TreinoViewController *destController = segue.destinationViewController;
+        destController.ficha = self.ficha;
+        destController.treino = [[self.ficha getListaTreinos] objectAtIndex:self.treinoSelecionado];
+    }
 }
 
 @end
