@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DataStorage.h"
-#import "Ficha.h"
-#import "Treinos.h"
-#import "Exercicio.h"
+#import "BegymModel.h"
 
 @interface GerenciarTreinoViewController : UIViewController
 

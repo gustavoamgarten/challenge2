@@ -24,6 +24,8 @@
 		EC4A58B218A1650B00C1FE01 /* LoadIniciarTreinoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4A58B118A1650B00C1FE01 /* LoadIniciarTreinoViewController.m */; };
 		EC4B9AF318A260EA002ADB4C /* LoadFichaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4B9AF218A260EA002ADB4C /* LoadFichaViewController.m */; };
 		EC4B9AF718A26655002ADB4C /* CriarFichaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4B9AF618A26655002ADB4C /* CriarFichaViewController.m */; };
+		EC61FDDB18A3B2CA009527DE /* FinishAddExercicioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC61FDDA18A3B2CA009527DE /* FinishAddExercicioViewController.m */; };
+		EC61FDDE18A3B367009527DE /* BegymModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC61FDDD18A3B367009527DE /* BegymModel.m */; };
 		EC7D00F01897CBD900D63E28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7D00EF1897CBD900D63E28 /* Foundation.framework */; };
 		EC7D00F21897CBD900D63E28 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7D00F11897CBD900D63E28 /* CoreGraphics.framework */; };
 		EC7D00F41897CBD900D63E28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7D00F31897CBD900D63E28 /* UIKit.framework */; };
@@ -94,6 +96,10 @@
 		EC4B9AF218A260EA002ADB4C /* LoadFichaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadFichaViewController.m; sourceTree = "<group>"; };
 		EC4B9AF518A26655002ADB4C /* CriarFichaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CriarFichaViewController.h; sourceTree = "<group>"; };
 		EC4B9AF618A26655002ADB4C /* CriarFichaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CriarFichaViewController.m; sourceTree = "<group>"; };
+		EC61FDD918A3B2CA009527DE /* FinishAddExercicioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishAddExercicioViewController.h; sourceTree = "<group>"; };
+		EC61FDDA18A3B2CA009527DE /* FinishAddExercicioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinishAddExercicioViewController.m; sourceTree = "<group>"; };
+		EC61FDDC18A3B367009527DE /* BegymModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BegymModel.h; sourceTree = "<group>"; };
+		EC61FDDD18A3B367009527DE /* BegymModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BegymModel.m; sourceTree = "<group>"; };
 		EC7D00EC1897CBD900D63E28 /* [Challenge 2] Ficha Treino 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "[Challenge 2] Ficha Treino 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7D00EF1897CBD900D63E28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EC7D00F11897CBD900D63E28 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -214,6 +220,8 @@
 				EC348CDE18A2A4E100CD79D0 /* GerenciarTreinoViewController.m */,
 				EC348CE518A2BCF300CD79D0 /* AddExercicioViewController.h */,
 				EC348CE618A2BCF300CD79D0 /* AddExercicioViewController.m */,
+				EC61FDD918A3B2CA009527DE /* FinishAddExercicioViewController.h */,
+				EC61FDDA18A3B2CA009527DE /* FinishAddExercicioViewController.m */,
 			);
 			name = "Cadastro Treino";
 			sourceTree = "<group>";
@@ -339,6 +347,8 @@
 				EC7D36E9189AC13D008BF3D3 /* Fichas */,
 				ED194E93189C076A006EE9F5 /* DadoFisico.h */,
 				ED194E94189C076A006EE9F5 /* DadoFisico.m */,
+				EC61FDDC18A3B367009527DE /* BegymModel.h */,
+				EC61FDDD18A3B367009527DE /* BegymModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -487,10 +497,12 @@
 				EC348CE718A2BCF300CD79D0 /* AddExercicioViewController.m in Sources */,
 				EC348CE218A2B36900CD79D0 /* TreinoCell.m in Sources */,
 				ED1D0FE3189FCC0500AECAC4 /* DadosFisicos.m in Sources */,
+				EC61FDDB18A3B2CA009527DE /* FinishAddExercicioViewController.m in Sources */,
 				EC322985189911DE009C34C1 /* CategoriaViewController.m in Sources */,
 				EC4A58B218A1650B00C1FE01 /* LoadIniciarTreinoViewController.m in Sources */,
 				EC7D00FC1897CBD900D63E28 /* main.m in Sources */,
 				EC1693FA18A007570055311B /* AddSexViewController.m in Sources */,
+				EC61FDDE18A3B367009527DE /* BegymModel.m in Sources */,
 				ED1D0FE0189FCC0500AECAC4 /* Treinos.m in Sources */,
 				EC1693F1189FEB030055311B /* LoadUserViewController.m in Sources */,
 				ED23DFA618A010CB0013D4B7 /* IrregularShapedButton.m in Sources */,
