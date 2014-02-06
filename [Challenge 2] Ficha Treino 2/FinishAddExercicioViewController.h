@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "BegymModel.h"
+#import "GerenciarTreinoViewController.h"
 
 @interface FinishAddExercicioViewController : UIViewController
 
 @property (nonatomic, strong) Exerciciopadrao *exercicioPadrao;
+@property (nonatomic, strong) Treinos *treino;
+@property (nonatomic, strong) GerenciarTreinoViewController *treinoViewController;
 
 @end

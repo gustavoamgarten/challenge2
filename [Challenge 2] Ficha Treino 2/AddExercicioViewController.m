@@ -7,10 +7,12 @@
 //
 
 #import "AddExercicioViewController.h"
+#import "FinishAddExercicioViewController.h"
 
 @interface AddExercicioViewController () <UITableViewDataSource>
 
 @property (nonatomic) NSInteger numRows;
+@property (nonatomic) Exerciciopadrao *exercicioPadrao;
 
 @end
 
@@ -50,6 +52,12 @@
     NSArray *exerciciosPadrao = [[DataStorage sharedRepository] getFichasDeExercicioPadrao];
     Exerciciopadrao *exPadrao = [exerciciosPadrao objectAtIndex:indexPath.row];
     
+    float laranjaRed = 238/255;
+    float laranjaGreen = 155/255;
+    float laranjaBlue = 17/255;
+    
+    cell.textLabel.textColor = [UIColor colorWithRed:0.1137f green:0.3960f blue:0.4862f alpha:1];
+    cell.detailTextLabel.textColor = [UIColor colorWithRed:laranjaRed green:laranjaGreen blue:laranjaBlue alpha:1];
     cell.textLabel.text = exPadrao.nome;
     
     // Categoria 1 = Abdominal
@@ -59,6 +67,7 @@
     // Categoria 5 = Perna
     // Categoria 6 = Triceps
     // Categoria 7 = Ombro
+    // 238 255 17
     
     NSInteger cat = [exPadrao.categoria integerValue];
     
@@ -97,5 +106,23 @@
 }
 
 #pragma mark - UITableViewDelegate
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSArray *exerciciosPadrao = [[DataStorage sharedRepository] getFichasDeExercicioPadrao];
+    Exerciciopadrao *exPadrao = [exerciciosPadrao objectAtIndex:indexPath.row];
+    
+    self.exercicioPadrao = exPadrao;
+    NSLog(@"exercicioPadraoPassado: %@", self.exercicioPadrao);
+    [self performSegueWithIdentifier:@"escolheuExercicio" sender:self];
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"escolheuExercicio"]) {
+        FinishAddExercicioViewController *destController = segue.destinationViewController;
+        destController.treinoViewController = self.treinoViewController;
+        destController.exercicioPadrao = self.exercicioPadrao;
+        destController.treino = self.treino;
+    }
+}
 
 @end

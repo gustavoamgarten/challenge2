@@ -7,6 +7,7 @@
 //
 
 #import "GerenciarTreinoViewController.h"
+#import "AddExercicioViewController.h"
 
 @interface GerenciarTreinoViewController () <UITableViewDataSource>
 
@@ -71,13 +72,22 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"gerenciarTreinoCell"];
     
-    cell.textLabel.text = [self.exercicios objectAtIndex:indexPath.row];
+    Exercicio *exercicio = [self.exercicios objectAtIndex:indexPath.row];
+    cell.textLabel.text = exercicio.detalhesDoExercicio.nome;
     
     return cell;
 }
 
 - (IBAction)goAdicionarExercicioButton:(UIButton *)sender {
     [self performSegueWithIdentifier:@"goAdicionarExercicio" sender:self];
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"goAdicionarExercicio"]) {
+        AddExercicioViewController *destController = segue.destinationViewController;
+        destController.treinoViewController = self;
+        destController.treino = self.treino;
+    }
 }
 
 @end

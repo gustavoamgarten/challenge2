@@ -11,9 +11,11 @@
 @interface FinishAddExercicioViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *nomeExercicioLabel;
-@property (weak, nonatomic) IBOutlet UITextField *pesoTextField;
-@property (weak, nonatomic) IBOutlet UITextField *repeticoesTextField;
-@property (weak, nonatomic) IBOutlet UITextField *sequenciasTextField;
+@property (weak, nonatomic) IBOutlet UIButton *addButton;
+
+@property(nonatomic) NSInteger peso;
+@property(nonatomic) NSInteger repeticoes;
+@property(nonatomic) NSInteger sequencias;
 
 @end
 
@@ -34,15 +36,42 @@
 	// Do any additional setup after loading the view.
     
     self.nomeExercicioLabel.text = self.exercicioPadrao.nome;
+    self.peso = 0;
+    self.repeticoes = 0;
+    self.sequencias = 0;
+    
+    NSLog(@"Passou exercicio padrao: %@", self.exercicioPadrao);
 }
+
+//- (void)viewWillAppear:(BOOL)animated {
+//    [super viewWillAppear:animated];
+//    
+//    self.addButton.enabled = YES;
+//}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)editPeso:(UITextField *)sender {
+    self.peso = [sender.text integerValue];
+}
+
+- (IBAction)editRepeticoes:(UITextField *)sender {
+    self.repeticoes = [sender.text integerValue];
+}
+
+- (IBAction)editSequencias:(UITextField *)sender {
+    self.sequencias = [sender.text integerValue];
+}
 
 - (IBAction)addExercicio:(UIButton *)sender {
+    [self.treino addExercicio:self.exercicioPadrao comPeso:self.peso comRepeticoes:self.repeticoes comSequencias:self.sequencias];
+    
+    //[self.navigationController];
+    //self.addButton.enabled = NO;
+    [self.navigationController popToViewController:self.treinoViewController animated:YES];
 }
 
 @end
