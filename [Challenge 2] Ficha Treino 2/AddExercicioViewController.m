@@ -121,7 +121,7 @@
         FinishAddExercicioViewController *destController = segue.destinationViewController;
         destController.treinoViewController = self.treinoViewController;
         destController.exercicioPadrao = self.exercicioPadrao;
-        destController.treino = self.treino;
+        destController.exercicios = self.exercicios;
     }
 }
 

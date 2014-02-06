@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BegymModel.h"
+#import "ExerciciosTemporarios.h"
 
 @interface GerenciarTreinoViewController : UIViewController
 

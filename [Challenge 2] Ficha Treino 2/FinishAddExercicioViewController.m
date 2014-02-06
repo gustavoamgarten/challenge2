@@ -67,7 +67,15 @@
 }
 
 - (IBAction)addExercicio:(UIButton *)sender {
-    [self.treino addExercicio:self.exercicioPadrao comPeso:self.peso comRepeticoes:self.repeticoes comSequencias:self.sequencias];
+    
+    ExerciciosTemporarios *ex = [[ExerciciosTemporarios alloc] init];
+    ex.peso = self.peso;
+    ex.repeticoes = self.repeticoes;
+    ex.sequencias = self.sequencias;
+    ex.detalheExercicio = self.exercicioPadrao;
+    
+    //[self.treino addExercicio:self.exercicioPadrao comPeso:self.peso comRepeticoes:self.repeticoes comSequencias:self.sequencias];
+    [self.exercicios addObject:ex];
     
     //[self.navigationController];
     //self.addButton.enabled = NO;

@@ -14,7 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *ordemTreinoLabel;
 @property (nonatomic, strong) Treinos *treino;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) NSArray *exercicios;
+@property (strong, nonatomic) NSMutableArray *exercicios;
+@property (nonatomic) NSInteger ordemTreino;
 
 @end
 
@@ -39,14 +40,17 @@
     //Receber e atualizar a tela com os dados do treino.
     //NSLog(@"Ficha: %@", self.ficha);
     
-    NSInteger ordemTreino = [[self.ficha getListaTreinos] count];
-    ordemTreino = ordemTreino + 1;
-    [self.ficha addTreino:[NSString stringWithFormat:@"%d", ordemTreino]];
+    self.ordemTreino = [[self.ficha getListaTreinos] count];
+    self.ordemTreino = self.ordemTreino + 1;
+    
+    //Criar array para armazenar exercicios
+    //[self.ficha addTreino:[NSString stringWithFormat:@"%d", ordemTreino]];
+    self.exercicios = [[NSMutableArray alloc] init];
     NSLog(@"Criou Treino");
     
-    self.ordemTreinoLabel.text = [NSString stringWithFormat:@"%d", ordemTreino];
+    self.ordemTreinoLabel.text = [NSString stringWithFormat:@"%d", self.ordemTreino];
     
-    self.treino = [[self.ficha getListaTreinos] objectAtIndex:(ordemTreino - 1)];
+    //self.treino = [[self.ficha getListaTreinos] objectAtIndex:(ordemTreino - 1)];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -54,7 +58,7 @@
     
     
     [self.tableView reloadData];
-    self.exercicios = [self.treino getListaExercicios];
+    //self.exercicios = [self.treino getListaExercicios];
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,27 +70,44 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[self.treino getListaExercicios] count];
+    //return [[self.treino getListaExercicios] count];
+    return [self.exercicios count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"gerenciarTreinoCell"];
     
-    Exercicio *exercicio = [self.exercicios objectAtIndex:indexPath.row];
-    cell.textLabel.text = exercicio.detalhesDoExercicio.nome;
+    ExerciciosTemporarios *exercicio = [self.exercicios objectAtIndex:indexPath.row];
+    cell.textLabel.text = exercicio.detalheExercicio.nome;
+    NSString *detail = [NSString stringWithFormat:@"Peso: %d Repetições: %d Sequências: %d", exercicio.peso, exercicio.repeticoes, exercicio.sequencias];
+    cell.detailTextLabel.text = detail;
     
     return cell;
 }
 
+#pragma mark - Botoes
 - (IBAction)goAdicionarExercicioButton:(UIButton *)sender {
     [self performSegueWithIdentifier:@"goAdicionarExercicio" sender:self];
 }
+
+- (IBAction)salvarTreino:(UIButton *)sender {
+    [self.ficha addTreino:[NSString stringWithFormat:@"%d", self.ordemTreino]];
+    self.treino = [[self.ficha getListaTreinos] objectAtIndex:(self.ordemTreino - 1)];
+    
+    for (ExerciciosTemporarios *exTemp in self.exercicios) {
+        [self.treino addExercicio:exTemp.detalheExercicio comPeso:exTemp.peso comRepeticoes:exTemp.repeticoes comSequencias:exTemp.sequencias];
+    }
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+#pragma mark - Outros
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"goAdicionarExercicio"]) {
         AddExercicioViewController *destController = segue.destinationViewController;
         destController.treinoViewController = self;
-        destController.treino = self.treino;
+        destController.exercicios = self.exercicios;
     }
 }
 
