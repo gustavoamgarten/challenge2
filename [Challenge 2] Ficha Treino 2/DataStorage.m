@@ -156,18 +156,18 @@ static NSManagedObjectContext *_managedObjectContext;
         [self.fichasExercicioPadrao addObject:exercicio];
     }
     
-    //Alimenta o Array com as fichas
-    fetchedObjects = [self reloadFichas];
-    
-    if(fetchedObjects != nil)
-    {
-        self.fichasExercicioPadrao = [[NSMutableArray alloc]init];
-    }
-    
-    for (Ficha *ficha in fetchedObjects)
-    {
-        [self.fichas addObject:ficha];
-    }
+//    //Alimenta o Array com as fichas
+//    fetchedObjects = [self reloadFichas];
+//    
+//    if(fetchedObjects != nil)
+//    {
+//        self.fichasExercicioPadrao = [[NSMutableArray alloc]init];
+//    }
+//    
+//    for (Ficha *ficha in fetchedObjects)
+//    {
+//        [self.fichas addObject:ficha];
+//    }
     
     //recarrega todas as tabelas restantes
     [self reloadDadosFisicos];
@@ -205,6 +205,8 @@ static NSManagedObjectContext *_managedObjectContext;
     
     exercicoPadrao.nome = nome;
     exercicoPadrao.categoria = [NSNumber numberWithInt:categoria];
+    
+    NSLog(@"%@", exercicoPadrao);
     
     
     NSError *error = nil;
