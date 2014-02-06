@@ -35,7 +35,13 @@
     //    CGAffineTransform s0 = CGAffineTransformMakeScale(0.5, 0.5);
     //    self.datePicker.transform = s0;
     
-    self.view.hidden = YES;
+    [[DataStorage sharedRepository] reloadData];
+    NSArray *pessoas = [[DataStorage sharedRepository] getPessoas];
+    if ([pessoas count] > 0) {
+        self.view.hidden = YES;
+    } else {
+        
+    }
 
 }
 
@@ -52,8 +58,6 @@
     if ([pessoas count] > 0) {
         NSLog(@"Aqui");
         [self performSegueWithIdentifier:@"comFicha" sender:self];
-    } else {
-        [self performSegueWithIdentifier:@"iniciarCadastro" sender:self];
     }
 }
 
@@ -63,6 +67,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)iniciarCadastro:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"iniciarCadastro" sender:self];
 }
 
 @end
