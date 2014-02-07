@@ -7,13 +7,15 @@
 //
 
 #import "EditarFichaViewController.h"
+#import "KeyboardAnimation.h"
 
-@interface EditarFichaViewController ()
+@interface EditarFichaViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *frequenciaTextField;
 @property (weak, nonatomic) IBOutlet UITextField *intervaloTextField;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *objetivoSegmentedControl;
 @property (weak, nonatomic) IBOutlet UITextField *periodoTextField;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *periodoSegmentedControl;
+@property (weak, nonatomic) IBOutlet UIButton *btnEditar;
 
 @property (nonatomic) NSInteger frequencia;
 @property (nonatomic) NSInteger intervalo;
@@ -51,6 +53,15 @@
     self.objetivo = [self.ficha.objetivo integerValue];
     self.periodoQuantidade = [self.ficha.periodoQuantidade integerValue];
     self.periodoTipo = [self.ficha.periodoTipo integerValue];
+    
+    self.frequenciaTextField.delegate = self;
+    self.intervaloTextField.delegate = self;
+    self.periodoTextField.delegate = self;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.frequenciaTextField becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -85,4 +96,36 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
+#pragma mark - métodos do text field delegate
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [KeyboardAnimation textFieldDidBeginEditing:textField from:self];
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [KeyboardAnimation textFieldDidEndedEditing:textField from:self];
+    
+    
+    //Verifica qual o text field atual e muda para o seguinte
+    if(textField == self.frequenciaTextField)
+    {
+        [self.intervaloTextField becomeFirstResponder];
+    }
+    else if(textField == self.intervaloTextField)
+    {
+        [self.periodoTextField becomeFirstResponder];
+    }
+    else if(textField == self.periodoTextField)
+    {
+        [self.btnEditar sendActionsForControlEvents:UIControlEventTouchUpInside];
+    }
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    //ativar evento ao pressionar return/done
+    [textField resignFirstResponder];
+    return YES;
+}
 @end

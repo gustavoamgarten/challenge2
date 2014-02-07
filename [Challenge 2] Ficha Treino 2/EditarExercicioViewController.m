@@ -7,12 +7,15 @@
 //
 
 #import "EditarExercicioViewController.h"
+#import "KeyboardAnimation.h"
 
-@interface EditarExercicioViewController ()
+@interface EditarExercicioViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *nomeExercicioLabel;
 @property (weak, nonatomic) IBOutlet UITextField *pesoTextField;
 @property (weak, nonatomic) IBOutlet UITextField *repeticoesTextField;
 @property (weak, nonatomic) IBOutlet UITextField *sequenciasTextField;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnSalvar;
 
 @property (nonatomic) NSInteger peso;
 @property (nonatomic) NSInteger repeticoes;
@@ -44,6 +47,15 @@
     self.peso = [self.exercicio.peso integerValue];
     self.repeticoes = [self.exercicio.repeticoes integerValue];
     self.sequencias = [self.exercicio.sequencias integerValue];
+    
+    self.pesoTextField.delegate =self;
+    self.repeticoesTextField.delegate = self;
+    self.sequenciasTextField.delegate = self;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.pesoTextField becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,4 +82,36 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
+#pragma mark - métodos do text field delegate
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [KeyboardAnimation textFieldDidBeginEditing:textField from:self];
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [KeyboardAnimation textFieldDidEndedEditing:textField from:self];
+    
+    
+    //Verifica qual o text field atual e muda para o seguinte
+    if(textField == self.pesoTextField)
+    {
+        [self.repeticoesTextField becomeFirstResponder];
+    }
+    else if(textField == self.repeticoesTextField)
+    {
+        [self.sequenciasTextField becomeFirstResponder];
+    }
+    else if(textField == self.sequenciasTextField)
+    {
+        [self.btnSalvar sendActionsForControlEvents:UIControlEventTouchUpInside];
+    }
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    //ativar evento ao pressionar return/done
+    [textField resignFirstResponder];
+    return YES;
+}
 @end

@@ -7,8 +7,12 @@
 //
 
 #import "FinishAddExercicioViewController.h"
+#import "KeyboardAnimation.h"
 
-@interface FinishAddExercicioViewController ()
+@interface FinishAddExercicioViewController ()<UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *pesoTextField;
+@property (weak, nonatomic) IBOutlet UITextField *repeticaoTextField;
+@property (weak, nonatomic) IBOutlet UITextField *sequenciaTextField;
 
 @property (weak, nonatomic) IBOutlet UILabel *nomeExercicioLabel;
 @property (weak, nonatomic) IBOutlet UIButton *addButton;
@@ -40,9 +44,18 @@
     self.repeticoes = 0;
     self.sequencias = 0;
     
+    
+    self.repeticaoTextField.delegate = self;
+    self.sequenciaTextField.delegate = self;
+    self.pesoTextField.delegate = self;
+    
     NSLog(@"Passou exercicio padrao: %@", self.exercicioPadrao);
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.pesoTextField becomeFirstResponder];
+}
 //- (void)viewWillAppear:(BOOL)animated {
 //    [super viewWillAppear:animated];
 //    
@@ -82,4 +95,36 @@
     [self.navigationController popToViewController:self.treinoViewController animated:YES];
 }
 
+#pragma mark - métodos do text field delegate
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [KeyboardAnimation textFieldDidBeginEditing:textField from:self];
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [KeyboardAnimation textFieldDidEndedEditing:textField from:self];
+    
+    
+    //Verifica qual o text field atual e muda para o seguinte
+    if(textField == self.pesoTextField)
+    {
+        [self.repeticaoTextField becomeFirstResponder];
+    }
+    else if(textField == self.repeticaoTextField)
+    {
+        [self.sequenciaTextField becomeFirstResponder];
+    }
+    else if(textField == self.sequenciaTextField)
+    {
+        [self.addButton sendActionsForControlEvents:UIControlEventTouchUpInside];
+    }
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    //ativar evento ao pressionar return/done
+    [textField resignFirstResponder];
+    return YES;
+}
 @end

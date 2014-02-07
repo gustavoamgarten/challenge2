@@ -467,6 +467,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <connections>
                         <outlet property="addButton" destination="IpQ-Ob-SeQ" id="UDT-KE-UsL"/>
                         <outlet property="nomeExercicioLabel" destination="1zU-W4-wgx" id="hs8-2T-JgW"/>
+                        <outlet property="pesoTextField" destination="k6T-e4-7xP" id="Z4Z-PU-lRW"/>
+                        <outlet property="repeticaoTextField" destination="6uK-aw-xKn" id="6FS-2W-SQF"/>
+                        <outlet property="sequenciaTextField" destination="Mhl-G9-czD" id="oc3-KZ-hPN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTT-UR-HTY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -967,6 +970,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </view>
                     <navigationItem key="navigationItem" id="2GT-JB-zox"/>
                     <connections>
+                        <outlet property="btnSalvar" destination="lBR-2Y-UvG" id="gmR-EP-Zr4"/>
                         <outlet property="nomeExercicioLabel" destination="GTv-nO-FwP" id="INc-1i-TkY"/>
                         <outlet property="pesoTextField" destination="I9x-yR-OG2" id="gLf-6O-GKZ"/>
                         <outlet property="repeticoesTextField" destination="0Qe-ty-bcE" id="xfV-K7-Vae"/>
@@ -1509,6 +1513,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </view>
                     <navigationItem key="navigationItem" id="ZoW-rV-NzE"/>
                     <connections>
+                        <outlet property="btnEditar" destination="aQt-kJ-weI" id="fL7-ZK-0ii"/>
                         <outlet property="frequenciaTextField" destination="cRH-JE-J4k" id="Gxb-dx-0nf"/>
                         <outlet property="intervaloTextField" destination="Vet-XS-ngY" id="vTd-Wn-0br"/>
                         <outlet property="objetivoSegmentedControl" destination="rWA-Ln-Q9i" id="aCu-mf-VIj"/>
