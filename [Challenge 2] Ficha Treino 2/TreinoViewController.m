@@ -165,4 +165,8 @@
         self.sequenciasAtual = [exercicio.sequencias integerValue];
     }
 }
+
+- (IBAction)pularExercicioButton:(UIButton *)sender {
+    [self iniciaProximoExercicio];
+}
 @end
