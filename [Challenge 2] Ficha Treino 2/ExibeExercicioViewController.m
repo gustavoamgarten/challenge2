@@ -7,6 +7,7 @@
 //
 
 #import "ExibeExercicioViewController.h"
+#import "EditarExercicioViewController.h"
 
 @interface ExibeExercicioViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *pesoLabel;
@@ -46,6 +47,14 @@
 }
 
 - (IBAction)editExercicio:(id)sender {
+    [self performSegueWithIdentifier:@"editarExercicio" sender:self];
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    EditarExercicioViewController *destController = segue.destinationViewController;
+    
+    destController.exercicio = self.exercicio;
+    destController.rootController = self.rootController;
 }
 
 @end

@@ -103,6 +103,7 @@
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     ExibeExercicioViewController *destController = segue.destinationViewController;
     destController.exercicio = [self.exercicios objectAtIndex:self.exercicioSelecionado];
+    destController.rootController = self.rootController;
 }
 
 @end

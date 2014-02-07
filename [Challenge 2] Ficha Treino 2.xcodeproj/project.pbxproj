@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC05740218A546090056B5B7 /* EditarFichaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC05740118A546090056B5B7 /* EditarFichaViewController.m */; };
 		EC11C3AE18981F0600F7EC2E /* FichaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC11C3AD18981F0600F7EC2E /* FichaViewController.m */; };
 		EC1693F1189FEB030055311B /* LoadUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1693F0189FEB030055311B /* LoadUserViewController.m */; };
 		EC1693F718A006540055311B /* AddNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1693F618A006540055311B /* AddNameViewController.m */; };
@@ -70,6 +71,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC05740018A546090056B5B7 /* EditarFichaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditarFichaViewController.h; sourceTree = "<group>"; };
+		EC05740118A546090056B5B7 /* EditarFichaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditarFichaViewController.m; sourceTree = "<group>"; };
 		EC11C3AC18981F0600F7EC2E /* FichaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FichaViewController.h; sourceTree = "<group>"; };
 		EC11C3AD18981F0600F7EC2E /* FichaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FichaViewController.m; sourceTree = "<group>"; };
 		EC1693EF189FEB030055311B /* LoadUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadUserViewController.h; sourceTree = "<group>"; };
@@ -272,6 +275,8 @@
 				EC2BC9E718A3F31C00ECD6A9 /* ExibeExercicioViewController.m */,
 				EC322983189911DE009C34C1 /* CategoriaViewController.h */,
 				EC322984189911DE009C34C1 /* CategoriaViewController.m */,
+				EC05740018A546090056B5B7 /* EditarFichaViewController.h */,
+				EC05740118A546090056B5B7 /* EditarFichaViewController.m */,
 				EC11C3AC18981F0600F7EC2E /* FichaViewController.h */,
 				EC11C3AD18981F0600F7EC2E /* FichaViewController.m */,
 				EC4B9AF118A260EA002ADB4C /* LoadFichaViewController.h */,
@@ -539,6 +544,7 @@
 				EC32298818992690009C34C1 /* TreinoViewController.m in Sources */,
 				EC7D01001897CBD900D63E28 /* AppDelegate.m in Sources */,
 				ED1D0FD7189FCBD300AECAC4 /* fichas.xcdatamodeld in Sources */,
+				EC05740218A546090056B5B7 /* EditarFichaViewController.m in Sources */,
 				EC11C3AE18981F0600F7EC2E /* FichaViewController.m in Sources */,
 				EC348CE718A2BCF300CD79D0 /* AddExercicioViewController.m in Sources */,
 				EC2BC9EE18A3FEEA00ECD6A9 /* IniciarTreinoCell.m in Sources */,

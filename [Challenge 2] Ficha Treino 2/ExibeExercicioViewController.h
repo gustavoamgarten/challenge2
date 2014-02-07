@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "BegymModel.h"
+#import "FichaViewController.h"
 
 @interface ExibeExercicioViewController : UIViewController
 
 @property (nonatomic, strong) Exercicio *exercicio;
+@property (nonatomic, strong) FichaViewController *rootController;
 
 @end

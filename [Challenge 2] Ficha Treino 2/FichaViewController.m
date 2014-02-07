@@ -14,6 +14,7 @@
 #import "GerenciarTreinoViewController.h"
 #import "TreinoCell.h"
 #import "CategoriaViewController.h"
+#import "EditarFichaViewController.h"
 
 @interface FichaViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
@@ -47,6 +48,67 @@
 	// Do any additional setup after loading the view.
     
     self.automaticallyAdjustsScrollViewInsets = NO; //Prevents top space navigation controller puts in CollectionView.
+    
+//    //Ajuste de dados da ficha
+//    [[DataStorage sharedRepository] reloadData];
+//    NSArray *pessoas = [[DataStorage sharedRepository] getPessoas];
+//    Pessoa *usuario = pessoas[0];
+//    
+//    NSArray* fichas = [usuario getFichas];
+//    Ficha *ficha = fichas[0];
+//    self.ficha = ficha;
+//    
+//    //Data
+//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+//    dateFormatter.dateFormat = @"dd/MM/yyyy";
+//    self.dataLabel.text = [dateFormatter stringFromDate:ficha.dataDaCriacao];
+//    
+//    //Frequencia
+//    self.frequenciaLabel.text = [NSString stringWithFormat:@"%@", ficha.frequencia];
+//    
+//    //Intervalo
+//    self.intervaloLabel.text = [NSString stringWithFormat:@"%@", ficha.intervalo];
+//    
+//    //Periodo
+//    NSInteger periodoTipo = [ficha.periodoTipo integerValue];
+//    
+//    if (periodoTipo == 0) {
+//        self.periodoTipo.text = [NSString stringWithFormat:@"(semanas)"];
+//    } else {
+//        self.periodoTipo.text = [NSString stringWithFormat:@"(meses)"];
+//    }
+//    
+//    self.periodoLabel.text = [NSString stringWithFormat:@"%@", ficha.periodoQuantidade];
+//    
+//    //Objetivo
+//    NSInteger objetivo = [ficha.objetivo integerValue];
+//    switch (objetivo) {
+//        case 0:
+//            self.objetivoLabel.text = [NSString stringWithFormat:@"Adaptação"];
+//            break;
+//        case 1:
+//            self.objetivoLabel.text = [NSString stringWithFormat:@"Hipertrofia"];
+//            break;
+//        case 2:
+//            self.objetivoLabel.text = [NSString stringWithFormat:@"Força"];
+//            break;
+//        case 3:
+//            self.objetivoLabel.text = [NSString stringWithFormat:@"Definição"];
+//            break;
+//        default:
+//            break;
+//    }
+    
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
     //Ajuste de dados da ficha
     [[DataStorage sharedRepository] reloadData];
@@ -98,17 +160,6 @@
             break;
     }
     
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
     [self.collectionView reloadData];
 }
 
@@ -150,7 +201,8 @@
 #pragma mark - Buttons
 
 - (IBAction)editButton:(UIButton *)sender {
-    NSLog(@"Cliquei no botao de Editar");
+    NSLog(@"bla");
+    [self performSegueWithIdentifier:@"editarFicha" sender:self];
 }
 
 - (IBAction)novoTreinoButton:(UIButton *)sender {
@@ -172,6 +224,10 @@
         
         CategoriaViewController *destController = segue.destinationViewController;
         destController.treino = treino;
+        destController.rootController = self;
+    } else if ([segue.identifier isEqualToString:@"editarFicha"]) {
+        EditarFichaViewController *destController = segue.destinationViewController;
+        destController.ficha = self.ficha;
     }
 }
 

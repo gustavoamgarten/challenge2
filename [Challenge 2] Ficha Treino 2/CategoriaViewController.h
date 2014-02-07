@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "BegymModel.h"
+#import "FichaViewController.h"
 
 @interface CategoriaViewController : UIViewController
 
 @property (nonatomic, strong) Ficha *ficha;
 @property (nonatomic, strong) Treinos *treino;
+@property (nonatomic, strong) FichaViewController *rootController;
 
 @end
