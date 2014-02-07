@@ -58,6 +58,7 @@
 		ED23DFA218A010360013D4B7 /* UIImage-Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = ED23DFA118A010360013D4B7 /* UIImage-Alpha.m */; };
 		ED23DFA618A010CB0013D4B7 /* IrregularShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ED23DFA518A010CB0013D4B7 /* IrregularShapedButton.m */; };
 		ED9B562C18A5328A0040F9E2 /* KeyboardAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9B562B18A5328A0040F9E2 /* KeyboardAnimation.m */; };
+		ED9B563318A54CCD0040F9E2 /* AddMedidasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9B563218A54CCD0040F9E2 /* AddMedidasViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +161,8 @@
 		ED23DFA518A010CB0013D4B7 /* IrregularShapedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IrregularShapedButton.m; sourceTree = "<group>"; };
 		ED9B562A18A5328A0040F9E2 /* KeyboardAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardAnimation.h; sourceTree = "<group>"; };
 		ED9B562B18A5328A0040F9E2 /* KeyboardAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardAnimation.m; sourceTree = "<group>"; };
+		ED9B563118A54CCD0040F9E2 /* AddMedidasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMedidasViewController.h; sourceTree = "<group>"; };
+		ED9B563218A54CCD0040F9E2 /* AddMedidasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMedidasViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +268,7 @@
 		EC4B9AEF18A259CB002ADB4C /* Ficha */ = {
 			isa = PBXGroup;
 			children = (
+				ED9B562D18A54C590040F9E2 /* CadastroMedidas */,
 				EC4B9AF418A2662E002ADB4C /* Cadastro Ficha */,
 				EC348CE418A2BC9F00CD79D0 /* Cadastro Treino */,
 				EC348CE018A2B36900CD79D0 /* TreinoCell.h */,
@@ -443,6 +447,15 @@
 			name = Keyboard;
 			sourceTree = "<group>";
 		};
+		ED9B562D18A54C590040F9E2 /* CadastroMedidas */ = {
+			isa = PBXGroup;
+			children = (
+				ED9B563118A54CCD0040F9E2 /* AddMedidasViewController.h */,
+				ED9B563218A54CCD0040F9E2 /* AddMedidasViewController.m */,
+			);
+			name = CadastroMedidas;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -552,6 +565,7 @@
 				EC2BC9E818A3F31C00ECD6A9 /* ExibeExercicioViewController.m in Sources */,
 				EC348CE218A2B36900CD79D0 /* TreinoCell.m in Sources */,
 				ED1D0FE3189FCC0500AECAC4 /* DadosFisicos.m in Sources */,
+				ED9B563318A54CCD0040F9E2 /* AddMedidasViewController.m in Sources */,
 				EC61FDDB18A3B2CA009527DE /* FinishAddExercicioViewController.m in Sources */,
 				EC322985189911DE009C34C1 /* CategoriaViewController.m in Sources */,
 				EC4A58B218A1650B00C1FE01 /* LoadIniciarTreinoViewController.m in Sources */,
