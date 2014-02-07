@@ -176,7 +176,6 @@
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     TreinoFinalizadoViewController *destController = segue.destinationViewController;
     
-    
-    //destController.prevController = (TreinoViewController*)self;
+    destController.prevController = self;
 }
 @end

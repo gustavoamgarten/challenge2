@@ -8,13 +8,17 @@
 
 #import "AddNameViewController.h"
 #import "AddSexViewController.h"
+#import "KeyboardAnimation.h"
 
-@interface AddNameViewController ()
+@interface AddNameViewController ()<UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UIButton *btnProximo;
+@property (weak, nonatomic) IBOutlet UITextField *nomeTextField;
 
 @end
 
 @implementation AddNameViewController
 
+#pragma mark - métodos de inicialização
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -28,6 +32,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.nomeTextField.delegate = self;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.nomeTextField becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,6 +59,32 @@
     AddSexViewController *destController = segue.destinationViewController;
     
     destController.nome = self.nome;
+}
+
+#pragma mark - métodos do text field delegate
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [KeyboardAnimation textFieldDidBeginEditing:textField from:self];
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [KeyboardAnimation textFieldDidEndedEditing:textField from:self];
+    
+    
+    //verifica se é o nome e depois de terminar a alteração pressiona o botão próximo
+    if(textField == self.nomeTextField)
+    {
+        self.nome = self.nomeTextField.text;
+        [self.btnProximo sendActionsForControlEvents:UIControlEventTouchUpInside];
+    }
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    //ativar evento ao pressionar return/done
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end

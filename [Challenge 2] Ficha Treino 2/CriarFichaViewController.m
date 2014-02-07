@@ -17,11 +17,13 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *objetivoSegmentedControl;
 @property (weak, nonatomic) IBOutlet UITextField *periodoTextField;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *periodoTipoSegmentedControl;
+@property (weak, nonatomic) IBOutlet UIButton *btnCriar;
 
 @end
 
 @implementation CriarFichaViewController
 
+#pragma mark - metodos de inicialização
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -41,11 +43,19 @@
     self.periodoTextField.delegate = self;
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    //seleciona o primeiro campo para digitação
+    [self.frequenciaTextField becomeFirstResponder];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - eventos clique botão
 - (IBAction)criarFicha:(UIButton *)sender {
     [[DataStorage sharedRepository] reloadData];
     NSArray *pessoas = [[DataStorage sharedRepository] getPessoas];
@@ -66,9 +76,19 @@
 {
     [KeyboardAnimation textFieldDidEndedEditing:textField from:self];
     
-    if(textField == self.periodoTextField)
+    
+    //Verifica qual o text field atual e muda para o seguinte
+    if(textField == self.frequenciaTextField)
     {
-        NSLog(@"\r\nUltimo text field selecionado - TODO");
+        [self.intervaloTextField becomeFirstResponder];
+    }
+    else if(textField == self.intervaloTextField)
+    {
+        [self.periodoTextField becomeFirstResponder];
+    }
+    else if(textField == self.periodoTextField)
+    {
+        [self.btnCriar sendActionsForControlEvents:UIControlEventTouchUpInside];
     }
 }
 
