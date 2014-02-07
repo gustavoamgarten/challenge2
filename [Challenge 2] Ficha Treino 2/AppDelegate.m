@@ -46,8 +46,8 @@
     
     
     //recupera os arrays de pessoa e exercicio padrao
-//    NSArray* pessoas = [[DataStorage sharedRepository]getPessoas];
-//    NSArray* exercicoPadrao =[[DataStorage sharedRepository]getFichasDeExercicioPadrao];
+    NSArray* pessoas = [[DataStorage sharedRepository]getPessoas];
+    NSArray* exercicoPadrao =[[DataStorage sharedRepository]getFichasDeExercicioPadrao];
     
     
     //Pessoa* pessoaInfo = pessoas[0];
@@ -95,11 +95,29 @@
 //    exercicoPadrao =[[DataStorage sharedRepository]getFichasDeExercicioPadrao];
 //    
 //
-//    NSLog(@"\r\nPESSOAS CADASTRADAS [%d]: \r\n%@\r\nEND",[pessoas count],pessoas);
+//   NSLog(@"\r\nPESSOAS CADASTRADAS [%d]: \r\n%@\r\nEND",[pessoas count],pessoas);
 //    
-//    NSLog(@"\r\nEXERCICOS CADASTRADOS [%d]: \r\n%@\r\nEND",[exercicoPadrao count],exercicoPadrao);
+//   NSLog(@"\r\nEXERCICOS CADASTRADOS [%d]: \r\n%@\r\nEND",[exercicoPadrao count],exercicoPadrao);
 //    
-//    
+//    for (Pessoa* PessoaInfo in pessoas)
+//    {
+//        for(Ficha* fichaPessoa in PessoaInfo.fichas)
+//        {
+//            NSLog(@"\r\nFicha de pessoa relacionados: \r\n%@\r\nEND",fichaPessoa);
+//            [fichaPessoa editFichaFrequencia:1 editIntervalo:2 editObjetivo:3 editPeriodoQuantidade:4 editPeriodoTipo:5];
+//        }
+//    }
+    
+//    for (Exerciciopadrao* exercicioPadraoColetado in exercicoPadrao)
+//    {
+//        for(Exercicio* ExercRelacionado in exercicioPadraoColetado.exerciciosRelacionados)
+//        {
+//            NSLog(@"\r\nEXERCICOS Relacionados: \r\n%@\r\nEND",ExercRelacionado);
+//            [ExercRelacionado editExercicioPeso:10 editRepeticoes:11 editSequencias:12];
+//        }
+//    }
+//
+//
 //    [[DataStorage sharedRepository]deleteExercicioPadrao:exercicoPadrao[0]];
 //    
 //    pessoas = [[DataStorage sharedRepository]getPessoas];
