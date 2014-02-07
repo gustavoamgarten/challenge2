@@ -17,10 +17,29 @@
 
 @property (nonatomic, strong) Ficha *ficha;
 @property (nonatomic) NSInteger treinoSelecionado;
-
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @end
 
 @implementation LoadIniciarTreinoViewController
+
+#pragma mark - método auxiliar
+//método para puxar os dados do banco local e atualizar o view controller
+-(void)atualizarMostradores
+{
+    DataStorage *repository = [DataStorage sharedRepository];
+    [repository reloadData];
+    
+    NSArray *pessoas = [repository getPessoas];
+    Pessoa *user = pessoas[0];
+    
+    NSArray* fichas = [user getFichas];
+    Ficha *ficha = fichas[0];
+    self.ficha = ficha;
+    
+    [self.collectionView reloadData];
+}
+
+#pragma mark - métodos de inicialização
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,16 +54,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
-    DataStorage *repository = [DataStorage sharedRepository];
-    [repository reloadData];
-    
-    NSArray *pessoas = [repository getPessoas];
-    Pessoa *user = pessoas[0];
-    
-    NSArray* fichas = [user getFichas];
-    Ficha *ficha = fichas[0];
-    self.ficha = ficha;
+
+    [self atualizarMostradores];
+}
+
+ -(void)viewWillAppear:(BOOL)animated
+{
+    [self atualizarMostradores];
 }
 
 - (void)didReceiveMemoryWarning

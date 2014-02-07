@@ -368,12 +368,7 @@
 				ED23DFA318A010940013D4B7 /* BotaoIrregular */,
 				EC7D36EA189AC149008BF3D3 /* Singleton */,
 				EC7D36E9189AC13D008BF3D3 /* Fichas */,
-				EC2BC9E318A3E94400ECD6A9 /* ExerciciosTemporarios.h */,
-				EC2BC9E418A3E94400ECD6A9 /* ExerciciosTemporarios.m */,
-				ED194E93189C076A006EE9F5 /* DadoFisico.h */,
-				ED194E94189C076A006EE9F5 /* DadoFisico.m */,
-				EC61FDDC18A3B367009527DE /* BegymModel.h */,
-				EC61FDDD18A3B367009527DE /* BegymModel.m */,
+				ED9B562818A522A00040F9E2 /* ModelosAuxiliares */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -415,6 +410,19 @@
 				ED23DFA518A010CB0013D4B7 /* IrregularShapedButton.m */,
 			);
 			name = BotaoIrregular;
+			sourceTree = "<group>";
+		};
+		ED9B562818A522A00040F9E2 /* ModelosAuxiliares */ = {
+			isa = PBXGroup;
+			children = (
+				EC2BC9E318A3E94400ECD6A9 /* ExerciciosTemporarios.h */,
+				EC2BC9E418A3E94400ECD6A9 /* ExerciciosTemporarios.m */,
+				ED194E93189C076A006EE9F5 /* DadoFisico.h */,
+				ED194E94189C076A006EE9F5 /* DadoFisico.m */,
+				EC61FDDC18A3B367009527DE /* BegymModel.h */,
+				EC61FDDD18A3B367009527DE /* BegymModel.m */,
+			);
+			name = ModelosAuxiliares;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

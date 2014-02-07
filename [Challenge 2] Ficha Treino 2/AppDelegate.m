@@ -46,8 +46,8 @@
     
     
     //recupera os arrays de pessoa e exercicio padrao
-    NSArray* pessoas = [[DataStorage sharedRepository]getPessoas];
-    NSArray* exercicoPadrao =[[DataStorage sharedRepository]getFichasDeExercicioPadrao];
+//    NSArray* pessoas = [[DataStorage sharedRepository]getPessoas];
+//    NSArray* exercicoPadrao =[[DataStorage sharedRepository]getFichasDeExercicioPadrao];
     
     
     //Pessoa* pessoaInfo = pessoas[0];
