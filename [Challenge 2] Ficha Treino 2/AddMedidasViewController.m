@@ -9,8 +9,18 @@
 #import "AddMedidasViewController.h"
 
 @interface AddMedidasViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *pesoTextField;
+@property (weak, nonatomic) IBOutlet UITextField *bracoTextField;
+@property (weak, nonatomic) IBOutlet UITextField *cinturaTextField;
+@property (weak, nonatomic) IBOutlet UITextField *coxaTextField;
+@property (weak, nonatomic) IBOutlet UITextField *ombroTextField;
+@property (weak, nonatomic) IBOutlet UITextField *panturrilhaTextField;
+@property (weak, nonatomic) IBOutlet UITextField *antebracoTextField;
+@property (weak, nonatomic) IBOutlet UITextField *quadrisTextField;
+@property (weak, nonatomic) IBOutlet UITextField *porcentagemDeGorduraTextField;
+@property (weak, nonatomic) IBOutlet UITextField *alturaTextField;
 
-@property (weak, nonatomic) IBOutlet UITextField *TextField;
+@property (weak, nonatomic) IBOutlet UIButton *btnSalvarMedidas;
 @end
 
 @implementation AddMedidasViewController

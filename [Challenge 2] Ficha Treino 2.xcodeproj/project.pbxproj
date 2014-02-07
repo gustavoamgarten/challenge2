@@ -209,6 +209,7 @@
 		EC322982189910D7009C34C1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				ED9B562D18A54C590040F9E2 /* AdicaoMedidas */,
 				EC1693EF189FEB030055311B /* LoadUserViewController.h */,
 				EC1693F0189FEB030055311B /* LoadUserViewController.m */,
 				EC1693FE18A017EC0055311B /* Cadastro */,
@@ -268,7 +269,6 @@
 		EC4B9AEF18A259CB002ADB4C /* Ficha */ = {
 			isa = PBXGroup;
 			children = (
-				ED9B562D18A54C590040F9E2 /* CadastroMedidas */,
 				EC4B9AF418A2662E002ADB4C /* Cadastro Ficha */,
 				EC348CE418A2BC9F00CD79D0 /* Cadastro Treino */,
 				EC348CE018A2B36900CD79D0 /* TreinoCell.h */,
@@ -447,13 +447,13 @@
 			name = Keyboard;
 			sourceTree = "<group>";
 		};
-		ED9B562D18A54C590040F9E2 /* CadastroMedidas */ = {
+		ED9B562D18A54C590040F9E2 /* AdicaoMedidas */ = {
 			isa = PBXGroup;
 			children = (
 				ED9B563118A54CCD0040F9E2 /* AddMedidasViewController.h */,
 				ED9B563218A54CCD0040F9E2 /* AddMedidasViewController.m */,
 			);
-			name = CadastroMedidas;
+			name = AdicaoMedidas;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
