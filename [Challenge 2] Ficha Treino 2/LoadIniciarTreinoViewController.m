@@ -17,7 +17,6 @@
 
 @property (nonatomic, strong) Ficha *ficha;
 @property (nonatomic) NSInteger treinoSelecionado;
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -37,18 +36,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-//    DataStorage *repository = [DataStorage sharedRepository];
-//    [repository reloadData];
-//    
-//    NSArray *pessoas = [repository getPessoas];
-//    Pessoa *user = pessoas[0];
-//    
-//    NSArray* fichas = [user getFichas];
-//    Ficha *ficha = fichas[0];
-//    self.ficha = ficha;
-}
-
-- (void)viewWillAppear:(BOOL)animated {
     DataStorage *repository = [DataStorage sharedRepository];
     [repository reloadData];
     
@@ -58,8 +45,6 @@
     NSArray* fichas = [user getFichas];
     Ficha *ficha = fichas[0];
     self.ficha = ficha;
-    
-    [self.collectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning

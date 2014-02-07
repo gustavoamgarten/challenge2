@@ -19,11 +19,4 @@
 @property (nonatomic, retain) Exerciciopadrao *detalhesDoExercicio;
 @property (nonatomic, retain) Treinos *treinoRelacionado;
 
-//métodos para editar individualmente os valores do exercício
--(BOOL)editPeso:(int)peso;
--(BOOL)editRepeticoes:(int)repeticoes;
--(BOOL)editSequencias:(int)sequencias;
-
-//método para editar todos os dados do exercício
--(BOOL)editExercicioPeso:(int)peso editRepeticoes:(int)repeticoes editSequencias:(int)sequencias;
 @end
