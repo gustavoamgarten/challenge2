@@ -67,6 +67,7 @@
     NSURL *soundURL = [[NSURL alloc]initFileURLWithPath:soundPath];
     NSError *error;
     self.messageSound = [[AVAudioPlayer alloc]initWithContentsOfURL:soundURL error:&error];
+    [self.messageSound prepareToPlay];
     
     Exercicio *exercicio = [self.exercicios objectAtIndex:self.exercicioAtual];
     self.pesoLabel.text = [NSString stringWithFormat:@"%@", exercicio.peso];
