@@ -25,9 +25,18 @@
 //Adicionar nova rotina de treino na ficha de treinamentos
 -(BOOL)addTreino:(NSString*)nome;
 
-
 //método para pegar o array de fichas de treinos contidos na ficha
 -(NSArray*)getListaTreinos;
+
+//métodos para editar individualmente os valores da ficha
+-(BOOL)editFrequencia:(int)frequencia;
+-(BOOL)editIntervalo:(int)intervalo;
+-(BOOL)editObjetivo:(int)objetivo;
+-(BOOL)editPeriodoQuantidade:(int)periodoQuantidade;
+-(BOOL)editPeriodoTipo:(int)periodoTipo;
+
+//métodos para editar todos os valores da ficha
+-(BOOL)editFichaFrequencia:(int)frequencia editIntervalo:(int)intervalo editObjetivo:(int)objetivo editPeriodoQuantidade:(int)periodoQuantidade editPeriodoTipo:(int)periodoTipo;
 @end
 
 @interface Ficha (CoreDataGeneratedAccessors)
