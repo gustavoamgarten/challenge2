@@ -65,7 +65,6 @@
     NSURL *soundURL = [[NSURL alloc]initFileURLWithPath:soundPath];
     NSError *error;
     self.messageSound = [[AVAudioPlayer alloc]initWithContentsOfURL:soundURL error:&error];
-    [self.messageSound prepareToPlay];
     
     Exercicio *exercicio = [self.exercicios objectAtIndex:self.exercicioAtual];
     self.pesoLabel.text = [NSString stringWithFormat:@"%@", exercicio.peso];
@@ -109,7 +108,7 @@
         
         self.sequenciasAtual--;
         self.sequenciasLabel.text = [NSString stringWithFormat:@"%d", self.sequenciasAtual];
-        if (self.sequenciasAtual <= 0) {
+        if (self.sequenciasAtual == 0) {
             [self iniciaProximoExercicio];
         }
     }
