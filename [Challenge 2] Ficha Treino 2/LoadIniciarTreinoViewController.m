@@ -113,6 +113,7 @@
         TreinoViewController *destController = segue.destinationViewController;
         destController.ficha = self.ficha;
         destController.treino = [[self.ficha getListaTreinos] objectAtIndex:self.treinoSelecionado];
+        destController.prevController = self;
     }
 }
 

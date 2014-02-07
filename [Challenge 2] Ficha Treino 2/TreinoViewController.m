@@ -51,6 +51,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    [self.prevController dismissViewControllerAnimated:NO completion:nil];
+    
     //self.seconds = [self.ficha.intervalo integerValue];
     self.seconds = 3;
     NSDate *intervalo = [NSDate dateWithTimeIntervalSinceReferenceDate:self.seconds];
@@ -168,5 +170,12 @@
 
 - (IBAction)pularExercicioButton:(UIButton *)sender {
     [self iniciaProximoExercicio];
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    TreinoFinalizadoViewController *destController = segue.destinationViewController;
+    
+    
+    //destController.prevController = (TreinoViewController*)self;
 }
 @end

@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "BegymModel.h"
+#import "LoadIniciarTreinoViewController.h"
+#import "TreinoFinalizadoViewController.h"
 
 @interface TreinoViewController : UIViewController
 
 @property (nonatomic, strong) Ficha *ficha;
 @property (nonatomic, strong) Treinos *treino;
+@property (nonatomic, strong) LoadIniciarTreinoViewController *prevController;
 
 @end
