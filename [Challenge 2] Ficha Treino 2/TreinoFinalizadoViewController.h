@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TreinoViewController.h"
+
+@class TreinoViewController;
 
 @interface TreinoFinalizadoViewController : UIViewController
 
-//@property(nonatomic, strong) TreinoViewController *prevController;
+@property(nonatomic, strong) TreinoViewController *prevController;
 
 @end
