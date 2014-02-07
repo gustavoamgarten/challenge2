@@ -1002,7 +1002,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <!--Tab Bar Controller-->
         <scene sceneID="Wky-HH-WhA">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" id="3AP-zW-wTZ" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" id="3AP-zW-wTZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="dRg-5V-xv8">
@@ -1251,6 +1251,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <tabBarItem key="tabBarItem" title="Treinar" image="action" id="bmR-mO-KCJ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="collectionView" destination="hUB-ZY-GsN" id="gkr-aO-JoI"/>
                         <segue destination="1XN-nF-vtO" kind="modal" identifier="iniciarTreino" id="yNn-2F-D8V"/>
                     </connections>
                 </viewController>
