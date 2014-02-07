@@ -973,7 +973,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <!--Navigation Controller - Ficha-->
         <scene sceneID="cDx-d9-Gdp">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gna-EC-IIo" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" id="gna-EC-IIo" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Ficha" image="paper" id="uQI-eE-mVS"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="98z-GB-a31"/>
