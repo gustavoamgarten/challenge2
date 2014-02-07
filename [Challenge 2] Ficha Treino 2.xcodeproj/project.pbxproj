@@ -56,6 +56,7 @@
 		ED1D0FE9189FCC0600AECAC4 /* Ficha.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1D0FE8189FCC0600AECAC4 /* Ficha.m */; };
 		ED23DFA218A010360013D4B7 /* UIImage-Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = ED23DFA118A010360013D4B7 /* UIImage-Alpha.m */; };
 		ED23DFA618A010CB0013D4B7 /* IrregularShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ED23DFA518A010CB0013D4B7 /* IrregularShapedButton.m */; };
+		ED9B562C18A5328A0040F9E2 /* KeyboardAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9B562B18A5328A0040F9E2 /* KeyboardAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +155,8 @@
 		ED23DFA118A010360013D4B7 /* UIImage-Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage-Alpha.m"; sourceTree = "<group>"; };
 		ED23DFA418A010CB0013D4B7 /* IrregularShapedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IrregularShapedButton.h; sourceTree = "<group>"; };
 		ED23DFA518A010CB0013D4B7 /* IrregularShapedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IrregularShapedButton.m; sourceTree = "<group>"; };
+		ED9B562A18A5328A0040F9E2 /* KeyboardAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardAnimation.h; sourceTree = "<group>"; };
+		ED9B562B18A5328A0040F9E2 /* KeyboardAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardAnimation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +326,7 @@
 		EC7D00F51897CBD900D63E28 /* [Challenge 2] Ficha Treino 2 */ = {
 			isa = PBXGroup;
 			children = (
+				ED9B562918A532550040F9E2 /* Keyboard */,
 				EC7D36E8189AC102008BF3D3 /* Model */,
 				EC32298D18993A9E009C34C1 /* Resources */,
 				EC32298E18993AB6009C34C1 /* Other */,
@@ -423,6 +427,15 @@
 				EC61FDDD18A3B367009527DE /* BegymModel.m */,
 			);
 			name = ModelosAuxiliares;
+			sourceTree = "<group>";
+		};
+		ED9B562918A532550040F9E2 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				ED9B562A18A5328A0040F9E2 /* KeyboardAnimation.h */,
+				ED9B562B18A5328A0040F9E2 /* KeyboardAnimation.m */,
+			);
+			name = Keyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -552,6 +565,7 @@
 				ED1D0FE9189FCC0600AECAC4 /* Ficha.m in Sources */,
 				EC348CDF18A2A4E100CD79D0 /* GerenciarTreinoViewController.m in Sources */,
 				EC1693F718A006540055311B /* AddNameViewController.m in Sources */,
+				ED9B562C18A5328A0040F9E2 /* KeyboardAnimation.m in Sources */,
 				ED1D0FDD189FCC0500AECAC4 /* Pessoa.m in Sources */,
 				ED23DFA218A010360013D4B7 /* UIImage-Alpha.m in Sources */,
 				EC4B9AF318A260EA002ADB4C /* LoadFichaViewController.m in Sources */,

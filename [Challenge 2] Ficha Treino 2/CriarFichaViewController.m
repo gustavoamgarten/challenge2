@@ -9,8 +9,9 @@
 #import "CriarFichaViewController.h"
 #import "Pessoa.h"
 #import "DataStorage.h"
+#import "KeyboardAnimation.h"
 
-@interface CriarFichaViewController ()
+@interface CriarFichaViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *frequenciaTextField;
 @property (weak, nonatomic) IBOutlet UITextField *intervaloTextField;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *objetivoSegmentedControl;
@@ -34,6 +35,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self.frequenciaTextField.delegate = self;
+    self.intervaloTextField.delegate = self;
+    self.periodoTextField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,4 +56,26 @@
     [self performSegueWithIdentifier:@"fichaCriada" sender:self];
 }
 
+#pragma mark - métodos do text field delegate
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [KeyboardAnimation textFieldDidBeginEditing:textField from:self];
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [KeyboardAnimation textFieldDidEndedEditing:textField from:self];
+    
+    if(textField == self.periodoTextField)
+    {
+        NSLog(@"\r\nUltimo text field selecionado - TODO");
+    }
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    //ativar evento ao pressionar return/done
+    [textField resignFirstResponder];
+    return YES;
+}
 @end
