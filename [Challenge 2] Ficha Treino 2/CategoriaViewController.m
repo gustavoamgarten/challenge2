@@ -52,7 +52,10 @@
     //TODO
     //Populate cell
     Exercicio *exercicio = [self.exercicios objectAtIndex:indexPath.row];
+    cell.textLabel.textColor = [UIColor colorWithRed:0.1137f green:0.3960f blue:0.4862f alpha:1];
     cell.textLabel.text = [NSString stringWithFormat:@"%d. %@", (indexPath.row + 1), exercicio.detalhesDoExercicio.nome];
+    
+    cell.detailTextLabel.textColor = [UIColor colorWithRed:0.9333f green:0.6078f blue:0.0666f alpha:1];
     
     
     NSInteger cat = [exercicio.detalhesDoExercicio.categoria integerValue];

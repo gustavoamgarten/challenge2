@@ -52,12 +52,8 @@
     NSArray *exerciciosPadrao = [[DataStorage sharedRepository] getFichasDeExercicioPadrao];
     Exerciciopadrao *exPadrao = [exerciciosPadrao objectAtIndex:indexPath.row];
     
-    float laranjaRed = 238/255;
-    float laranjaGreen = 155/255;
-    float laranjaBlue = 17/255;
-    
     cell.textLabel.textColor = [UIColor colorWithRed:0.1137f green:0.3960f blue:0.4862f alpha:1];
-    cell.detailTextLabel.textColor = [UIColor colorWithRed:laranjaRed green:laranjaGreen blue:laranjaBlue alpha:1];
+    cell.detailTextLabel.textColor = [UIColor colorWithRed:0.9333f green:0.6078f blue:0.0666f alpha:1];
     cell.textLabel.text = exPadrao.nome;
     
     // Categoria 1 = Abdominal
