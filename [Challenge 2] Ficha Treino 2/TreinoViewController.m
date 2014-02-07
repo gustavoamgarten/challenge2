@@ -53,8 +53,8 @@
     
     [self.prevController dismissViewControllerAnimated:NO completion:nil];
     
-    //self.seconds = [self.ficha.intervalo integerValue];
-    self.seconds = 3;
+    self.seconds = [self.ficha.intervalo integerValue];
+    //self.seconds = 3;
     NSDate *intervalo = [NSDate dateWithTimeIntervalSinceReferenceDate:self.seconds];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"mm:ss";
@@ -89,8 +89,8 @@
 - (IBAction)finishExercise:(id)sender {
     if (![self.timer isValid]) {
         //Initialize the exercise interval.
-        //self.seconds = [self.ficha.intervalo integerValue];
-        self.seconds = 3;
+        self.seconds = [self.ficha.intervalo integerValue];
+        //self.seconds = 3;
         
         //Specify time interval in seconds.
         NSDate *clock = [NSDate dateWithTimeIntervalSinceReferenceDate:self.seconds];
