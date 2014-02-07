@@ -1458,30 +1458,18 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="begym_loading640x1136_comlogo" width="640" height="1136"/>
         <image name="begym_logo" width="784" height="455"/>
         <image name="botao1" width="608" height="117"/>
-        <image name="botao1" width="608" height="117"/>
         <image name="calendar" width="16" height="16"/>
-        <image name="edit" width="48" height="48"/>
-        <image name="edit" width="48" height="48"/>
         <image name="edit" width="48" height="48"/>
         <image name="frequency" width="16" height="16"/>
         <image name="goal" width="128" height="128"/>
-        <image name="loop" width="32" height="32"/>
-        <image name="loop" width="32" height="32"/>
-        <image name="loop" width="32" height="32"/>
         <image name="loop" width="32" height="32"/>
         <image name="next" width="72" height="72"/>
         <image name="note" width="32" height="32"/>
         <image name="paper" width="26" height="26"/>
         <image name="sequence" width="16" height="16"/>
-        <image name="sequence" width="16" height="16"/>
-        <image name="sequence" width="16" height="16"/>
-        <image name="sequence" width="16" height="16"/>
         <image name="time" width="32" height="32"/>
         <image name="treinoCompleto" width="318" height="101"/>
         <image name="trofeu" width="460" height="683"/>
-        <image name="weight" width="30" height="30"/>
-        <image name="weight" width="30" height="30"/>
-        <image name="weight" width="30" height="30"/>
         <image name="weight" width="30" height="30"/>
         <image name="youtube" width="64" height="64"/>
     </resources>

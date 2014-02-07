@@ -10,4 +10,7 @@
 
 @interface KeyboardAnimation : NSObject
 
++(void)textFieldDidBeginEditing:(UITextField *)textField from:(UIViewController*) viewController;
++(void)textFieldDidEndedEditing:(UITextField *)textField from:(UIViewController*) viewController;
+
 @end
