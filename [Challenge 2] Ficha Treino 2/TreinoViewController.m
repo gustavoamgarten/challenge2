@@ -109,18 +109,7 @@
         self.sequenciasAtual--;
         self.sequenciasLabel.text = [NSString stringWithFormat:@"%d", self.sequenciasAtual];
         if (self.sequenciasAtual == 0) {
-            
-            self.exercicioAtual++;
-            
-            Exercicio *exercicio = [self.exercicios objectAtIndex:self.exercicioAtual];
-            self.pesoLabel.text = [NSString stringWithFormat:@"%@", exercicio.peso];
-            self.repeticoesLabel.text = [NSString stringWithFormat:@"%@", exercicio.repeticoes];
-            self.sequenciasLabel.text = [NSString stringWithFormat:@"%@", exercicio.sequencias];
-            self.nomeLabel.text = exercicio.detalhesDoExercicio.nome;
-            
-            self.pesoAtual = [exercicio.peso integerValue];
-            self.repeticoesAtual = [exercicio.repeticoes integerValue];
-            self.sequenciasAtual = [exercicio.sequencias integerValue];
+            [self iniciaProximoExercicio];
         }
     }
 }
@@ -156,6 +145,24 @@
         
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
         
+    }
+}
+
+- (void)iniciaProximoExercicio {
+    self.exercicioAtual++;
+    
+    if (self.exercicioAtual >= [self.exercicios count]) {
+        [self performSegueWithIdentifier:@"terminarTreino" sender:self];
+    } else {
+        Exercicio *exercicio = [self.exercicios objectAtIndex:self.exercicioAtual];
+        self.pesoLabel.text = [NSString stringWithFormat:@"%@", exercicio.peso];
+        self.repeticoesLabel.text = [NSString stringWithFormat:@"%@", exercicio.repeticoes];
+        self.sequenciasLabel.text = [NSString stringWithFormat:@"%@", exercicio.sequencias];
+        self.nomeLabel.text = exercicio.detalhesDoExercicio.nome;
+        
+        self.pesoAtual = [exercicio.peso integerValue];
+        self.repeticoesAtual = [exercicio.repeticoes integerValue];
+        self.sequenciasAtual = [exercicio.sequencias integerValue];
     }
 }
 @end

@@ -12,6 +12,7 @@
 		EC1693F718A006540055311B /* AddNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1693F618A006540055311B /* AddNameViewController.m */; };
 		EC1693FA18A007570055311B /* AddSexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1693F918A007570055311B /* AddSexViewController.m */; };
 		EC1693FD18A017D90055311B /* AddBirthdayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1693FC18A017D90055311B /* AddBirthdayViewController.m */; };
+		EC1BE46E18A4FB2900B62AB6 /* TreinoFinalizadoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1BE46D18A4FB2900B62AB6 /* TreinoFinalizadoViewController.m */; };
 		EC2BC9E518A3E94400ECD6A9 /* ExerciciosTemporarios.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2BC9E418A3E94400ECD6A9 /* ExerciciosTemporarios.m */; };
 		EC2BC9E818A3F31C00ECD6A9 /* ExibeExercicioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2BC9E718A3F31C00ECD6A9 /* ExibeExercicioViewController.m */; };
 		EC2BC9EE18A3FEEA00ECD6A9 /* IniciarTreinoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2BC9ED18A3FEEA00ECD6A9 /* IniciarTreinoCell.m */; };
@@ -77,6 +78,8 @@
 		EC1693F918A007570055311B /* AddSexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSexViewController.m; sourceTree = "<group>"; };
 		EC1693FB18A017D90055311B /* AddBirthdayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBirthdayViewController.h; sourceTree = "<group>"; };
 		EC1693FC18A017D90055311B /* AddBirthdayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBirthdayViewController.m; sourceTree = "<group>"; };
+		EC1BE46C18A4FB2900B62AB6 /* TreinoFinalizadoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreinoFinalizadoViewController.h; sourceTree = "<group>"; };
+		EC1BE46D18A4FB2900B62AB6 /* TreinoFinalizadoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreinoFinalizadoViewController.m; sourceTree = "<group>"; };
 		EC2BC9E318A3E94400ECD6A9 /* ExerciciosTemporarios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciciosTemporarios.h; sourceTree = "<group>"; };
 		EC2BC9E418A3E94400ECD6A9 /* ExerciciosTemporarios.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciciosTemporarios.m; sourceTree = "<group>"; };
 		EC2BC9E618A3F31C00ECD6A9 /* ExibeExercicioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExibeExercicioViewController.h; sourceTree = "<group>"; };
@@ -244,6 +247,8 @@
 				EC4A58B118A1650B00C1FE01 /* LoadIniciarTreinoViewController.m */,
 				EC2BC9EC18A3FEEA00ECD6A9 /* IniciarTreinoCell.h */,
 				EC2BC9ED18A3FEEA00ECD6A9 /* IniciarTreinoCell.m */,
+				EC1BE46C18A4FB2900B62AB6 /* TreinoFinalizadoViewController.h */,
+				EC1BE46D18A4FB2900B62AB6 /* TreinoFinalizadoViewController.m */,
 			);
 			name = IniciarTreino;
 			sourceTree = "<group>";
@@ -529,6 +534,7 @@
 				EC1693FD18A017D90055311B /* AddBirthdayViewController.m in Sources */,
 				ED194E95189C076A006EE9F5 /* DadoFisico.m in Sources */,
 				EC7D36F7189AC22D008BF3D3 /* DataStorage.m in Sources */,
+				EC1BE46E18A4FB2900B62AB6 /* TreinoFinalizadoViewController.m in Sources */,
 				ED1D0FE9189FCC0600AECAC4 /* Ficha.m in Sources */,
 				EC348CDF18A2A4E100CD79D0 /* GerenciarTreinoViewController.m in Sources */,
 				EC1693F718A006540055311B /* AddNameViewController.m in Sources */,

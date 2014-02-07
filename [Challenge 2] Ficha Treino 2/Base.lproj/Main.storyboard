@@ -1261,11 +1261,58 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="pesoLabel" destination="c20-Ar-PT8" id="t5i-xw-wf8"/>
                         <outlet property="repeticoesLabel" destination="jYp-Gu-ucK" id="yik-FM-DBM"/>
                         <outlet property="sequenciasLabel" destination="Dmj-14-tT0" id="r7q-gQ-BT6"/>
+                        <segue destination="BcD-NX-3hn" kind="modal" identifier="terminarTreino" id="yqz-pK-5rO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1QP-am-TpU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1521" y="1383"/>
+        </scene>
+        <!--Treino Finalizado View Controller-->
+        <scene sceneID="pKk-ZK-EIy">
+            <objects>
+                <viewController id="BcD-NX-3hn" customClass="TreinoFinalizadoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qWQ-gb-emX"/>
+                        <viewControllerLayoutGuide type="bottom" id="uiG-4m-LYt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Pg-Wd-OrU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="begym_background" translatesAutoresizingMaskIntoConstraints="NO" id="dWv-OR-QJf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="trofeu" translatesAutoresizingMaskIntoConstraints="NO" id="sa3-bO-33p">
+                                <rect key="frame" x="45" y="26" width="230" height="341"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="treinoCompleto" translatesAutoresizingMaskIntoConstraints="NO" id="3kx-kD-S3D">
+                                <rect key="frame" x="81" y="375" width="159" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tx9-yV-0Pq">
+                                <rect key="frame" x="81" y="433" width="159" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Voltar" backgroundImage="botao1">
+                                    <color key="titleColor" red="0.1137254902" green="0.39607843139999999" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="voltarParaFichaButton:" destination="BcD-NX-3hn" eventType="touchUpInside" id="wla-Df-SYG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="3AP-zW-wTZ" kind="modal" identifier="voltarParaFicha" id="R6l-mj-rqg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iki-fr-5pG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1983" y="1383"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="x8g-mE-47L">
@@ -1293,7 +1340,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </scene>
     </scenes>
     <resources>
+        <image name="begym_background" width="640" height="1136"/>
         <image name="begym_loading640x1136_comlogo" width="640" height="1136"/>
+        <image name="botao1" width="608" height="117"/>
         <image name="botao1" width="608" height="117"/>
         <image name="calendar" width="16" height="16"/>
         <image name="edit" width="48" height="48"/>
@@ -1310,6 +1359,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="sequence" width="16" height="16"/>
         <image name="sequence" width="16" height="16"/>
         <image name="time" width="32" height="32"/>
+        <image name="treinoCompleto" width="318" height="101"/>
+        <image name="trofeu" width="460" height="683"/>
         <image name="weight" width="30" height="30"/>
         <image name="weight" width="30" height="30"/>
         <image name="weight" width="30" height="30"/>
@@ -1321,6 +1372,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="R6l-mj-rqg"/>
         <segue reference="Cm5-3x-Sn7"/>
     </inferredMetricsTieBreakers>
 </document>
