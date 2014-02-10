@@ -7,24 +7,39 @@
 //
 
 #import "AddMedidasViewController.h"
+#import "KeyboardAnimation.h"
+#import "DadoFisico.h"
+#import "Pessoa.h"
 
-@interface AddMedidasViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *pesoTextField;
-@property (weak, nonatomic) IBOutlet UITextField *bracoTextField;
-@property (weak, nonatomic) IBOutlet UITextField *cinturaTextField;
-@property (weak, nonatomic) IBOutlet UITextField *coxaTextField;
-@property (weak, nonatomic) IBOutlet UITextField *ombroTextField;
-@property (weak, nonatomic) IBOutlet UITextField *panturrilhaTextField;
-@property (weak, nonatomic) IBOutlet UITextField *antebracoTextField;
-@property (weak, nonatomic) IBOutlet UITextField *quadrisTextField;
-@property (weak, nonatomic) IBOutlet UITextField *porcentagemDeGorduraTextField;
-@property (weak, nonatomic) IBOutlet UITextField *alturaTextField;
+#import "DataStorage.h"
 
+@interface AddMedidasViewController ()<UITextFieldDelegate>
+
+//Text Fields BEGIN
+@property (weak, nonatomic) IBOutlet UITextField *pesoTextField;                //1
+
+@property (weak, nonatomic) IBOutlet UITextField *bracoTextField;               //2
+@property (weak, nonatomic) IBOutlet UITextField *cinturaTextField;             //3
+@property (weak, nonatomic) IBOutlet UITextField *coxaTextField;                //4
+@property (weak, nonatomic) IBOutlet UITextField *ombroTextField;               //5
+@property (weak, nonatomic) IBOutlet UITextField *panturrilhaTextField;         //6
+@property (weak, nonatomic) IBOutlet UITextField *antebracoTextField;           //7
+@property (weak, nonatomic) IBOutlet UITextField *quadrisTextField;             //8
+@property (weak, nonatomic) IBOutlet UITextField *porcentagemDeGorduraTextField;//9
+@property (weak, nonatomic) IBOutlet UITextField *alturaTextField;              //10
+//Text Fields END
+
+//botões
 @property (weak, nonatomic) IBOutlet UIButton *btnSalvarMedidas;
+
+//Variáveis internas
+@property (strong,nonatomic) DadoFisico *dadoFisico;
+@property (strong,nonatomic) NSArray *textFields;
 @end
 
 @implementation AddMedidasViewController
 
+#pragma mark - Métodos de inicialização
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -38,6 +53,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    [self iniciarArrayTextFields];
+    [self regularDelegatesTextField];
+    [self inicializarDadoFisico];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,4 +65,155 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - métodos auxiliares
+
+-(void)regularDelegatesTextField
+{
+    self.pesoTextField.delegate = self;
+    
+    self.bracoTextField.delegate = self;
+    self.cinturaTextField.delegate = self;
+    self.coxaTextField.delegate = self;
+    self.ombroTextField.delegate = self;
+    self.panturrilhaTextField.delegate = self;
+    self.antebracoTextField.delegate = self;
+    self.quadrisTextField.delegate = self;
+    self.porcentagemDeGorduraTextField.delegate = self;
+    self.alturaTextField.delegate = self;
+}
+
+-(void)inicializarDadoFisico
+{
+    self.dadoFisico = [[DadoFisico alloc]init];
+    
+    //Ajustar Valores se necessário
+    self.dadoFisico.altura = 0;
+    
+    self.dadoFisico.braco = 0;
+    self.dadoFisico.cintura = 0;
+    self.dadoFisico.coxa = 0;
+    self.dadoFisico.ombro = 0;
+    self.dadoFisico.panturrilha = 0;
+    self.dadoFisico.antebraco = 0;
+    self.dadoFisico.quadris = 0;
+    self.dadoFisico.porcentagemDeGordura = 0;
+    self.dadoFisico.peso = 0;
+}
+
+-(void)iniciarArrayTextFields
+{
+    self.textFields = [[NSArray alloc]initWithObjects:  self.pesoTextField,                 //01 index 00
+                                                        self.bracoTextField,                //02 index 01
+                                                        self.cinturaTextField,              //03 index 02
+                                                        self.coxaTextField,                 //04 index 03
+                                                        self.ombroTextField,                //05 index 04
+                                                        self.panturrilhaTextField,          //06 index 05
+                                                        self.antebracoTextField,            //07 index 06
+                                                        self.quadrisTextField,              //08 index 07
+                                                        self.porcentagemDeGorduraTextField, //09 index 08
+                                                        self.alturaTextField,               //10 index 09
+                                                        nil];
+}
+
+-(void)mudarParaCampoSeguinte:(UITextField *)textFieldAtual
+{
+    if (textFieldAtual == self.textFields[self.textFields.count -1])
+    {
+        //se for o último text field pressiona o botao salvar
+        [self.btnSalvarMedidas sendActionsForControlEvents:UIControlEventTouchUpInside];
+        return;
+    }
+    else
+    {
+        //senão muda para o seguinte
+        int indexProximo = [self.textFields indexOfObject:textFieldAtual] + 1;
+        [(UITextField*)self.textFields[indexProximo] becomeFirstResponder];
+    }
+}
+
+
+-(void)repassarEdicoesDoTextFieldParaVariaveis:(UITextField *)textFieldAtual
+{
+    switch ([self.textFields indexOfObject:textFieldAtual])
+    {
+        case 0:
+            self.dadoFisico.peso = [textFieldAtual.text floatValue];
+            break;
+            
+            
+        case 1:
+            self.dadoFisico.braco = [textFieldAtual.text floatValue];
+            break;
+            
+        case 2:
+            self.dadoFisico.cintura = [textFieldAtual.text floatValue];
+            break;
+            
+        case 3:
+            self.dadoFisico.coxa = [textFieldAtual.text floatValue];
+            break;
+            
+        case 4:
+            self.dadoFisico.ombro = [textFieldAtual.text floatValue];
+            break;
+            
+        case 5:
+            self.dadoFisico.panturrilha = [textFieldAtual.text floatValue];
+            break;
+            
+        case 6:
+            self.dadoFisico.antebraco = [textFieldAtual.text floatValue];
+            break;
+            
+        case 7:
+            self.dadoFisico.quadris = [textFieldAtual.text floatValue];
+            break;
+            
+        case 8:
+            self.dadoFisico.porcentagemDeGordura = [textFieldAtual.text floatValue];
+            break;
+            
+        case 9:
+            self.dadoFisico.altura = [textFieldAtual.text floatValue];
+            break;
+            
+        default:
+            break;
+    }
+}
+
+#pragma mark - eventos de botões e text Field
+
+- (IBAction)salvaExercicio:(UIButton *)sender
+{
+    [self.pessoaInfo addDadosFisicos:self.dadoFisico];
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (IBAction)campoEditado:(UITextField *)sender
+{
+    [self repassarEdicoesDoTextFieldParaVariaveis:sender];
+}
+
+#pragma mark - métodos do text field delegate
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [KeyboardAnimation textFieldDidBeginEditing:textField from:self];
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [KeyboardAnimation textFieldDidEndedEditing:textField from:self];
+    
+    //Verifica qual o text field atual e muda para o seguinte
+    [self mudarParaCampoSeguinte:textField];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    //ativar evento ao pressionar return/done
+    [textField resignFirstResponder];
+    return YES;
+}
 @end

@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Pessoa;
 
 @interface AddMedidasViewController : UIViewController
 
+@property(strong,nonatomic) Pessoa* pessoaInfo;
+
+-(void)inicializarDadoFisico;
+-(void)regularDelegatesTextField;
+-(void)iniciarArrayTextFields;
+-(void)mudarParaCampoSeguinte:(UITextField *)textFieldAtual;
+-(void)repassarEdicoesDoTextFieldParaVariaveis:(UITextField *)textFieldAtual;
 @end
