@@ -88,7 +88,8 @@
     }
     else if(textField == self.periodoTextField)
     {
-        [self.btnCriar sendActionsForControlEvents:UIControlEventTouchUpInside];
+        [self.frequenciaTextField becomeFirstResponder];
+        //[self.btnCriar sendActionsForControlEvents:UIControlEventTouchUpInside];
     }
 }
 
