@@ -123,8 +123,8 @@
     }
     else if(textField == self.periodoTextField)
     {
-        [self.frequenciaTextField becomeFirstResponder];
-        //[self.btnEditar sendActionsForControlEvents:UIControlEventTouchUpInside];
+        //[self.frequenciaTextField becomeFirstResponder];
+        [self.btnEditar sendActionsForControlEvents:UIControlEventTouchUpInside];
     }
 }
 

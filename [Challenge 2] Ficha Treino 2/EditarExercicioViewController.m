@@ -109,8 +109,8 @@
     }
     else if(textField == self.sequenciasTextField)
     {
-        [self.pesoTextField becomeFirstResponder];
-        //[self.btnSalvar sendActionsForControlEvents:UIControlEventTouchUpInside];
+        //[self.pesoTextField becomeFirstResponder];
+        [self.btnSalvar sendActionsForControlEvents:UIControlEventTouchUpInside];
     }
 }
 

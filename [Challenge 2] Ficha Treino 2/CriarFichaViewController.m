@@ -49,11 +49,6 @@
     [self.frequenciaTextField becomeFirstResponder];
 }
 
--(void)viewDidDisappear:(BOOL)animated
-{
-    [KeyboardAnimation textFieldViewReset:self];
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -93,8 +88,8 @@
     }
     else if(textField == self.periodoTextField)
     {
-        [self.frequenciaTextField becomeFirstResponder];
-        //[self.btnCriar sendActionsForControlEvents:UIControlEventTouchUpInside];
+        //[self.frequenciaTextField becomeFirstResponder];
+        [self.btnCriar sendActionsForControlEvents:UIControlEventTouchUpInside];
     }
 }
 
