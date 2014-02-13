@@ -49,6 +49,11 @@
     [self.frequenciaTextField becomeFirstResponder];
 }
 
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [KeyboardAnimation textFieldViewReset:self];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

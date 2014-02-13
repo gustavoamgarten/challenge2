@@ -88,4 +88,18 @@ CGFloat animatedDistance;
     
     [UIView commitAnimations];
 }
+
++(void)textFieldViewReset:(UIViewController*) viewController
+{
+    CGRect viewFrame = viewController.view.frame;
+    viewFrame.origin.y += animatedDistance;
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];
+    
+    [viewController.view setFrame:viewFrame];
+    
+    [UIView commitAnimations];
+}
 @end
