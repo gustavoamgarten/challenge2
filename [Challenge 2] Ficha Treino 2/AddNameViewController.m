@@ -33,6 +33,17 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.nomeTextField.delegate = self;
+    
+    
+    //necessário para o dismissKeyboard
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    //adicionar o reconhecimento de gesture no view
+    [self.view addGestureRecognizer:tap];
+
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -71,13 +82,14 @@
 {
     [KeyboardAnimation textFieldDidEndedEditing:textField from:self];
     
-    
+    /*
     //verifica se é o nome e depois de terminar a alteração pressiona o botão próximo
     if(textField == self.nomeTextField)
     {
         self.nome = self.nomeTextField.text;
         [self.btnProximo sendActionsForControlEvents:UIControlEventTouchUpInside];
     }
+    */
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -85,6 +97,18 @@
     //ativar evento ao pressionar return/done
     [textField resignFirstResponder];
     return YES;
+}
+
+
+#pragma mark - retirar teclado
+-(void)dismissKeyboard
+{
+    [self dismissAllTextFields];
+}
+
+-(void)dismissAllTextFields
+{
+    [self.nomeTextField resignFirstResponder];
 }
 
 @end

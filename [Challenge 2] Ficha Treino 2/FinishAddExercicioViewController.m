@@ -49,6 +49,15 @@
     self.sequenciaTextField.delegate = self;
     self.pesoTextField.delegate = self;
     
+    
+    //necessário para o dismissKeyboard
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    //adicionar o reconhecimento de gesture no view
+    [self.view addGestureRecognizer:tap];
+
     NSLog(@"Passou exercicio padrao: %@", self.exercicioPadrao);
 }
 
@@ -106,6 +115,7 @@
     [KeyboardAnimation textFieldDidEndedEditing:textField from:self];
     
     
+    /*
     //Verifica qual o text field atual e muda para o seguinte
     if(textField == self.pesoTextField)
     {
@@ -119,6 +129,7 @@
     {
         [self.addButton sendActionsForControlEvents:UIControlEventTouchUpInside];
     }
+    */
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -126,5 +137,19 @@
     //ativar evento ao pressionar return/done
     [textField resignFirstResponder];
     return YES;
+}
+
+
+#pragma mark - retirar teclado
+-(void)dismissKeyboard
+{
+    [self dismissAllTextFields];
+}
+
+-(void)dismissAllTextFields
+{
+    [self.pesoTextField resignFirstResponder];
+    [self.repeticaoTextField resignFirstResponder];
+    [self.sequenciaTextField resignFirstResponder];
 }
 @end

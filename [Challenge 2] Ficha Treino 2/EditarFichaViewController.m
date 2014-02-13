@@ -57,6 +57,13 @@
     self.frequenciaTextField.delegate = self;
     self.intervaloTextField.delegate = self;
     self.periodoTextField.delegate = self;
+    
+    //necessário para o dismissKeyboard
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -113,6 +120,7 @@
     
     
     //Verifica qual o text field atual e muda para o seguinte
+    /*
     if(textField == self.frequenciaTextField)
     {
         [self.intervaloTextField becomeFirstResponder];
@@ -126,12 +134,27 @@
         //[self.frequenciaTextField becomeFirstResponder];
         [self.btnEditar sendActionsForControlEvents:UIControlEventTouchUpInside];
     }
+    */
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     //ativar evento ao pressionar return/done
     [textField resignFirstResponder];
+    
     return YES;
+}
+
+#pragma mark - retirar teclado
+-(void)dismissKeyboard
+{
+    [self dismissAllTextFields];
+}
+
+-(void)dismissAllTextFields
+{
+    [self.frequenciaTextField resignFirstResponder];
+    [self.intervaloTextField resignFirstResponder];
+    [self.periodoTextField resignFirstResponder];
 }
 @end
