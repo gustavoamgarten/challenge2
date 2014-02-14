@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-@class Pessoa;
+@class Pessoa,AcompanhamentoFisicoViewController;
 
 @interface AddMedidasViewController : UIViewController
 
+@property (nonatomic, strong) AcompanhamentoFisicoViewController *rootController;
 @property(strong,nonatomic) Pessoa* pessoaInfo;
 
 -(void)inicializarDadoFisico;

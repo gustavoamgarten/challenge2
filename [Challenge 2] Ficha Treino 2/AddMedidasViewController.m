@@ -57,6 +57,16 @@
     [self iniciarArrayTextFields];
     [self regularDelegatesTextField];
     [self inicializarDadoFisico];
+    
+    
+    
+    //necessário para o dismissKeyboard
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    //adicionar o reconhecimento de gesture no view
+    [self.view addGestureRecognizer:tap];
 }
 
 - (void)didReceiveMemoryWarning
@@ -207,7 +217,7 @@
     [KeyboardAnimation textFieldDidEndedEditing:textField from:self];
     
     //Verifica qual o text field atual e muda para o seguinte
-    [self mudarParaCampoSeguinte:textField];
+    //[self mudarParaCampoSeguinte:textField];
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -215,5 +225,20 @@
     //ativar evento ao pressionar return/done
     [textField resignFirstResponder];
     return YES;
+}
+
+
+#pragma mark - retirar teclado
+-(void)dismissKeyboard
+{
+    [self dismissAllTextFields];
+}
+
+-(void)dismissAllTextFields
+{
+    for (int i=0; i< self.textFields.count; i++)
+    {
+        [self.textFields[i] resignFirstResponder];
+    }
 }
 @end

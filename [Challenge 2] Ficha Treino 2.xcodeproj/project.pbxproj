@@ -59,6 +59,7 @@
 		ED23DFA618A010CB0013D4B7 /* IrregularShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ED23DFA518A010CB0013D4B7 /* IrregularShapedButton.m */; };
 		ED9B562C18A5328A0040F9E2 /* KeyboardAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9B562B18A5328A0040F9E2 /* KeyboardAnimation.m */; };
 		ED9B563318A54CCD0040F9E2 /* AddMedidasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9B563218A54CCD0040F9E2 /* AddMedidasViewController.m */; };
+		EDAB7BDB18AE7099008D1C8E /* AcompanhamentoFisicoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDAB7BDA18AE7099008D1C8E /* AcompanhamentoFisicoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +164,8 @@
 		ED9B562B18A5328A0040F9E2 /* KeyboardAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardAnimation.m; sourceTree = "<group>"; };
 		ED9B563118A54CCD0040F9E2 /* AddMedidasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMedidasViewController.h; sourceTree = "<group>"; };
 		ED9B563218A54CCD0040F9E2 /* AddMedidasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMedidasViewController.m; sourceTree = "<group>"; };
+		EDAB7BD918AE7099008D1C8E /* AcompanhamentoFisicoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcompanhamentoFisicoViewController.h; sourceTree = "<group>"; };
+		EDAB7BDA18AE7099008D1C8E /* AcompanhamentoFisicoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcompanhamentoFisicoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,7 +212,7 @@
 		EC322982189910D7009C34C1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				ED9B562D18A54C590040F9E2 /* AdicaoMedidas */,
+				EDAB7BD818AE7070008D1C8E /* Acompanhamento Fisico */,
 				EC1693EF189FEB030055311B /* LoadUserViewController.h */,
 				EC1693F0189FEB030055311B /* LoadUserViewController.m */,
 				EC1693FE18A017EC0055311B /* Cadastro */,
@@ -456,6 +459,16 @@
 			name = AdicaoMedidas;
 			sourceTree = "<group>";
 		};
+		EDAB7BD818AE7070008D1C8E /* Acompanhamento Fisico */ = {
+			isa = PBXGroup;
+			children = (
+				ED9B562D18A54C590040F9E2 /* AdicaoMedidas */,
+				EDAB7BD918AE7099008D1C8E /* AcompanhamentoFisicoViewController.h */,
+				EDAB7BDA18AE7099008D1C8E /* AcompanhamentoFisicoViewController.m */,
+			);
+			name = "Acompanhamento Fisico";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -578,6 +591,7 @@
 				ED23DFA618A010CB0013D4B7 /* IrregularShapedButton.m in Sources */,
 				ED1D0FE6189FCC0500AECAC4 /* Exercicio.m in Sources */,
 				EC4B9AF718A26655002ADB4C /* CriarFichaViewController.m in Sources */,
+				EDAB7BDB18AE7099008D1C8E /* AcompanhamentoFisicoViewController.m in Sources */,
 				EC1693FD18A017D90055311B /* AddBirthdayViewController.m in Sources */,
 				ED194E95189C076A006EE9F5 /* DadoFisico.m in Sources */,
 				EC7D36F7189AC22D008BF3D3 /* DataStorage.m in Sources */,
