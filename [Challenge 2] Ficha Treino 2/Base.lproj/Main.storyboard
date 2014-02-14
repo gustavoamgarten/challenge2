@@ -1809,7 +1809,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <color key="textColor" red="0.1137254902" green="0.39607843139999999" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loop" translatesAutoresizingMaskIntoConstraints="NO" id="Cxr-k4-Qyc" userLabel="Image View - Altura">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Altura" translatesAutoresizingMaskIntoConstraints="NO" id="Cxr-k4-Qyc" userLabel="Image View - Altura">
                                 <rect key="frame" x="21" y="67" width="16" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1817,35 +1817,35 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <rect key="frame" x="204" y="67" width="16" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loop" translatesAutoresizingMaskIntoConstraints="NO" id="Gsi-dU-qRb" userLabel="Image View - Braco">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="braco" translatesAutoresizingMaskIntoConstraints="NO" id="Gsi-dU-qRb" userLabel="Image View - Braco">
                                 <rect key="frame" x="21" y="171" width="16" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="weight" translatesAutoresizingMaskIntoConstraints="NO" id="fMa-Qb-n1y" userLabel="Image View - Antebraco">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="antebraco" translatesAutoresizingMaskIntoConstraints="NO" id="fMa-Qb-n1y" userLabel="Image View - Antebraco">
                                 <rect key="frame" x="204" y="171" width="16" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loop" translatesAutoresizingMaskIntoConstraints="NO" id="wpy-gE-v94" userLabel="Image View - Ombro">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OMBRO" translatesAutoresizingMaskIntoConstraints="NO" id="wpy-gE-v94" userLabel="Image View - Ombro">
                                 <rect key="frame" x="21" y="230" width="16" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="weight" translatesAutoresizingMaskIntoConstraints="NO" id="Rzk-gm-DuK" userLabel="Image View - PorcentagemGordura">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Adipometero" translatesAutoresizingMaskIntoConstraints="NO" id="Rzk-gm-DuK" userLabel="Image View - PorcentagemGordura">
                                 <rect key="frame" x="204" y="230" width="16" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loop" translatesAutoresizingMaskIntoConstraints="NO" id="DwN-MK-r5y" userLabel="Image View - Cintura">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cintura" translatesAutoresizingMaskIntoConstraints="NO" id="DwN-MK-r5y" userLabel="Image View - Cintura">
                                 <rect key="frame" x="21" y="292" width="16" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="weight" translatesAutoresizingMaskIntoConstraints="NO" id="mrf-P5-I7H" userLabel="Image View - Quadris">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Quadil" translatesAutoresizingMaskIntoConstraints="NO" id="mrf-P5-I7H" userLabel="Image View - Quadris">
                                 <rect key="frame" x="204" y="292" width="16" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loop" translatesAutoresizingMaskIntoConstraints="NO" id="BdZ-zo-bMf" userLabel="Image View - Coxa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CoxaMeasure" translatesAutoresizingMaskIntoConstraints="NO" id="BdZ-zo-bMf" userLabel="Image View - Coxa">
                                 <rect key="frame" x="21" y="351" width="16" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="weight" translatesAutoresizingMaskIntoConstraints="NO" id="9BG-Rt-iCh" userLabel="Image View - Panturrilha">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Panturrilha" translatesAutoresizingMaskIntoConstraints="NO" id="9BG-Rt-iCh" userLabel="Image View - Panturrilha">
                                 <rect key="frame" x="204" y="351" width="16" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1934,7 +1934,15 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </scene>
     </scenes>
     <resources>
+        <image name="Adipometero" width="26" height="26"/>
+        <image name="Altura" width="26" height="26"/>
+        <image name="Cintura" width="26" height="26"/>
+        <image name="CoxaMeasure" width="26" height="26"/>
+        <image name="OMBRO" width="26" height="26"/>
+        <image name="Panturrilha" width="26" height="26"/>
+        <image name="Quadil" width="26" height="26"/>
         <image name="action" width="26" height="26"/>
+        <image name="antebraco" width="26" height="26"/>
         <image name="begym_background" width="640" height="1136"/>
         <image name="begym_background" width="640" height="1136"/>
         <image name="begym_loading640x1136_comlogo" width="640" height="1136"/>
@@ -1942,6 +1950,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="botao1" width="608" height="117"/>
         <image name="botao1" width="608" height="117"/>
         <image name="botao1" width="608" height="117"/>
+        <image name="braco" width="26" height="26"/>
         <image name="calendar" width="16" height="16"/>
         <image name="edit" width="48" height="48"/>
         <image name="edit" width="48" height="48"/>
@@ -1949,11 +1958,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="edit" width="48" height="48"/>
         <image name="frequency" width="16" height="16"/>
         <image name="goal" width="128" height="128"/>
-        <image name="loop" width="32" height="32"/>
-        <image name="loop" width="32" height="32"/>
-        <image name="loop" width="32" height="32"/>
-        <image name="loop" width="32" height="32"/>
-        <image name="loop" width="32" height="32"/>
         <image name="loop" width="32" height="32"/>
         <image name="loop" width="32" height="32"/>
         <image name="loop" width="32" height="32"/>
@@ -1970,10 +1974,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="time" width="32" height="32"/>
         <image name="treinoCompleto" width="318" height="101"/>
         <image name="trofeu" width="460" height="683"/>
-        <image name="weight" width="30" height="30"/>
-        <image name="weight" width="30" height="30"/>
-        <image name="weight" width="30" height="30"/>
-        <image name="weight" width="30" height="30"/>
         <image name="weight" width="30" height="30"/>
         <image name="weight" width="30" height="30"/>
         <image name="weight" width="30" height="30"/>
