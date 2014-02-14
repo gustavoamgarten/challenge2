@@ -66,6 +66,8 @@ CGFloat animatedDistance;
     CGRect viewFrame = viewController.view.frame;
     viewFrame.origin.y -= animatedDistance;
     
+    NSLog(@"/r/n-(%f)  begin \r\nGCRect:(%f,%f)",animatedDistance,viewFrame.origin.x,viewFrame.origin.y);
+    
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationBeginsFromCurrentState:YES];
     [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];
@@ -84,15 +86,17 @@ CGFloat animatedDistance;
     [UIView setAnimationBeginsFromCurrentState:YES];
     [UIView setAnimationDuration:KEYBOARD_ANIMATION_DURATION];
     
+    NSLog(@"/r/n+(%f) begin \r\nGGCRect:(%f,%f)",animatedDistance,viewFrame.origin.x,viewFrame.origin.y);
+    
     [viewController.view setFrame:viewFrame];
     
     [UIView commitAnimations];
 }
 
-+(void)textFieldViewReset:(UIViewController*) viewController
++(void)textFieldViewReset:(UIViewController*) viewController comOffset:(int)offset
 {
     CGRect viewFrame = viewController.view.frame;
-    viewFrame.origin.y += animatedDistance;
+    viewFrame.origin.y += offset;
     
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationBeginsFromCurrentState:YES];
@@ -102,4 +106,5 @@ CGFloat animatedDistance;
     
     [UIView commitAnimations];
 }
+
 @end

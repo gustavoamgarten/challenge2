@@ -12,5 +12,5 @@
 
 +(void)textFieldDidBeginEditing:(UITextField *)textField from:(UIViewController*) viewController;
 +(void)textFieldDidEndedEditing:(UITextField *)textField from:(UIViewController*) viewController;
-+(void)textFieldViewReset:(UIViewController*) viewController;
++(void)textFieldViewReset:(UIViewController*) viewController comOffset:(int)offset;
 @end

@@ -71,11 +71,6 @@
     [self.frequenciaTextField becomeFirstResponder];
 }
 
--(void)viewDidDisappear:(BOOL)animated
-{
-    [KeyboardAnimation textFieldViewReset:self];
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -117,6 +112,13 @@
 -(void)textFieldDidEndEditing:(UITextField *)textField
 {
     [KeyboardAnimation textFieldDidEndedEditing:textField from:self];
+    //[KeyboardAnimation textFieldViewReset:self];
+    
+    
+    //POG
+    CGRect viewFrame = self.view.frame;
+    viewFrame.origin.y = 64;
+    [self.view setFrame:viewFrame];
     
     
     //Verifica qual o text field atual e muda para o seguinte
