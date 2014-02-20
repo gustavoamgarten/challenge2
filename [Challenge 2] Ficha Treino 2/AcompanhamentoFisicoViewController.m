@@ -9,6 +9,7 @@
 #import "AcompanhamentoFisicoViewController.h"
 #import "AddMedidasViewController.h"
 #import "DataStorage.h"
+#import "GraficoViewController.h"
 
 @interface AcompanhamentoFisicoViewController ()
 
@@ -50,13 +51,27 @@
     [self performSegueWithIdentifier:@"adicionarDadosFisicos" sender:self];
 }
 
+- (IBAction)visualizarDadosFisicos:(id)sender {
+    [self performSegueWithIdentifier:@"visualizarDadosFisicos" sender:self];
+}
+
 
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    AddMedidasViewController *destController = segue.destinationViewController;
     
-    destController.pessoaInfo = self.pessoaInfo;
-    destController.rootController = self;
+    if([segue.identifier isEqualToString:@"adicionarDadosFisicos"])
+    {
+        AddMedidasViewController *destController = segue.destinationViewController;
+    
+        destController.pessoaInfo = self.pessoaInfo;
+        destController.rootController = self;
+    }
+    else if([segue.identifier isEqualToString:@"visualizarDadosFisicos"])
+    {
+        GraficoViewController *destController = segue.destinationViewController;
+        
+        destController.rootController = self;
+    }
 }
 
 @end

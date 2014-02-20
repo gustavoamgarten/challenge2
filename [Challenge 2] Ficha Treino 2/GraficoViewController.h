@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GraficoViewController : UIViewController
+@class AcompanhamentoFisicoViewController;
+
+@interface GraficoViewController : UIViewController{
+    UIScrollView *scroller;
+}
+@property (nonatomic, strong) AcompanhamentoFisicoViewController *rootController;
+
+
+@property (nonatomic, retain) IBOutlet UIScrollView *scroller;
 
 @end

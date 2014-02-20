@@ -7,12 +7,15 @@
 //
 
 #import "GraficoViewController.h"
+#import "AcompanhamentoFisicoViewController.h"
+#import "GraphView.h"
 
 @interface GraficoViewController ()
 
 @end
 
 @implementation GraficoViewController
+@synthesize scroller;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +30,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    scroller.contentSize = CGSizeMake(kDefaultGraphWidth, kGraphHeight);
 }
 
 - (void)didReceiveMemoryWarning

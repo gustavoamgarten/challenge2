@@ -62,6 +62,7 @@
 		EDAB7BDB18AE7099008D1C8E /* AcompanhamentoFisicoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDAB7BDA18AE7099008D1C8E /* AcompanhamentoFisicoViewController.m */; };
 		EDACC1F618B6455E0084EEDC /* GraficoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDACC1F418B6455E0084EEDC /* GraficoViewController.m */; };
 		EDACC1F718B6455E0084EEDC /* GraficoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDACC1F518B6455E0084EEDC /* GraficoViewController.xib */; };
+		EDACC1FC18B64C1A0084EEDC /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDACC1FB18B64C1A0084EEDC /* GraphView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +172,8 @@
 		EDACC1F318B6455E0084EEDC /* GraficoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraficoViewController.h; sourceTree = "<group>"; };
 		EDACC1F418B6455E0084EEDC /* GraficoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraficoViewController.m; sourceTree = "<group>"; };
 		EDACC1F518B6455E0084EEDC /* GraficoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GraficoViewController.xib; sourceTree = "<group>"; };
+		EDACC1FA18B64C1A0084EEDC /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
+		EDACC1FB18B64C1A0084EEDC /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -478,11 +481,21 @@
 		EDACC1F818B645670084EEDC /* Grafico */ = {
 			isa = PBXGroup;
 			children = (
+				EDACC1F918B64BF00084EEDC /* Graph View */,
 				EDACC1F318B6455E0084EEDC /* GraficoViewController.h */,
 				EDACC1F418B6455E0084EEDC /* GraficoViewController.m */,
 				EDACC1F518B6455E0084EEDC /* GraficoViewController.xib */,
 			);
 			name = Grafico;
+			sourceTree = "<group>";
+		};
+		EDACC1F918B64BF00084EEDC /* Graph View */ = {
+			isa = PBXGroup;
+			children = (
+				EDACC1FA18B64C1A0084EEDC /* GraphView.h */,
+				EDACC1FB18B64C1A0084EEDC /* GraphView.m */,
+			);
+			name = "Graph View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -620,6 +633,7 @@
 				ED9B562C18A5328A0040F9E2 /* KeyboardAnimation.m in Sources */,
 				ED1D0FDD189FCC0500AECAC4 /* Pessoa.m in Sources */,
 				ED23DFA218A010360013D4B7 /* UIImage-Alpha.m in Sources */,
+				EDACC1FC18B64C1A0084EEDC /* GraphView.m in Sources */,
 				EC4B9AF318A260EA002ADB4C /* LoadFichaViewController.m in Sources */,
 				ED1D0FDA189FCC0500AECAC4 /* Exerciciopadrao.m in Sources */,
 			);
