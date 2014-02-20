@@ -190,6 +190,18 @@
         default:
             break;
     }
+    
+    NSLog(@"\r\nPeso: %f",self.dadoFisico.peso);
+    NSLog(@"\r\nBraço: %f",self.dadoFisico.braco);
+    NSLog(@"\r\nCintura: %f",self.dadoFisico.cintura);
+    NSLog(@"\r\nCoxa: %f",self.dadoFisico.coxa);
+    NSLog(@"\r\nOmbro: %f",self.dadoFisico.ombro);
+    NSLog(@"\r\npanturrilha: %f",self.dadoFisico.panturrilha);
+    NSLog(@"\r\nAntebraço: %f",self.dadoFisico.antebraco);
+    NSLog(@"\r\nQuadris: %f",self.dadoFisico.quadris);
+    NSLog(@"\r\nPorcentagem de gordura: %f",self.dadoFisico.porcentagemDeGordura);
+    NSLog(@"\r\nAltura: %f",self.dadoFisico.altura);
+    
 }
 
 #pragma mark - eventos de botões e text Field

@@ -50,7 +50,7 @@
 //    NSArray* exercicoPadrao =[[DataStorage sharedRepository]getFichasDeExercicioPadrao];
     
     
-    //Pessoa* pessoaInfo = pessoas[0];
+//    Pessoa* pessoaInfo = pessoas[0];
     //NSLog(@"\r\nPESSOAS CADASTRADAS [%d]: \r\n%@\r\nEND",[pessoas count],pessoas);
     
     //[pessoaInfo removeFichasObject:[pessoaInfo getFichas][([[pessoaInfo getFichas] count]-1)]] ;

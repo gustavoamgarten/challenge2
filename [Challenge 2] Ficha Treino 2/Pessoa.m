@@ -79,7 +79,7 @@
 }
 
 - (DadosFisicos *)getDadosFisicos {
-    return [self.dadosFisicos];
+    return self.dadosFisicos;
 }
 
 @end

@@ -60,6 +60,8 @@
 		ED9B562C18A5328A0040F9E2 /* KeyboardAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9B562B18A5328A0040F9E2 /* KeyboardAnimation.m */; };
 		ED9B563318A54CCD0040F9E2 /* AddMedidasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9B563218A54CCD0040F9E2 /* AddMedidasViewController.m */; };
 		EDAB7BDB18AE7099008D1C8E /* AcompanhamentoFisicoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDAB7BDA18AE7099008D1C8E /* AcompanhamentoFisicoViewController.m */; };
+		EDACC1F618B6455E0084EEDC /* GraficoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDACC1F418B6455E0084EEDC /* GraficoViewController.m */; };
+		EDACC1F718B6455E0084EEDC /* GraficoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDACC1F518B6455E0084EEDC /* GraficoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +168,9 @@
 		ED9B563218A54CCD0040F9E2 /* AddMedidasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMedidasViewController.m; sourceTree = "<group>"; };
 		EDAB7BD918AE7099008D1C8E /* AcompanhamentoFisicoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcompanhamentoFisicoViewController.h; sourceTree = "<group>"; };
 		EDAB7BDA18AE7099008D1C8E /* AcompanhamentoFisicoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcompanhamentoFisicoViewController.m; sourceTree = "<group>"; };
+		EDACC1F318B6455E0084EEDC /* GraficoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraficoViewController.h; sourceTree = "<group>"; };
+		EDACC1F418B6455E0084EEDC /* GraficoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraficoViewController.m; sourceTree = "<group>"; };
+		EDACC1F518B6455E0084EEDC /* GraficoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GraficoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -462,11 +467,22 @@
 		EDAB7BD818AE7070008D1C8E /* Acompanhamento Fisico */ = {
 			isa = PBXGroup;
 			children = (
+				EDACC1F818B645670084EEDC /* Grafico */,
 				ED9B562D18A54C590040F9E2 /* AdicaoMedidas */,
 				EDAB7BD918AE7099008D1C8E /* AcompanhamentoFisicoViewController.h */,
 				EDAB7BDA18AE7099008D1C8E /* AcompanhamentoFisicoViewController.m */,
 			);
 			name = "Acompanhamento Fisico";
+			sourceTree = "<group>";
+		};
+		EDACC1F818B645670084EEDC /* Grafico */ = {
+			isa = PBXGroup;
+			children = (
+				EDACC1F318B6455E0084EEDC /* GraficoViewController.h */,
+				EDACC1F418B6455E0084EEDC /* GraficoViewController.m */,
+				EDACC1F518B6455E0084EEDC /* GraficoViewController.xib */,
+			);
+			name = Grafico;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -545,6 +561,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDACC1F718B6455E0084EEDC /* GraficoViewController.xib in Resources */,
 				EC7D01081897CBD900D63E28 /* Images.xcassets in Resources */,
 				EC7D00FA1897CBD900D63E28 /* InfoPlist.strings in Resources */,
 				EC7D01031897CBD900D63E28 /* Main.storyboard in Resources */,
@@ -587,6 +604,7 @@
 				EC1693FA18A007570055311B /* AddSexViewController.m in Sources */,
 				EC61FDDE18A3B367009527DE /* BegymModel.m in Sources */,
 				ED1D0FE0189FCC0500AECAC4 /* Treinos.m in Sources */,
+				EDACC1F618B6455E0084EEDC /* GraficoViewController.m in Sources */,
 				EC1693F1189FEB030055311B /* LoadUserViewController.m in Sources */,
 				ED23DFA618A010CB0013D4B7 /* IrregularShapedButton.m in Sources */,
 				ED1D0FE6189FCC0500AECAC4 /* Exercicio.m in Sources */,
