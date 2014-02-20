@@ -29,6 +29,9 @@
 
 //método para pegar o array de fichas de treino da pessoa
 -(NSArray*)getFichas;
+
+//método para recuperar dados fisicos
+- (DadosFisicos *)getDadosFisicos;
 @end
 
 @interface Pessoa (CoreDataGeneratedAccessors)

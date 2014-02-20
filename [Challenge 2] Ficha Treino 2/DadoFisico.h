@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DadoFisico : NSObject
+@interface DadoFisico : NSObject <NSCoding>
 
 @property (nonatomic) float peso;
 

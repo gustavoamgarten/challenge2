@@ -10,6 +10,7 @@
 #import "DadosFisicos.h"
 #import "Ficha.h"
 #import "DataStorage.h"
+#import "DadoFisico.h"
 
 @implementation Pessoa
 
@@ -63,6 +64,10 @@
     
     dadosFisicos.dadosFisicos = arrayDeDados;
     
+    //DadoFisico *ultimoDado = [dadosFisicos.dadosFisicos objectAtIndex:0];
+    
+    //NSLog(@"Array de dados fisicos: %f", ultimoDado.panturrilha);
+    
     NSError *error = nil;
     if (![dadosFisicos.managedObjectContext save:&error])
     {
@@ -71,6 +76,10 @@
     
     [[DataStorage sharedRepository]reloadData];
     return YES;
+}
+
+- (DadosFisicos *)getDadosFisicos {
+    return [self.dadosFisicos];
 }
 
 @end

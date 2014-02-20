@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BegymModel.h"
 @class Pessoa,AcompanhamentoFisicoViewController;
 
 @interface AddMedidasViewController : UIViewController
