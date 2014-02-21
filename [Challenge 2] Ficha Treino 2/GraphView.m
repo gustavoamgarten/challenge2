@@ -74,7 +74,7 @@
     [self desenharPontosSobreOsDadosComContexto:context];
     [self preencherAreaSobreGraficoComContexto:context];
     [self desenharLinhasGuiaComContexto:context];
-    [self colocarIdentificadoresHorizontaisComContexto:context];
+    [self colocarIdentificadoresVerticalComContexto:context];
 }
 
 -(void)preencherAreaSobreGraficoComContexto:(CGContextRef)ctx
@@ -165,10 +165,33 @@
     CGContextSelectFont(context, "Helvetica", 18, kCGEncodingMacRoman);
     CGContextSetTextDrawingMode(context, kCGTextFill);
     CGContextSetFillColorWithColor(context, [[UIColor colorWithRed:0 green:0 blue:0 alpha:1.0] CGColor]);
+    
+    CGContextSetTextMatrix(context, CGAffineTransformRotate(CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0), M_PI / 2));
+    
     for (int i = 1; i < sizeof(data); i++)
     {
+        
         NSString *theText = [NSString stringWithFormat:@"%d", i];
         CGContextShowTextAtPoint(context, kOffsetX + i * kStepX, kGraphBottom - 5, [theText cStringUsingEncoding:NSUTF8StringEncoding], [theText length]);
+    }
+}
+
+-(void)colocarIdentificadoresVerticalComContexto:(CGContextRef)context
+{
+    float data[] = {0.0,50.0, 100.0, 150.0, 200.0, 250.0, 300.0};
+    
+    CGContextSetTextMatrix(context, CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0));//CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0));
+    CGContextSelectFont(context, "Helvetica", 18, kCGEncodingMacRoman);
+    CGContextSetTextDrawingMode(context, kCGTextFill);
+    CGContextSetFillColorWithColor(context, [[UIColor colorWithRed:0 green:0 blue:0 alpha:1.0] CGColor]);
+    
+    CGContextSetTextMatrix(context, CGAffineTransformRotate(CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0), M_PI / 2));
+    
+
+    for (int i = 0; i < sizeof(data); i++)
+    {
+        NSString *theText = [NSString stringWithFormat:@"%f", data[i]];
+        CGContextShowTextAtPoint(context, kOffsetX + i * kStepX, kGraphBottom -5, [theText cStringUsingEncoding:NSUTF8StringEncoding], [theText length]);
     }
 }
 
