@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GraficoViewController">
             <connections>
+                <outlet property="graphView" destination="TyL-60-ZhY" id="c0j-3b-jTd"/>
+                <outlet property="scrollView" destination="qzs-fK-IXn" id="JBz-IX-0VH"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -19,7 +21,7 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TyL-60-ZhY" userLabel="Graph View" customClass="GraphView">
-                            <rect key="frame" x="0.0" y="0.0" width="900" height="300"/>
+                            <rect key="frame" x="0.0" y="10" width="900" height="300"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </view>
@@ -28,10 +30,10 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="qzs-fK-IXn" secondAttribute="bottom" constant="20" symbolic="YES" id="FmM-7A-Io4"/>
-                <constraint firstItem="qzs-fK-IXn" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" symbolic="YES" id="OiR-cK-iZZ"/>
-                <constraint firstAttribute="trailing" secondItem="qzs-fK-IXn" secondAttribute="trailing" constant="20" symbolic="YES" id="XF8-b0-yKS"/>
-                <constraint firstItem="qzs-fK-IXn" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="qrD-67-6wD"/>
+                <constraint firstItem="qzs-fK-IXn" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" symbolic="YES" id="A5J-ay-UzL"/>
+                <constraint firstItem="qzs-fK-IXn" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="FA3-ao-AgB"/>
+                <constraint firstAttribute="bottom" secondItem="qzs-fK-IXn" secondAttribute="bottom" constant="20" symbolic="YES" id="QPy-VL-JqP"/>
+                <constraint firstAttribute="trailing" secondItem="qzs-fK-IXn" secondAttribute="trailing" constant="20" symbolic="YES" id="XWR-on-JcL"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
