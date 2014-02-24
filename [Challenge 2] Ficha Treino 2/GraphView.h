@@ -16,7 +16,7 @@
 #define kStepX 50
 
 #define kStepY 50
-#define kOffsetY 0
+#define kOffsetY 50
 
 #define kGraphBottom 300
 #define kGraphTop 0

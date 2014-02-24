@@ -7,7 +7,9 @@
 //
 
 #import "GraphView.h"
-
+@interface GraphView()
+@property (nonatomic,strong)NSMutableArray *data;
+@end
 
 @implementation GraphView
 
@@ -20,21 +22,20 @@
     return self;
 }
 
-- (void)desenharGraficoDeLinhaComContexto:(CGContextRef)ctx
+- (void)desenharGraficoDeLinhaComContexto:(CGContextRef)ctx comDados:(NSArray*)data
 {
-    
-    float data[] = {0.0f,0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44, 0.88, 0.77, 0.99, 0.55};
+    NSArray *dado = [self arrayVetorizadosComDados:data];
     
     CGContextSetLineWidth(ctx, 2.0);
     CGContextSetStrokeColorWithColor(ctx, [[UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:1.0] CGColor]);
     
     int maxGraphHeight = kGraphHeight - kOffsetY;
     CGContextBeginPath(ctx);
-    CGContextMoveToPoint(ctx, kOffsetX, kGraphHeight - maxGraphHeight * data[0]);
+    CGContextMoveToPoint(ctx, kOffsetX, kGraphHeight - maxGraphHeight * [dado[0] floatValue]);
     
-    for (int i = 1; i < sizeof(data); i++)
+    for (int i = 1; i < dado.count; i++)
     {
-        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphHeight - maxGraphHeight * data[i]);
+        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphHeight - maxGraphHeight * [dado[i] floatValue]);
     }
     
     CGContextDrawPath(ctx, kCGPathStroke);
@@ -43,17 +44,16 @@
     CGContextSetFillColorWithColor(ctx, [[UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:1.0] CGColor]);
 }
 
--(void)desenharPontosSobreOsDadosComContexto:(CGContextRef)ctx
+-(void)desenharPontosSobreOsDadosComContexto:(CGContextRef)ctx comDados:(NSArray*)data
 {
-    float data[] = {0.0f,0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44, 0.88, 0.77, 0.99, 0.55};
-   
+    NSArray *dado = [self arrayVetorizadosComDados:data];
     int maxGraphHeight = kGraphHeight - kOffsetY;
     
-    for (int i = 1; i < sizeof(data) - 1; i++)
+    for (int i = 1; i < dado.count - 1; i++)
     {
         
         float x = kOffsetX + i * kStepX;
-        float y = kGraphHeight - maxGraphHeight * data[i];
+        float y = kGraphHeight - maxGraphHeight * [dado[i] floatValue];
         CGRect rect = CGRectMake(x - kCircleRadius, y - kCircleRadius, 2 * kCircleRadius, 2 * kCircleRadius);
         CGContextAddEllipseInRect(ctx, rect);
     }
@@ -70,17 +70,37 @@
     
     //float data[] = {0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44, 0.88, 0.77, 0.99, 0.55};
     
-    [self desenharGraficoDeLinhaComContexto:context];
-    [self desenharPontosSobreOsDadosComContexto:context];
-    [self preencherAreaSobreGraficoComContexto:context];
+    self.data = [[NSMutableArray alloc]initWithObjects: [NSNumber numberWithFloat:119.3],
+                                                        [NSNumber numberWithFloat:103.7],
+                                                        [NSNumber numberWithFloat:98.4],
+                                                        [NSNumber numberWithFloat:95.88],
+                                                        [NSNumber numberWithFloat:92.85],
+                                                        [NSNumber numberWithFloat:90.2],
+                                                        [NSNumber numberWithFloat:87.85],
+                                                        [NSNumber numberWithFloat:86.11],
+                                                        [NSNumber numberWithFloat:85.75],
+                                                        [NSNumber numberWithFloat:88.53],
+                                                        [NSNumber numberWithFloat:89.44],
+                                                        [NSNumber numberWithFloat:92.88],
+                                                        [NSNumber numberWithFloat:85.77],
+                                                        [NSNumber numberWithFloat:82.85],
+                                                        [NSNumber numberWithFloat:78.55],
+                                                        nil];
+    
+    [self desenharGraficoDeLinhaComContexto:context comDados:self.data];
+    [self desenharPontosSobreOsDadosComContexto:context comDados:self.data];
+    [self preencherAreaSobreGraficoComContexto:context comDados:self.data];
     [self desenharLinhasGuiaComContexto:context];
-    [self colocarIdentificadoresVerticalComContexto:context];
+    [self colocarIdentificadoresVerticalComContexto:context comDados:self.data];
+    //[self colocarIdentificadoresHorizontaisComContexto:context comDados:self.data];
 }
 
--(void)preencherAreaSobreGraficoComContexto:(CGContextRef)ctx
+-(void)preencherAreaSobreGraficoComContexto:(CGContextRef)ctx comDados:(NSArray*)data
 {
     
-    float data[] = {0.0f,0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44, 0.88, 0.77, 0.99, 0.55};
+    //float data[] = {0.0f,0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44, 0.88, 0.77, 0.99, 0.55};
+    
+    NSArray *dado = [self arrayVetorizadosComDados:data];
     
     CGContextSetFillColorWithColor(ctx, [[UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:0.5] CGColor]);
     
@@ -88,12 +108,12 @@
     
     CGContextBeginPath(ctx);
     CGContextMoveToPoint(ctx, kOffsetX, kGraphHeight);
-    CGContextAddLineToPoint(ctx, kOffsetX, kGraphHeight - maxGraphHeight * data[0]);
-    for (int i = 1; i < sizeof(data); i++)
+    CGContextAddLineToPoint(ctx, kOffsetX, kGraphHeight - maxGraphHeight * [dado[0] floatValue]);
+    for (int i = 1; i < dado.count; i++)
     {
-        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphHeight - maxGraphHeight * data[i]);
+        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphHeight - maxGraphHeight * [dado[i] floatValue]);
     }
-    CGContextAddLineToPoint(ctx, kOffsetX + (sizeof(data) - 1) * kStepX, kGraphHeight);
+    CGContextAddLineToPoint(ctx, kOffsetX + (dado.count - 1) * kStepX, kGraphHeight);
     
     CGContextClosePath(ctx);
     
@@ -157,10 +177,8 @@
     CGContextSetLineDash(context, 0, NULL, 0);
 }
 
--(void)colocarIdentificadoresHorizontaisComContexto:(CGContextRef)context
+-(void)colocarIdentificadoresHorizontaisComContexto:(CGContextRef)context comDados:(NSArray*)data
 {
-    float data[] = {0.0f,0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44, 0.88, 0.77, 0.99, 0.55};
-    
     CGContextSetTextMatrix(context, CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0));
     CGContextSelectFont(context, "Helvetica", 18, kCGEncodingMacRoman);
     CGContextSetTextDrawingMode(context, kCGTextFill);
@@ -169,9 +187,10 @@
     CGContextSetTextMatrix(context, CGAffineTransformRotate(CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0), M_PI / 2));
     
     
-    CGContextConcatCTM(context, flipVertical);  
+    //CGAffineTransform flipVertical = CGAffineTransformMake(1, 0, 0, -1, 0, self.frame.size.height);
+    //CGContextConcatCTM(context, flipVertical);
 
-    for (int i = 1; i < sizeof(data); i++)
+    for (int i = 1; i < data.count; i++)
     {
         
         NSString *theText = [NSString stringWithFormat:@"%d", i];
@@ -179,23 +198,113 @@
     }
 }
 
--(void)colocarIdentificadoresVerticalComContexto:(CGContextRef)context
+-(float)maiorValorNosDados:(NSArray*)data
 {
-    float data[] = {0.0,50.0, 100.0, 150.0, 200.0, 250.0, 300.0};
+    float maiorValor = 0;
     
-    CGContextSetTextMatrix(context, CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0));//CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0));
+    if([data count]>0)
+    {
+        maiorValor = [data[0] floatValue];
+    }
+    
+    for (int i=0; i<data.count; i++)
+    {
+        if(maiorValor < [data[i] floatValue])
+            maiorValor = [data[i] floatValue];
+    }
+    
+    return maiorValor;
+}
+
+-(float)menorValorNosDados:(NSArray*)data
+{
+    float menorValor = 0;
+    
+    if([data count]>0)
+    {
+        menorValor = [data[0] floatValue];
+    }
+    
+    for (int i=0; i<data.count; i++)
+    {
+        if (menorValor > [data[i] floatValue])
+            menorValor = [data[i] floatValue];
+    }
+    
+    return menorValor;
+}
+
+-(void)colocarIdentificadoresVerticalComContexto:(CGContextRef)context comDados:(NSArray*)data
+{
+    float maiorValorY = 0;
+    float menorValorY = 0;
+    float variacaoEmY = 0;
+    
+    if([data count]>0)
+    {
+        maiorValorY = [data[0] floatValue];
+        menorValorY = maiorValorY;
+    }
+    
+    for (int i=0; i<data.count; i++)
+    {
+        if(maiorValorY < [data[i] floatValue])
+            maiorValorY = [data[i] floatValue];
+        if (menorValorY > [data[i] floatValue])
+            menorValorY = [data[i] floatValue];
+        
+        NSLog(@"\r\nData:%f\r\nMaior:%f\r\nMenor:%f",[data[i] floatValue],maiorValorY,menorValorY);
+        
+    }
+    
+    variacaoEmY = maiorValorY;
+    
+    NSMutableArray *valoresEixoY = [[NSMutableArray alloc]init];
+    float stepValoresY = (variacaoEmY/((kGraphHeight - kOffsetY)/kStepY));
+    
+    NSLog(@"step size:%d",((kGraphHeight - kOffsetY)/kStepY));
+    for (int i = 0; i<=((kGraphHeight - kOffsetY)/kStepY); i++)
+    {
+        [valoresEixoY addObject:[NSNumber numberWithFloat:(stepValoresY * i)]];
+    }
+    
+    if(valoresEixoY.count > 0)
+    {
+        valoresEixoY[[valoresEixoY count] -1] = [NSNumber numberWithFloat:maiorValorY];
+    }
+    
+    CGContextSetTextMatrix(context,CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0));
     CGContextSelectFont(context, "Helvetica", 18, kCGEncodingMacRoman);
     CGContextSetTextDrawingMode(context, kCGTextFill);
     CGContextSetFillColorWithColor(context, [[UIColor colorWithRed:0 green:0 blue:0 alpha:1.0] CGColor]);
     
-    CGContextSetTextMatrix(context, CGAffineTransformRotate(CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0), M_PI / 2));
+    //CGContextSetTextMatrix(context, CGAffineTransformRotate(CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0), M_PI / 2));
     
+    
+    
+    //CGAffineTransform flipVertical = CGAffineTransformMake(1, 0, 0, -1, 0, self.frame.size.height);
+    //CGContextConcatCTM(context, flipVertical);
 
-    for (int i = 0; i < sizeof(data); i++)
+    //for (int i = 0; i < sizeof(data); i++)
+    for (int i = 0; i < valoresEixoY.count; i++)
     {
-        NSString *theText = [NSString stringWithFormat:@"%f", data[i]];
-        CGContextShowTextAtPoint(context, kOffsetX + i * kStepX, kGraphBottom -5, [theText cStringUsingEncoding:NSUTF8StringEncoding], [theText length]);
+        NSLog(@"%f",[valoresEixoY[i] floatValue]);
+        NSString *theText = [NSString stringWithFormat:@"%03.2f", [valoresEixoY[i] floatValue]];
+        CGContextShowTextAtPoint(context, 0+5, kGraphHeight -(3+ i * kStepY), [theText cStringUsingEncoding:NSUTF8StringEncoding], [theText length]);
     }
+}
+
+-(NSArray*)arrayVetorizadosComDados:(NSArray*)data
+{
+    float maiorValor = [self maiorValorNosDados:data];
+    NSMutableArray* retorno = [[NSMutableArray alloc]init];
+    
+    for (int i =0; i<data.count; i++)
+    {
+        [retorno addObject:[NSNumber numberWithFloat:([data[i] floatValue]/maiorValor)]];
+    }
+    
+    return retorno;
 }
 
 

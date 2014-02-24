@@ -57,8 +57,6 @@
     NSLog(@"scroll SUBS(%@)",self.scrollView.subviews);//frame.size.height,self.scroller.frame.size.width);
     NSLog(@"scroll(%f,%f)",self.scrollView.frame.size.height,self.scrollView.frame.size.width);
     NSLog(@"graph(%f,%f)",self.graphView.frame.size.height,self.graphView.frame.size.width);
-    
-    
 }
 
 - (void)didReceiveMemoryWarning
