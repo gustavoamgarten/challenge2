@@ -168,6 +168,9 @@
     
     CGContextSetTextMatrix(context, CGAffineTransformRotate(CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0), M_PI / 2));
     
+    
+    CGContextConcatCTM(context, flipVertical);  
+
     for (int i = 1; i < sizeof(data); i++)
     {
         
