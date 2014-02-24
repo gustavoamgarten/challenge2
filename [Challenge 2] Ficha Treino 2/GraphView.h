@@ -12,7 +12,7 @@
 #define kGraphHeight 300
 #define kDefaultGraphWidth 900
 
-#define kOffsetX 0
+#define kOffsetX 50
 #define kStepX 50
 
 #define kStepY 50
@@ -21,7 +21,7 @@
 #define kGraphBottom 300
 #define kGraphTop 0
 
-#define kCircleRadius 3
+#define kCircleRadius 2
 
 @interface GraphView : UIView
 

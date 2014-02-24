@@ -167,8 +167,8 @@
     //desenhar linhas-guia no eixo Y
     for (int i = 0; i <= qtdLinhasGuiaY; i++)
     {
-        CGContextMoveToPoint(context, kOffsetX, kGraphBottom - kOffsetY - i * kStepY);
-        CGContextAddLineToPoint(context, kDefaultGraphWidth, kGraphBottom - kOffsetY - i * kStepY);
+        CGContextMoveToPoint(context, kOffsetX, kGraphBottom - (kOffsetY *0) - i * kStepY);
+        CGContextAddLineToPoint(context, kDefaultGraphWidth, kGraphBottom - (kOffsetY*0) - i * kStepY);
     }
     
     //comit desenhos
@@ -289,7 +289,7 @@
     for (int i = 0; i < valoresEixoY.count; i++)
     {
         NSLog(@"%f",[valoresEixoY[i] floatValue]);
-        NSString *theText = [NSString stringWithFormat:@"%03.2f", [valoresEixoY[i] floatValue]];
+        NSString *theText = [NSString stringWithFormat:@"%03.1f", [valoresEixoY[i] floatValue]];
         CGContextShowTextAtPoint(context, 0+5, kGraphHeight -(3+ i * kStepY), [theText cStringUsingEncoding:NSUTF8StringEncoding], [theText length]);
     }
 }
