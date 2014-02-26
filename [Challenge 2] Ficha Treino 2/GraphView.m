@@ -29,7 +29,9 @@
     CGContextSetLineWidth(ctx, 2.0);
     CGContextSetStrokeColorWithColor(ctx, [[UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:1.0] CGColor]);
     
-    int maxGraphHeight = kGraphHeight - kOffsetY;
+    //int maxGraphHeight = kGraphHeight - kOffsetY;
+    int maxGraphHeight = kGraphHeight - kOffsetY - kGraphTop;
+    
     CGContextBeginPath(ctx);
     CGContextMoveToPoint(ctx, kOffsetX, kGraphHeight - maxGraphHeight * [dado[0] floatValue]);
     
@@ -47,7 +49,8 @@
 -(void)desenharPontosSobreOsDadosComContexto:(CGContextRef)ctx comDados:(NSArray*)data
 {
     NSArray *dado = [self arrayVetorizadosComDados:data];
-    int maxGraphHeight = kGraphHeight - kOffsetY;
+    //int maxGraphHeight = kGraphHeight - kOffsetY;
+    int maxGraphHeight = kGraphHeight - kOffsetY - kGraphTop;
     
     for (int i = 1; i < dado.count - 1; i++)
     {
@@ -104,7 +107,8 @@
     
     CGContextSetFillColorWithColor(ctx, [[UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:0.5] CGColor]);
     
-    int maxGraphHeight = kGraphHeight - kOffsetY;
+    //int maxGraphHeight = kGraphHeight - kOffsetY;
+    int maxGraphHeight = kGraphHeight - kOffsetY - kGraphTop;
     
     CGContextBeginPath(ctx);
     CGContextMoveToPoint(ctx, kOffsetX, kGraphHeight);
@@ -163,6 +167,7 @@
     }
     
     //determinar quantidade de linhas-guia no eixo Y
+    //int qtdLinhasGuiaY = (kGraphBottom - kGraphTop - kOffsetY) / kStepY;
     int qtdLinhasGuiaY = (kGraphBottom - kGraphTop - kOffsetY) / kStepY;
     //desenhar linhas-guia no eixo Y
     for (int i = 0; i <= qtdLinhasGuiaY; i++)
@@ -260,10 +265,14 @@
     variacaoEmY = maiorValorY;
     
     NSMutableArray *valoresEixoY = [[NSMutableArray alloc]init];
-    float stepValoresY = (variacaoEmY/((kGraphHeight - kOffsetY)/kStepY));
     
-    NSLog(@"step size:%d",((kGraphHeight - kOffsetY)/kStepY));
-    for (int i = 0; i<=((kGraphHeight - kOffsetY)/kStepY); i++)
+    //int maxGraphHeight = kGraphHeight - kOffsetY;
+    int maxGraphHeight = kGraphHeight - kOffsetY - kGraphTop;
+    
+    float stepValoresY = (variacaoEmY/((maxGraphHeight)/kStepY));
+    
+    NSLog(@"step size:%d",((maxGraphHeight)/kStepY));
+    for (int i = 0; i<=((maxGraphHeight)/kStepY); i++)
     {
         [valoresEixoY addObject:[NSNumber numberWithFloat:(stepValoresY * i)]];
     }

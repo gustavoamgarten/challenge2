@@ -10,7 +10,7 @@
 #import "AcompanhamentoFisicoViewController.h"
 #import "GraphView.h"
 
-@interface GraficoViewController ()
+@interface GraficoViewController ()<UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet GraphView *graphView;
 
