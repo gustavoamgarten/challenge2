@@ -9,7 +9,7 @@
 #import "AcompanhamentoFisicoViewController.h"
 #import "AddMedidasViewController.h"
 #import "DataStorage.h"
-#import "GraficoViewController.h"
+#import "MedidasGraficoViewController.h"
 
 @interface AcompanhamentoFisicoViewController ()
 
@@ -68,7 +68,7 @@
     }
     else if([segue.identifier isEqualToString:@"visualizarDadosFisicos"])
     {
-        GraficoViewController *destController = segue.destinationViewController;
+        MedidasGraficoViewController *destController = segue.destinationViewController;
         
         destController.rootController = self;
     }

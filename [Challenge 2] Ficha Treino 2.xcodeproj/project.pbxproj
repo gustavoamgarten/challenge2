@@ -60,10 +60,10 @@
 		ED9B562C18A5328A0040F9E2 /* KeyboardAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9B562B18A5328A0040F9E2 /* KeyboardAnimation.m */; };
 		ED9B563318A54CCD0040F9E2 /* AddMedidasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9B563218A54CCD0040F9E2 /* AddMedidasViewController.m */; };
 		EDA8B31C18B7B02A00483580 /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA8B31B18B7B02A00483580 /* ScrollViewController.m */; };
+		EDAACE9118BE2FDC005C665E /* MedidasGraficoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDAACE9018BE2FDC005C665E /* MedidasGraficoViewController.m */; };
+		EDAACE9418BE3697005C665E /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDAACE9218BE3697005C665E /* GraphView.m */; };
 		EDAB7BDB18AE7099008D1C8E /* AcompanhamentoFisicoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDAB7BDA18AE7099008D1C8E /* AcompanhamentoFisicoViewController.m */; };
-		EDACC1F618B6455E0084EEDC /* GraficoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDACC1F418B6455E0084EEDC /* GraficoViewController.m */; };
-		EDACC1F718B6455E0084EEDC /* GraficoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDACC1F518B6455E0084EEDC /* GraficoViewController.xib */; };
-		EDACC1FC18B64C1A0084EEDC /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDACC1FB18B64C1A0084EEDC /* GraphView.m */; };
+		EDCD7FF918BE5B0E00B8905E /* PaginaExternaGraficoView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCD7FF818BE5B0E00B8905E /* PaginaExternaGraficoView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,13 +170,14 @@
 		ED9B563218A54CCD0040F9E2 /* AddMedidasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMedidasViewController.m; sourceTree = "<group>"; };
 		EDA8B31A18B7B02A00483580 /* ScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
 		EDA8B31B18B7B02A00483580 /* ScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
+		EDAACE8F18BE2FDC005C665E /* MedidasGraficoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedidasGraficoViewController.h; sourceTree = "<group>"; };
+		EDAACE9018BE2FDC005C665E /* MedidasGraficoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedidasGraficoViewController.m; sourceTree = "<group>"; };
+		EDAACE9218BE3697005C665E /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
+		EDAACE9318BE3697005C665E /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
 		EDAB7BD918AE7099008D1C8E /* AcompanhamentoFisicoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcompanhamentoFisicoViewController.h; sourceTree = "<group>"; };
 		EDAB7BDA18AE7099008D1C8E /* AcompanhamentoFisicoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcompanhamentoFisicoViewController.m; sourceTree = "<group>"; };
-		EDACC1F318B6455E0084EEDC /* GraficoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraficoViewController.h; sourceTree = "<group>"; };
-		EDACC1F418B6455E0084EEDC /* GraficoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraficoViewController.m; sourceTree = "<group>"; };
-		EDACC1F518B6455E0084EEDC /* GraficoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GraficoViewController.xib; sourceTree = "<group>"; };
-		EDACC1FA18B64C1A0084EEDC /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
-		EDACC1FB18B64C1A0084EEDC /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
+		EDCD7FF718BE5B0E00B8905E /* PaginaExternaGraficoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaginaExternaGraficoView.h; sourceTree = "<group>"; };
+		EDCD7FF818BE5B0E00B8905E /* PaginaExternaGraficoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaginaExternaGraficoView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -479,6 +480,25 @@
 			name = "Scroll View";
 			sourceTree = "<group>";
 		};
+		EDAACE8E18BE2F9E005C665E /* Grafico View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EDAACE9518BE36A4005C665E /* Graph View */,
+				EDAACE8F18BE2FDC005C665E /* MedidasGraficoViewController.h */,
+				EDAACE9018BE2FDC005C665E /* MedidasGraficoViewController.m */,
+			);
+			name = "Grafico View Controller";
+			sourceTree = "<group>";
+		};
+		EDAACE9518BE36A4005C665E /* Graph View */ = {
+			isa = PBXGroup;
+			children = (
+				EDAACE9218BE3697005C665E /* GraphView.m */,
+				EDAACE9318BE3697005C665E /* GraphView.h */,
+			);
+			name = "Graph View";
+			sourceTree = "<group>";
+		};
 		EDAB7BD818AE7070008D1C8E /* Acompanhamento Fisico */ = {
 			isa = PBXGroup;
 			children = (
@@ -493,22 +513,20 @@
 		EDACC1F818B645670084EEDC /* Grafico */ = {
 			isa = PBXGroup;
 			children = (
+				EDCD7FF618BE5AD200B8905E /* Dados View */,
+				EDAACE8E18BE2F9E005C665E /* Grafico View Controller */,
 				EDA8B31918B7AFF200483580 /* Scroll View */,
-				EDACC1F918B64BF00084EEDC /* Graph View */,
-				EDACC1F318B6455E0084EEDC /* GraficoViewController.h */,
-				EDACC1F418B6455E0084EEDC /* GraficoViewController.m */,
-				EDACC1F518B6455E0084EEDC /* GraficoViewController.xib */,
 			);
 			name = Grafico;
 			sourceTree = "<group>";
 		};
-		EDACC1F918B64BF00084EEDC /* Graph View */ = {
+		EDCD7FF618BE5AD200B8905E /* Dados View */ = {
 			isa = PBXGroup;
 			children = (
-				EDACC1FA18B64C1A0084EEDC /* GraphView.h */,
-				EDACC1FB18B64C1A0084EEDC /* GraphView.m */,
+				EDCD7FF718BE5B0E00B8905E /* PaginaExternaGraficoView.h */,
+				EDCD7FF818BE5B0E00B8905E /* PaginaExternaGraficoView.m */,
 			);
-			name = "Graph View";
+			name = "Dados View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -587,7 +605,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDACC1F718B6455E0084EEDC /* GraficoViewController.xib in Resources */,
 				EC7D01081897CBD900D63E28 /* Images.xcassets in Resources */,
 				EC7D00FA1897CBD900D63E28 /* InfoPlist.strings in Resources */,
 				EC7D01031897CBD900D63E28 /* Main.storyboard in Resources */,
@@ -611,6 +628,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC32298818992690009C34C1 /* TreinoViewController.m in Sources */,
+				EDCD7FF918BE5B0E00B8905E /* PaginaExternaGraficoView.m in Sources */,
 				EC7D01001897CBD900D63E28 /* AppDelegate.m in Sources */,
 				ED1D0FD7189FCBD300AECAC4 /* fichas.xcdatamodeld in Sources */,
 				EC05740218A546090056B5B7 /* EditarFichaViewController.m in Sources */,
@@ -621,6 +639,7 @@
 				EC2BC9E818A3F31C00ECD6A9 /* ExibeExercicioViewController.m in Sources */,
 				EC348CE218A2B36900CD79D0 /* TreinoCell.m in Sources */,
 				ED1D0FE3189FCC0500AECAC4 /* DadosFisicos.m in Sources */,
+				EDAACE9418BE3697005C665E /* GraphView.m in Sources */,
 				ED9B563318A54CCD0040F9E2 /* AddMedidasViewController.m in Sources */,
 				EC61FDDB18A3B2CA009527DE /* FinishAddExercicioViewController.m in Sources */,
 				EC322985189911DE009C34C1 /* CategoriaViewController.m in Sources */,
@@ -631,7 +650,6 @@
 				EC1693FA18A007570055311B /* AddSexViewController.m in Sources */,
 				EC61FDDE18A3B367009527DE /* BegymModel.m in Sources */,
 				ED1D0FE0189FCC0500AECAC4 /* Treinos.m in Sources */,
-				EDACC1F618B6455E0084EEDC /* GraficoViewController.m in Sources */,
 				EC1693F1189FEB030055311B /* LoadUserViewController.m in Sources */,
 				ED23DFA618A010CB0013D4B7 /* IrregularShapedButton.m in Sources */,
 				ED1D0FE6189FCC0500AECAC4 /* Exercicio.m in Sources */,
@@ -645,9 +663,9 @@
 				EC348CDF18A2A4E100CD79D0 /* GerenciarTreinoViewController.m in Sources */,
 				EC1693F718A006540055311B /* AddNameViewController.m in Sources */,
 				ED9B562C18A5328A0040F9E2 /* KeyboardAnimation.m in Sources */,
+				EDAACE9118BE2FDC005C665E /* MedidasGraficoViewController.m in Sources */,
 				ED1D0FDD189FCC0500AECAC4 /* Pessoa.m in Sources */,
 				ED23DFA218A010360013D4B7 /* UIImage-Alpha.m in Sources */,
-				EDACC1FC18B64C1A0084EEDC /* GraphView.m in Sources */,
 				EC4B9AF318A260EA002ADB4C /* LoadFichaViewController.m in Sources */,
 				ED1D0FDA189FCC0500AECAC4 /* Exerciciopadrao.m in Sources */,
 			);

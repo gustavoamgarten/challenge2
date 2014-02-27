@@ -1951,11 +1951,46 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="1665" y="-1250"/>
         </scene>
-        <!--Grafico View Controller-->
+        <!--Medidas Grafico View Controller-->
         <scene sceneID="DbY-Iw-LTb">
             <objects>
-                <viewController id="NeF-5b-pqH" customClass="GraficoViewController" sceneMemberID="viewController">
+                <viewController id="NeF-5b-pqH" customClass="MedidasGraficoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VIT-d8-vjv"/>
+                        <viewControllerLayoutGuide type="bottom" id="lY8-2R-QOg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Zh-ro-AjC">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qsy-FW-vdo">
+                                <rect key="frame" x="20" y="20" width="280" height="415"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8zW-xk-rfo" customClass="PaginaExternaGraficoView">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="415"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VJc-NY-YcT">
+                                                <rect key="frame" x="50" y="20" width="210" height="375"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </scrollView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
                     <navigationItem key="navigationItem" id="wGB-PK-ps9"/>
+                    <connections>
+                        <outlet property="mainView" destination="2Zh-ro-AjC" id="dbW-zo-qnk"/>
+                        <outlet property="paginaExterna" destination="8zW-xk-rfo" id="df5-h8-Xew"/>
+                        <outlet property="scrollViewExterno" destination="qsy-FW-vdo" id="HOx-TY-yHU"/>
+                        <outlet property="scrollViewInterno" destination="VJc-NY-YcT" id="IST-QZ-Sss"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d1d-mD-Tug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

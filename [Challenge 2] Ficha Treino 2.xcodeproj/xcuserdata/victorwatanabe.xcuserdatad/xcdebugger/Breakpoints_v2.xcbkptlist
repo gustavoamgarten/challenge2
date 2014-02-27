@@ -313,22 +313,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "[Challenge 2] Ficha Treino 2/GraficoViewController.m"
-            timestampString = "414693188.184282"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "[Challenge 2] Ficha Treino 2/GraphView.m"
             timestampString = "415113844.487517"
             startingColumnNumber = "9223372036854775807"
@@ -375,13 +359,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "[Challenge 2] Ficha Treino 2/GraphView.m"
-            timestampString = "415113844.487517"
+            filePath = "[Challenge 2] Ficha Treino 2/PaginaExternaGraficoView.m"
+            timestampString = "415202949.25532"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "272"
-            endingLineNumber = "272"
-            landmarkName = "-colocarIdentificadoresVerticalComContexto:comDados:"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-deleteTextoComContexto:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -391,13 +375,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "[Challenge 2] Ficha Treino 2/GraphView.m"
-            timestampString = "415113844.487517"
+            filePath = "[Challenge 2] Ficha Treino 2/PaginaExternaGraficoView.m"
+            timestampString = "415202949.25532"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "244"
-            endingLineNumber = "244"
-            landmarkName = "-colocarIdentificadoresVerticalComContexto:comDados:"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "-deleteTexto"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -407,13 +391,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "[Challenge 2] Ficha Treino 2/GraphView.m"
-            timestampString = "415113844.487517"
+            filePath = "[Challenge 2] Ficha Treino 2/PaginaExternaGraficoView.m"
+            timestampString = "415202949.25532"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "282"
-            endingLineNumber = "282"
-            landmarkName = "-colocarIdentificadoresVerticalComContexto:comDados:"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-ajustarScrollView:comBounds:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "[Challenge 2] Ficha Treino 2/MedidasGraficoViewController.m"
+            timestampString = "415208624.376795"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "-viewDidAppear:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "[Challenge 2] Ficha Treino 2/MedidasGraficoViewController.m"
+            timestampString = "415207784.557916"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "-ajustarLayoutDosComponentes"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -32,37 +32,44 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
     
-    //[self.scroller addSubview:self.graphView];//if the contentView is not already inside your scrollview in your xib/StoryBoard doc
-    
-    //self.scroller.contentSize = self.graphView.frame.size;
-    //self.scroller.contentSize = CGSizeMake(kDefaultGraphWidth, kGraphHeight);
-    [self.scrollView setContentSize:CGSizeMake(kDefaultGraphWidth, kGraphHeight)];
-    
-    /*
-    if(![self.scrollView.subviews containsObject:self.graphView])
-        [self.scrollView addSubview:self.graphView];
-    self.scrollView.delegate = self;
-    */
+    [self.graphView setFrame:CGRectMake(0, 0, kDefaultGraphWidth, kGraphHeight)];
     
     [self.scrollView addSubview:self.graphView];
-    self.scrollView.contentSize = self.graphView.bounds.size;
-    self.scrollView.pagingEnabled = YES;
-    self.scrollView.scrollEnabled = YES;
-    self.scrollView.showsHorizontalScrollIndicator = YES;
-    self.scrollView.showsVerticalScrollIndicator = YES;
+    self.scrollView.contentSize = CGSizeMake(self.graphView.frame.size.width, self.graphView.frame.size.height);
+    
+    //self.graphView.bounds.size;
+    
+    //self.scrollView.pagingEnabled = YES;
+    //self.scrollView.scrollEnabled = YES;
+    //self.scrollView.showsHorizontalScrollIndicator = YES;
+    //self.scrollView.showsVerticalScrollIndicator = YES;
     self.scrollView.delegate = self;
     
-    NSLog(@"scroll SUBS(%@)",self.scrollView.subviews);//frame.size.height,self.scroller.frame.size.width);
-    NSLog(@"scroll(%f,%f)",self.scrollView.frame.size.height,self.scrollView.frame.size.width);
-    NSLog(@"graph(%f,%f)",self.graphView.frame.size.height,self.graphView.frame.size.width);
+    NSLog(@"\r\nscroll SUBS(%@)",self.scrollView.subviews);//frame.size.height,self.scroller.frame.size.width);
+    NSLog(@"\r\nscroll(%f,%f)",self.scrollView.frame.size.height,self.scrollView.frame.size.width);
+    NSLog(@"\r\ngraph(%f,%f)",self.graphView.frame.size.height,self.graphView.frame.size.width);
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+-(void)scrollViewDidScroll:(UIScrollView*)scrollView
+{
+    CGPoint offset = self.scrollView.contentOffset;
+    NSLog(@"x=%f y=%f",offset.x,offset.y);
+    CGRect bounds = self.scrollView.bounds;
+    NSLog(@"x=%f y%f w=%f h=%f",bounds.origin.x,bounds.origin.y,bounds.size.width,bounds.size.height);
 }
 
 @end

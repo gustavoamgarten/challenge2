@@ -12,7 +12,7 @@
 #define kGraphHeight 300
 #define kDefaultGraphWidth 900
 
-#define kOffsetX 50
+#define kOffsetX 0
 #define kStepX 50
 
 #define kStepY 50

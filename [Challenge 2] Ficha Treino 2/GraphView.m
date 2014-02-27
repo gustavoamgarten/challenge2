@@ -94,7 +94,7 @@
     [self desenharPontosSobreOsDadosComContexto:context comDados:self.data];
     [self preencherAreaSobreGraficoComContexto:context comDados:self.data];
     [self desenharLinhasGuiaComContexto:context];
-    [self colocarIdentificadoresVerticalComContexto:context comDados:self.data];
+    //[self colocarIdentificadoresVerticalComContexto:context comDados:self.data];
     //[self colocarIdentificadoresHorizontaisComContexto:context comDados:self.data];
 }
 
@@ -297,7 +297,7 @@
     //for (int i = 0; i < sizeof(data); i++)
     for (int i = 0; i < valoresEixoY.count; i++)
     {
-        NSLog(@"%f",[valoresEixoY[i] floatValue]);
+        //NSLog(@"%f",[valoresEixoY[i] floatValue]);
         NSString *theText = [NSString stringWithFormat:@"%03.1f", [valoresEixoY[i] floatValue]];
         CGContextShowTextAtPoint(context, 0+5, kGraphHeight -(3+ i * kStepY), [theText cStringUsingEncoding:NSUTF8StringEncoding], [theText length]);
     }
