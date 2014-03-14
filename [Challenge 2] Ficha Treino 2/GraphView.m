@@ -9,6 +9,7 @@
 #import "GraphView.h"
 @interface GraphView()
 @property (nonatomic,strong)NSMutableArray *data;
+@property (nonatomic,strong)NSMutableArray *dateTime;
 @end
 
 @implementation GraphView
@@ -90,12 +91,29 @@
                                                         [NSNumber numberWithFloat:78.55],
                                                         nil];
     
+    self.dateTime = [[NSMutableArray alloc]initWithObjects: [NSDate date],//[NSNumber numberWithFloat:119.3],
+                 [NSDate dateWithTimeIntervalSinceReferenceDate:1234],
+                 [NSDate dateWithTimeIntervalSinceReferenceDate:2374],
+                 [NSDate dateWithTimeIntervalSinceReferenceDate:3812],
+                 [NSDate dateWithTimeIntervalSinceReferenceDate:5923],
+                 [NSDate dateWithTimeIntervalSinceReferenceDate:8402],
+                 [NSDate dateWithTimeIntervalSinceReferenceDate:12324],
+                 [NSDate dateWithTimeIntervalSinceReferenceDate:14203],
+                 [NSDate dateWithTimeIntervalSinceReferenceDate:17232],
+                 [NSDate dateWithTimeIntervalSinceReferenceDate:23319],
+                 [NSDate dateWithTimeIntervalSinceReferenceDate:26811],
+                 [NSDate dateWithTimeIntervalSinceReferenceDate:33109],
+                 [NSDate dateWithTimeIntervalSinceReferenceDate:39128],
+                 [NSDate dateWithTimeIntervalSinceReferenceDate:46121],
+                 [NSDate dateWithTimeIntervalSinceReferenceDate:52324],
+                 nil];
+    
     [self desenharGraficoDeLinhaComContexto:context comDados:self.data];
     [self desenharPontosSobreOsDadosComContexto:context comDados:self.data];
     [self preencherAreaSobreGraficoComContexto:context comDados:self.data];
     [self desenharLinhasGuiaComContexto:context];
     //[self colocarIdentificadoresVerticalComContexto:context comDados:self.data];
-    //[self colocarIdentificadoresHorizontaisComContexto:context comDados:self.data];
+    //[self colocarIdentificadoresHorizontaisDataComContexto:context comDados:self.dateTime];
 }
 
 -(void)preencherAreaSobreGraficoComContexto:(CGContextRef)ctx comDados:(NSArray*)data
@@ -182,6 +200,30 @@
     CGContextSetLineDash(context, 0, NULL, 0);
 }
 
+-(void)colocarIdentificadoresHorizontaisDataComContexto:(CGContextRef)context comDados:(NSArray*)data
+{
+    CGContextSetTextMatrix(context, CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0));
+    CGContextSelectFont(context, "Helvetica", 18, kCGEncodingMacRoman);
+    CGContextSetTextDrawingMode(context, kCGTextFill);
+    CGContextSetFillColorWithColor(context, [[UIColor colorWithRed:0 green:0 blue:0 alpha:1.0] CGColor]);
+    
+    CGContextSetTextMatrix(context, CGAffineTransformRotate(CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0), M_PI / 2));
+    
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd/MM/yyyy HH:mm"];
+    
+    //CGAffineTransform flipVertical = CGAffineTransformMake(1, 0, 0, -1, 0, self.frame.size.height);
+    //CGContextConcatCTM(context, flipVertical);
+
+    for (int i = 0; i < data.count; i++)
+    {
+        //NSString *dataAtual = [dateFormatter stringFromDate:(NSDate*)(self.dateTime[i])];
+        
+        NSString *theText = [dateFormatter stringFromDate:(NSDate*)(self.dateTime[i])];//[NSString stringWithFormat:@"%d", i];
+        CGContextShowTextAtPoint(context, 15 + kOffsetX + i * kStepX, kGraphBottom - 5, [theText cStringUsingEncoding:NSUTF8StringEncoding], [theText length]);
+    }
+}
+
 -(void)colocarIdentificadoresHorizontaisComContexto:(CGContextRef)context comDados:(NSArray*)data
 {
     CGContextSetTextMatrix(context, CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0));
@@ -194,7 +236,7 @@
     
     //CGAffineTransform flipVertical = CGAffineTransformMake(1, 0, 0, -1, 0, self.frame.size.height);
     //CGContextConcatCTM(context, flipVertical);
-
+    
     for (int i = 1; i < data.count; i++)
     {
         

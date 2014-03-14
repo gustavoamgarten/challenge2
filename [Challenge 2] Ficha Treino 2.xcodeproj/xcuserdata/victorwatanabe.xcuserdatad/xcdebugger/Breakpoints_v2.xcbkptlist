@@ -314,11 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "[Challenge 2] Ficha Treino 2/GraphView.m"
-            timestampString = "415113844.487517"
+            timestampString = "416235844.423706"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "298"
-            endingLineNumber = "298"
+            startingLineNumber = "340"
+            endingLineNumber = "340"
             landmarkName = "-colocarIdentificadoresVerticalComContexto:comDados:"
             landmarkType = "5">
             <Locations>
@@ -430,6 +430,22 @@
             startingLineNumber = "80"
             endingLineNumber = "80"
             landmarkName = "-ajustarLayoutDosComponentes"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "[Challenge 2] Ficha Treino 2/GraphView.m"
+            timestampString = "416235869.769509"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "-drawRect:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
